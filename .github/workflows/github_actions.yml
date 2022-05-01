@@ -1,0 +1,60 @@
+name: GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node ⚙
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Run tests on Linux 🧪
+        if: runner.os == 'Linux'
+        run: |
+          yarn
+          xvfb-run -a yarn test
+
+      - name: Run tests on MacOS or Windows 🧪
+        if: runner.os != 'Linux'
+        run: |
+          yarn
+          yarn test
+
+      - name: Upload coverage report 📡
+        uses: codecov/codecov-action@v3.1.0
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node ⚙
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Run linting 🧪
+        run: |
+          yarn
+          yarn lint
