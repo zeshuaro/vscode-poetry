@@ -49,7 +49,7 @@
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "yarn run compile && yarn run lint",
+    "pretest": "yarn run compile",
     "lint": "eslint src --ext ts && prettier src/**/*.ts --check",
     "format": "eslint src --ext ts --fix && prettier src/**/*.ts --write",
     "test": "node ./out/test/runTest.js"
