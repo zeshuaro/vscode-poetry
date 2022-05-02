@@ -1,0 +1,15 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "semanticCommits": "enabled",
+  "schedule": ["after 6pm every weekday", "every weekend"],
+  "timezone": "Australia/Sydney",
+  "postUpdateOptions": ["yarnDedupeFewer"],
+  "packageRules": [
+    {
+      "groupName": "GitHub Actions dependencies",
+      "matchPaths": [".github/workflows/*.yml"],
+      "addLabels": ["ci"]
+    }
+  ]
+}
