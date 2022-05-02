@@ -18,29 +18,47 @@
     "onCommand:vscode-python-poetry.addPackage",
     "onCommand:vscode-python-poetry.addDevPackage",
     "onCommand:vscode-python-poetry.removePackage",
-    "onCommand:vscode-python-poetry.removeDevPackage"
+    "onCommand:vscode-python-poetry.removeDevPackage",
+    "onCommand:vscode-python-poetry.updatePackages",
+    "onCommand:vscode-python-poetry.updatePackagesNoDev",
+    "onCommand:vscode-python-poetry.updatePackage"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-python-poetry.addPackage",
-        "title": "Add package",
+        "title": "Add package(s)",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.addDevPackage",
-        "title": "Add dev package",
+        "title": "Add dev package(s)",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.removePackage",
-        "title": "Remove package",
+        "title": "Remove package(s)",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.removeDevPackage",
-        "title": "Remove dev package",
+        "title": "Remove dev package(s)",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.updatePackages",
+        "title": "Update all packages",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.updatePackagesNoDev",
+        "title": "Update all packages (without updating dev packages)",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.updatePackage",
+        "title": "Update selected package(s)",
         "category": "Poetry"
       }
     ]

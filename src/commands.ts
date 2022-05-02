@@ -20,6 +20,14 @@ export class Commands {
   removeDevPackage = async () =>
     await this.managePackage({ command: PoetryCommand.remove, isDev: true });
 
+  updatePackages = async () => await this.managePackageUpdate({});
+
+  updatePackagesNoDev = async () =>
+    await this.managePackageUpdate({ noDev: true });
+
+  updatePackage = async () =>
+    await this.managePackageUpdate({ askPackageName: true });
+
   private managePackage = async ({
     command,
     isDev = false,
@@ -35,6 +43,31 @@ export class Commands {
     const args = [command, packageName];
     if (isDev) {
       args.push("--dev");
+    }
+    this.poetryService.runPoetry(args);
+  };
+
+  private managePackageUpdate = async ({
+    askPackageName = false,
+    noDev = false,
+  }: {
+    askPackageName?: boolean;
+    noDev?: boolean;
+  }) => {
+    let packageName: string | undefined;
+    if (askPackageName) {
+      packageName = await this.poetryService.promptPackageName();
+      if (!packageName) {
+        return;
+      }
+    }
+
+    const args: string[] = [PoetryCommand.update];
+    if (packageName) {
+      args.push(packageName);
+    }
+    if (noDev) {
+      args.push("--no-dev");
     }
     this.poetryService.runPoetry(args);
   };
