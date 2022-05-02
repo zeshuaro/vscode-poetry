@@ -53,7 +53,7 @@
       },
       {
         "command": "vscode-python-poetry.updatePackagesNoDev",
-        "title": "Update all packages (without updating dev packages)",
+        "title": "Update all packages (ignore dev)",
         "category": "Poetry"
       },
       {

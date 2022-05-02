@@ -20,9 +20,12 @@ You can activate the commands by launching the command palette (View > Command P
 
 ### Commands
 
-| Command               | Description                                                         |
-| --------------------- | ------------------------------------------------------------------- |
-| `poetry add`          | Add required packages to your `pyproject.toml` and install them     |
-| `poetry add --dev`    | Add required dev packages to your `pyproject.toml` and install them |
-| `poetry remove`       | Remove a package from the current list of installed packages        |
-| `poetry remove --dev` | Remove a dev package from the current list of installed packages    |
+| Command Palette                  | Poetry command                  | Description                                                                            |
+| -------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------- |
+| Add package(s)                   | `poetry add <package>`          | Add required packages to your `pyproject.toml` and install them                        |
+| Add dev package(s)               | `poetry add --dev <package>`    | Add required dev packages to your `pyproject.toml` and install them                    |
+| Remove package(s)                | `poetry remove <package>`       | Remove packages from the current list of installed packages                            |
+| Remove dev package(s)            | `poetry remove --dev <package>` | Remove dev packages from the current list of installed packages                        |
+| Update all packages              | `poetry update`                 | Update all packages from the current list of installed packages                        |
+| Update all packages (ignore dev) | `poetry update --no-dev`        | Update all packages from the current list of installed packages, ignoring dev packages |
+| Update selected package(s)       | `poetry update <package>`       | Update selected packages from the current list of installed packages                   |
