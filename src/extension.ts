@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import commands from "./commands";
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
     ...[
       vscode.commands.registerCommand(
@@ -24,4 +24,6 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export function deactivate(): void {
+  // This method is called when the extension is deactivated
+}

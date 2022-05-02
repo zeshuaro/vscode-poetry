@@ -9,7 +9,7 @@ export class PoetryService {
       title: "Enter a package name, git URL or local path",
     });
 
-  runPoetry = (args: string[]) => {
+  runPoetry = (args: string[]): void => {
     const terminal = this.getTerminal();
     terminal.sendText(`poetry ${args.join(" ")}`);
   };
