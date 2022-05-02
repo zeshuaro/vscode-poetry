@@ -34,7 +34,7 @@ suite("Commands", () => {
       .stub(poetryService, "promptPackageName")
       .callsFake(() => Promise.resolve(undefined));
 
-  const verifyNotCalled = (promptPackageName: sinon.SinonStub) => {
+  const verifyrunPoetryNotCalled = (promptPackageName: sinon.SinonStub) => {
     sinon.assert.calledOnce(promptPackageName);
     sinon.assert.notCalled(runPoetry);
   };
@@ -51,7 +51,7 @@ suite("Commands", () => {
   test("adds package without package name", async () => {
     const promptPackageName = mockPromptPackageNameUndefined();
     await commands.addPackage();
-    verifyNotCalled(promptPackageName);
+    verifyrunPoetryNotCalled(promptPackageName);
   });
 
   test("adds dev package", async () => {
@@ -70,7 +70,7 @@ suite("Commands", () => {
   test("adds dev package without package name", async () => {
     const promptPackageName = mockPromptPackageNameUndefined();
     await commands.addDevPackage();
-    verifyNotCalled(promptPackageName);
+    verifyrunPoetryNotCalled(promptPackageName);
   });
 
   test("removes package", async () => {
@@ -85,7 +85,7 @@ suite("Commands", () => {
   test("removes package without package name", async () => {
     const promptPackageName = mockPromptPackageNameUndefined();
     await commands.removePackage();
-    verifyNotCalled(promptPackageName);
+    verifyrunPoetryNotCalled(promptPackageName);
   });
 
   test("removes dev package", async () => {
@@ -104,6 +104,31 @@ suite("Commands", () => {
   test("removes dev package without package name", async () => {
     const promptPackageName = mockPromptPackageNameUndefined();
     await commands.removeDevPackage();
-    verifyNotCalled(promptPackageName);
+    verifyrunPoetryNotCalled(promptPackageName);
+  });
+
+  test("updates packages", async () => {
+    await commands.updatePackages();
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.update]);
+  });
+
+  test("updates packages without dev", async () => {
+    await commands.updatePackagesNoDev();
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.update, "--no-dev"]);
+  });
+
+  test("updates package", async () => {
+    const promptPackageName = mockPromptPackageName();
+
+    await commands.updatePackage();
+
+    sinon.assert.calledOnce(promptPackageName);
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.update, packageName]);
+  });
+
+  test("updates package without package name", async () => {
+    const promptPackageName = mockPromptPackageNameUndefined();
+    await commands.updatePackage();
+    verifyrunPoetryNotCalled(promptPackageName);
   });
 });

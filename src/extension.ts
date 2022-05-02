@@ -20,6 +20,18 @@ export function activate(context: vscode.ExtensionContext): void {
         "vscode-python-poetry.removeDevPackage",
         commands.removeDevPackage
       ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.updatePackages",
+        commands.updatePackages
+      ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.updatePackagesNoDev",
+        commands.updatePackagesNoDev
+      ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.updatePackage",
+        commands.updatePackage
+      ),
     ]
   );
 }
