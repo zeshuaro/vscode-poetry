@@ -22,6 +22,8 @@ You can activate the commands by launching the command palette (View > Command P
 
 | Command Palette                  | Poetry command                  | Description                                                                            |
 | -------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------- |
+| Install packages                 | `poetry install`                | Read the `pyproject.toml` file, resolve the packages, and install them                 |
+| Install packages (with options)  | `poetry install [--options]`    | Install the packages with additional options                                           |
 | Add package(s)                   | `poetry add <package>`          | Add required packages to your `pyproject.toml` and install them                        |
 | Add dev package(s)               | `poetry add --dev <package>`    | Add required dev packages to your `pyproject.toml` and install them                    |
 | Remove package(s)                | `poetry remove <package>`       | Remove packages from the current list of installed packages                            |
