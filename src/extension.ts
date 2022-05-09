@@ -5,6 +5,14 @@ export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
     ...[
       vscode.commands.registerCommand(
+        "vscode-python-poetry.installPackages",
+        commands.installPackages
+      ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.installPackagesWithOptions",
+        commands.installPackagesWithOptions
+      ),
+      vscode.commands.registerCommand(
         "vscode-python-poetry.addPackage",
         commands.addPackage
       ),

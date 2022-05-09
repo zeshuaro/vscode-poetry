@@ -8,6 +8,7 @@
   "plugins": ["@typescript-eslint", "unused-imports"],
   "rules": {
     "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/semi": "warn",
     "curly": "warn",
     "eqeqeq": "warn",
