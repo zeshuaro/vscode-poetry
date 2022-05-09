@@ -1,17 +1,20 @@
 import { afterEach, before, beforeEach } from "mocha";
 import * as sinon from "sinon";
 import { Commands } from "../../commands";
+import { installOptions } from "../../poetry-options";
 import { PoetryService } from "../../poetry-service";
-import { PoetryCommand } from "../../types";
+import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("Commands", () => {
   let poetryService: PoetryService;
   let commands: Commands;
   let packageName: string;
+  let options: PoetryOption[];
   let runPoetry: sinon.SinonStub;
 
   before(() => {
     packageName = "packageName";
+    options = installOptions;
   });
 
   beforeEach(() => {
@@ -38,6 +41,49 @@ suite("Commands", () => {
     sinon.assert.calledOnce(promptPackageName);
     sinon.assert.notCalled(runPoetry);
   };
+
+  test("installs packages", async () => {
+    await commands.installPackages();
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.install]);
+  });
+
+  test("installs packages with options", async () => {
+    const promptOptions = sinon
+      .stub(poetryService, "promptOptions")
+      .callsFake(() =>
+        Promise.resolve(options.map((option) => option.description))
+      );
+
+    await commands.installPackagesWithOptions();
+
+    sinon.assert.calledOnce(promptOptions);
+    sinon.assert.calledWith(runPoetry, [
+      PoetryCommand.install,
+      ...options.map((option) => option.option),
+    ]);
+  });
+
+  test("installs packages with unknown options", async () => {
+    const promptOptions = sinon
+      .stub(poetryService, "promptOptions")
+      .callsFake(() => Promise.resolve(["a", "b"]));
+
+    await commands.installPackagesWithOptions();
+
+    sinon.assert.calledOnce(promptOptions);
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.install]);
+  });
+
+  test("installs packages without selecting options", async () => {
+    const promptOptions = sinon
+      .stub(poetryService, "promptOptions")
+      .callsFake(() => Promise.resolve(undefined));
+
+    await commands.installPackagesWithOptions();
+
+    sinon.assert.calledOnce(promptOptions);
+    sinon.assert.notCalled(runPoetry);
+  });
 
   test("adds package", async () => {
     const promptPackageName = mockPromptPackageName();

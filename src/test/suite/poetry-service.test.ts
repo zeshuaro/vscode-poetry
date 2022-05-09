@@ -17,6 +17,15 @@ suite("PoetryService", () => {
     sinon.restore();
   });
 
+  test("prompts options", async () => {
+    const options = ["a", "b", "c"];
+    const showInputBox = sinon.stub(vscode.window, "showQuickPick");
+
+    await poetryService.promptOptions(options);
+
+    sinon.assert.calledOnce(showInputBox);
+  });
+
   test("prompts package name", async () => {
     const packageName = "package";
     const showInputBox = sinon

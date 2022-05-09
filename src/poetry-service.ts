@@ -3,6 +3,13 @@ import * as vscode from "vscode";
 export class PoetryService {
   terminal?: vscode.Terminal;
 
+  promptOptions = async (items: string[]) =>
+    await vscode.window.showQuickPick(items, {
+      canPickMany: true,
+      title: "Select one or more options to run with the command",
+      placeHolder: "Press space to select/unselect an option",
+    });
+
   promptPackageName = async () =>
     await vscode.window.showInputBox({
       placeHolder: "Package name, git URL or local path",

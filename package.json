@@ -16,6 +16,8 @@
     "Other"
   ],
   "activationEvents": [
+    "onCommand:vscode-python-poetry.installPackages",
+    "onCommand:vscode-python-poetry.installPackagesWithOptions",
     "onCommand:vscode-python-poetry.addPackage",
     "onCommand:vscode-python-poetry.addDevPackage",
     "onCommand:vscode-python-poetry.removePackage",
@@ -27,6 +29,16 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
+      {
+        "command": "vscode-python-poetry.installPackages",
+        "title": "Install packages",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.installPackagesWithOptions",
+        "title": "Install packages (with options)",
+        "category": "Poetry"
+      },
       {
         "command": "vscode-python-poetry.addPackage",
         "title": "Add package(s)",
@@ -93,5 +105,11 @@
     "sinon": "14.0.0",
     "typescript": "4.6.4",
     "vsce": "2.7.0"
+  },
+  "__metadata": {
+    "id": "ad8177d1-0e40-42a1-b51e-6cbae086b46b",
+    "publisherDisplayName": "zeshuaro",
+    "publisherId": "2734336c-fb4f-41fb-af35-b05f36285b55",
+    "isPreReleaseVersion": false
   }
 }
