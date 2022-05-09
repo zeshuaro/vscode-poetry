@@ -7,6 +7,11 @@
   "postUpdateOptions": ["yarnDedupeFewer"],
   "packageRules": [
     {
+      "groupName": "VS Code dependencies",
+      "matchPaths": ["package.json"],
+      "matchPackageNames": ["vscode", "@types/vscode"]
+    },
+    {
       "groupName": "GitHub Actions dependencies",
       "matchPaths": [".github/workflows/*.yml"],
       "addLabels": ["ci"]
