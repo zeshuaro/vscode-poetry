@@ -1,3 +1,18 @@
+## v0.0.4
+
+## 📄 Documentation
+
+- docs: update readme on install command ([#34](https://github.com/zeshuaro/vscode-poetry/pull/34))
+
+## 💬 Other
+
+- chore(deps): update typescript-eslint monorepo to v5.23.0 ([#37](https://github.com/zeshuaro/vscode-poetry/pull/37))
+- chore(deps): update dependency vscode to v1.67.1 ([#36](https://github.com/zeshuaro/vscode-poetry/pull/36))
+- chore(deps): update dependency @types/node to v16.11.34 ([#39](https://github.com/zeshuaro/vscode-poetry/pull/39))
+- chore(deps): update dependency @types/node to v16.11.35 ([#40](https://github.com/zeshuaro/vscode-poetry/pull/40))
+- chore(deps): update dependency glob to v8.0.2 ([#41](https://github.com/zeshuaro/vscode-poetry/pull/41))
+- chore(deps): update dependency glob to v8.0.3 ([#43](https://github.com/zeshuaro/vscode-poetry/pull/43))
+
 ## v0.0.3
 
 ## 🚀 Features
