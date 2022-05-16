@@ -24,7 +24,9 @@
     "onCommand:vscode-python-poetry.removeDevPackage",
     "onCommand:vscode-python-poetry.updatePackages",
     "onCommand:vscode-python-poetry.updatePackagesNoDev",
-    "onCommand:vscode-python-poetry.updatePackage"
+    "onCommand:vscode-python-poetry.updatePackage",
+    "onCommand:vscode-python-poetry.lockPackages",
+    "onCommand:vscode-python-poetry.lockPackagesNoUpdate"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -72,6 +74,16 @@
       {
         "command": "vscode-python-poetry.updatePackage",
         "title": "Update selected package(s)",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.lockPackages",
+        "title": "Lock packages",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.lockPackagesNoUpdate",
+        "title": "Lock packages (no update)",
         "category": "Poetry"
       }
     ]

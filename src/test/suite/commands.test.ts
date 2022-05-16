@@ -177,4 +177,14 @@ suite("Commands", () => {
     await commands.updatePackage();
     verifyrunPoetryNotCalled(promptPackageName);
   });
+
+  test("locks packages", () => {
+    commands.lockPackages();
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.lock]);
+  });
+
+  test("locks packages no update", () => {
+    commands.lockPackagesNoUpdate();
+    sinon.assert.calledWith(runPoetry, [PoetryCommand.lock, "--no-update"]);
+  });
 });
