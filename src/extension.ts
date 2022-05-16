@@ -40,6 +40,14 @@ export function activate(context: vscode.ExtensionContext): void {
         "vscode-python-poetry.updatePackage",
         commands.updatePackage
       ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.lockPackages",
+        commands.lockPackages
+      ),
+      vscode.commands.registerCommand(
+        "vscode-python-poetry.lockPackagesNoUpdate",
+        commands.lockPackagesNoUpdate
+      ),
     ]
   );
 }

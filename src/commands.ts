@@ -34,6 +34,10 @@ export class Commands {
   updatePackage = async () =>
     await this.managePackageUpdate({ askPackageName: true });
 
+  lockPackages = (): void => this.managePackageLock();
+
+  lockPackagesNoUpdate = (): void => this.managePackageLock({ noUpdate: true });
+
   private managePackageInstall = async ({
     askOptions = false,
   }: {
@@ -99,6 +103,16 @@ export class Commands {
     }
     if (noDev) {
       args.push("--no-dev");
+    }
+    this.poetryService.runPoetry(args);
+  };
+
+  private managePackageLock = ({
+    noUpdate = false,
+  }: { noUpdate?: boolean } = {}) => {
+    const args: string[] = [PoetryCommand.lock];
+    if (noUpdate) {
+      args.push("--no-update");
     }
     this.poetryService.runPoetry(args);
   };

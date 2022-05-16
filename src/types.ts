@@ -3,6 +3,7 @@ export enum PoetryCommand {
   add = "add",
   remove = "remove",
   update = "update",
+  lock = "lock",
 }
 
 export type PoetryOption = {
