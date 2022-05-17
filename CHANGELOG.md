@@ -1,6 +1,15 @@
 ## v0.0.5
 
-- no changes## v0.0.4
+## 🚀 Features
+
+- feat: add support for poetry lock commands ([#47](https://github.com/zeshuaro/vscode-poetry/pull/47))
+
+## 💬 Other
+
+- chore(deps): update dependency @types/node to v16.11.36 ([#48](https://github.com/zeshuaro/vscode-poetry/pull/48))
+- chore(deps): update typescript-eslint monorepo to v5.24.0 ([#49](https://github.com/zeshuaro/vscode-poetry/pull/49))
+ 
+## v0.0.4
 
 ## 📄 Documentation
 
