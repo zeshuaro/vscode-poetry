@@ -116,7 +116,7 @@
     "prettier": "2.6.2",
     "sinon": "14.0.0",
     "typescript": "4.6.4",
-    "vsce": "2.7.0"
+    "vsce": "2.8.0"
   },
   "__metadata": {
     "id": "ad8177d1-0e40-42a1-b51e-6cbae086b46b",
