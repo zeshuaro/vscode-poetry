@@ -1,3 +1,11 @@
+## v0.1.0
+
+## 💬 Other
+
+- chore(deps): update dependency @vscode/test-electron to v2.1.4 ([#69](https://github.com/zeshuaro/vscode-poetry/pull/69))
+- chore(deps): update vs code dependencies to ^1.68.0 ([#70](https://github.com/zeshuaro/vscode-poetry/pull/70))
+- chore(deps): update typescript-eslint monorepo to v5.28.0 ([#73](https://github.com/zeshuaro/vscode-poetry/pull/73))
+
 ## v0.0.9
 
 ## 💬 Other
