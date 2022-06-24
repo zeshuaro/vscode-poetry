@@ -1,3 +1,12 @@
+## v0.1.1
+
+## 💬 Other
+
+- chore(deps): update dependency @types/node to v16.11.41 ([#74](https://github.com/zeshuaro/vscode-poetry/pull/74))
+- chore(deps): update dependency prettier to v2.7.1 ([#75](https://github.com/zeshuaro/vscode-poetry/pull/75))
+- chore(deps): update dependency typescript to v4.7.4 ([#76](https://github.com/zeshuaro/vscode-poetry/pull/76))
+- chore(deps): update dependency eslint to v8.18.0 ([#77](https://github.com/zeshuaro/vscode-poetry/pull/77))
+
 ## v0.1.0
 
 ## 💬 Other
