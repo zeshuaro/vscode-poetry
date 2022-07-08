@@ -1,3 +1,14 @@
+## v0.1.3
+
+## 💬 Other
+
+- chore(deps): update dependency @vscode/test-electron to v2.1.5 ([#81](https://github.com/zeshuaro/vscode-poetry/pull/81))
+- chore(deps): update dependency @types/sinon to v10.0.12 ([#83](https://github.com/zeshuaro/vscode-poetry/pull/83))
+- chore(deps): update dependency @types/node to v16.11.42 ([#85](https://github.com/zeshuaro/vscode-poetry/pull/85))
+- chore(deps): update typescript-eslint monorepo to v5.30.3 ([#82](https://github.com/zeshuaro/vscode-poetry/pull/82))
+- chore(deps): update dependency eslint to v8.19.0 ([#86](https://github.com/zeshuaro/vscode-poetry/pull/86))
+- chore(deps): update dependency @types/node to v16.11.43 ([#87](https://github.com/zeshuaro/vscode-poetry/pull/87))
+
 ## v0.1.2
 
 ## 💬 Other
