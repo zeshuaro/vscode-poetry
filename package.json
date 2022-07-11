@@ -10,7 +10,7 @@
     "url": "https://github.com/zeshuaro/vscode-poetry"
   },
   "engines": {
-    "vscode": "^1.68.0"
+    "vscode": "^1.69.0"
   },
   "categories": [
     "Other"
@@ -104,7 +104,7 @@
     "@types/mocha": "9.1.1",
     "@types/node": "16.11.43",
     "@types/sinon": "10.0.12",
-    "@types/vscode": "^1.68.0",
+    "@types/vscode": "^1.69.0",
     "@typescript-eslint/eslint-plugin": "5.30.5",
     "@typescript-eslint/parser": "5.30.5",
     "@vscode/test-electron": "2.1.5",
