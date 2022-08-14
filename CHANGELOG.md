@@ -1,3 +1,14 @@
+## v0.3.1
+
+## 📄 Documentation
+
+- docs: add issue templates ([#110](https://github.com/zeshuaro/vscode-poetry/pull/110))
+
+## 💬 Other
+
+- chore(deps): update dependency @types/vscode to ^1.70.0 ([#107](https://github.com/zeshuaro/vscode-poetry/pull/107))
+- chore(deps): update typescript-eslint monorepo to v5.33.0 ([#109](https://github.com/zeshuaro/vscode-poetry/pull/109))
+
 ## v0.3.0
 
 ## 💬 Other
