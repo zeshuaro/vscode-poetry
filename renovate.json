@@ -11,14 +11,16 @@
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "stabilityDays": 3
+      "stabilityDays": 3,
+      "automerge": true
     },
     {
       "groupName": "VS Code dependencies",
       "matchPaths": ["package.json"],
       "matchPackageNames": ["vscode", "@types/vscode"],
       "rangeStrategy": "bump",
-      "patch": false
+      "patch": false,
+      "automerge": false
     },
     {
       "groupName": "GitHub Actions dependencies",
