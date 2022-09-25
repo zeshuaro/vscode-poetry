@@ -1,3 +1,10 @@
+## v0.4.2
+
+## 💬 Other
+
+- chore(deps): lock file maintenance ([#134](https://github.com/zeshuaro/vscode-poetry/pull/134))
+- chore(deps): update typescript-eslint monorepo to v5.38.0 ([#137](https://github.com/zeshuaro/vscode-poetry/pull/137))
+
 ## v0.4.1
 
 ## 💬 Other
