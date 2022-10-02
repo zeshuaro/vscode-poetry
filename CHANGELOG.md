@@ -1,3 +1,13 @@
+## v0.4.3
+
+## 💬 Other
+
+- chore(deps): update dependency eslint to v8.24.0 ([#140](https://github.com/zeshuaro/vscode-poetry/pull/140))
+- chore(deps): update dependency @types/node to v16.11.62 ([#141](https://github.com/zeshuaro/vscode-poetry/pull/141))
+- chore(deps): update typescript-eslint monorepo to v5.38.1 ([#142](https://github.com/zeshuaro/vscode-poetry/pull/142))
+- chore(deps): update dependency typescript to v4.8.4 ([#143](https://github.com/zeshuaro/vscode-poetry/pull/143))
+- chore(deps): update dependency @types/mocha to v10 ([#144](https://github.com/zeshuaro/vscode-poetry/pull/144))
+
 ## v0.4.2
 
 ## 💬 Other
