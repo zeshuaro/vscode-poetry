@@ -83,7 +83,7 @@ jobs:
           yarn vsce publish --yarn -p ${{ secrets.VSCE_PAT }}
 
       - name: Release 🚀
-        uses: ncipollo/release-action@v1.10.0
+        uses: ncipollo/release-action@v1.11.1
         with:
           tag: ${{ steps.latest-tag.outputs.tag }}
           artifacts: "vscode-python-poetry-*.vsix"
