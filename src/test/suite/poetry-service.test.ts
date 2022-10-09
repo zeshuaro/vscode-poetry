@@ -1,55 +1,153 @@
-import assert = require("assert");
-import { afterEach, beforeEach } from "mocha";
-import * as sinon from "sinon";
-import * as vscode from "vscode";
+import { afterEach, before, beforeEach } from "mocha";
+import { assert, restore, SinonStub, stub } from "sinon";
+import { Terminal, window } from "vscode";
 import { PoetryService } from "../../poetry-service";
+import { PoetryCommand } from "../../types";
 
 suite("PoetryService", () => {
   let poetryService: PoetryService;
-  let terminal: vscode.Terminal;
+  let terminal: Terminal;
+  let sendText: SinonStub;
+  let showQuickPick: SinonStub;
+  let showInputBox: SinonStub;
+  let command: PoetryCommand;
+  let packageName: string;
+
+  before(() => {
+    command = PoetryCommand.add;
+    packageName = "packageName";
+  });
 
   beforeEach(() => {
+    terminal = <Terminal>{
+      sendText: (_text: string, _addNewLine?: boolean) => {
+        // for mocking
+      },
+      exitStatus: undefined,
+    };
+    sendText = stub(terminal, "sendText");
+    stub(window, "createTerminal").callsFake(() => terminal);
+
     poetryService = new PoetryService();
-    terminal = <vscode.Terminal>{};
   });
 
   afterEach(() => {
-    sinon.restore();
+    restore();
   });
 
-  test("prompts options", async () => {
-    const options = ["a", "b", "c"];
-    const showInputBox = sinon.stub(vscode.window, "showQuickPick");
+  const mockShowQuickPick = (values: string[] | undefined) => {
+    showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
+      [items: string[]],
+      Thenable<string[] | undefined>
+    >;
+    showQuickPick.callsFake(() => Promise.resolve(values));
+  };
 
-    await poetryService.promptOptions(options);
-
-    sinon.assert.calledOnce(showInputBox);
-  });
-
-  test("prompts package name", async () => {
-    const packageName = "package";
-    const showInputBox = sinon
-      .stub(vscode.window, "showInputBox")
-      .callsFake(() => Promise.resolve(packageName));
-
-    const actual = await poetryService.promptPackageName();
-
-    sinon.assert.calledOnce(showInputBox);
-    assert.strictEqual(actual, packageName);
-  });
-
-  test("runs poetry", () => {
-    terminal.sendText = sinon.stub();
-    const createTerminal = sinon
-      .stub(vscode.window, "createTerminal")
-      .callsFake(() => terminal);
-
-    poetryService.runPoetry(["add requests"]);
-
-    sinon.assert.calledOnce(createTerminal);
-    sinon.assert.calledWith(
-      <sinon.SinonStub>terminal.sendText,
-      "poetry add requests"
+  const mockShowInputBox = (value: string | undefined) => {
+    showInputBox = stub(window, "showInputBox").callsFake(() =>
+      Promise.resolve(value)
     );
+  };
+
+  test("install packages", async () => {
+    await poetryService.installPackages();
+    assert.calledWith(sendText, "poetry install");
+  });
+
+  test("install packages ask options", async () => {
+    mockShowQuickPick(PoetryService.installOptions.map((e) => e.description));
+
+    await poetryService.installPackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(
+      sendText,
+      `poetry install ${PoetryService.installOptions
+        .map((e) => e.option)
+        .join(" ")}`
+    );
+  });
+
+  test("install packages ask options without selections", async () => {
+    mockShowQuickPick(undefined);
+
+    await poetryService.installPackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(sendText, "poetry install");
+  });
+
+  test("install packages unknown option", async () => {
+    mockShowQuickPick(["clearlyRandomOption"]);
+
+    await poetryService.installPackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(sendText, "poetry install");
+  });
+
+  test("manage packages", async () => {
+    mockShowInputBox(packageName);
+
+    await poetryService.managePackages({ command });
+
+    assert.calledWith(sendText, `poetry ${command} ${packageName}`);
+    assert.calledOnce(showInputBox);
+  });
+
+  test("manage packages without package name", async () => {
+    mockShowInputBox(undefined);
+
+    await poetryService.managePackages({ command });
+
+    assert.notCalled(sendText);
+    assert.calledOnce(showInputBox);
+  });
+
+  test("manage dev packages", async () => {
+    mockShowInputBox(packageName);
+
+    await poetryService.managePackages({ command, isDev: true });
+
+    assert.calledWith(sendText, `poetry ${command} ${packageName} --dev`);
+    assert.calledOnce(showInputBox);
+  });
+
+  test("update packages", async () => {
+    await poetryService.updatePackages();
+    assert.calledWith(sendText, "poetry update");
+  });
+
+  test("update packages no dev", async () => {
+    await poetryService.updatePackages({ noDev: true });
+    assert.calledWith(sendText, "poetry update --no-dev");
+  });
+
+  test("update packages with package name", async () => {
+    mockShowInputBox(packageName);
+
+    await poetryService.updatePackages({ askPackageName: true });
+
+    assert.calledWith(sendText, `poetry update ${packageName}`);
+    assert.calledOnce(showInputBox);
+  });
+
+  test("update packages without package name", async () => {
+    mockShowInputBox(undefined);
+
+    await poetryService.updatePackages({ askPackageName: true });
+
+    assert.notCalled(sendText);
+    assert.calledOnce(showInputBox);
+  });
+
+  test("lock packages", () => {
+    poetryService.lockPackages();
+    assert.calledWith(sendText, "poetry lock");
+  });
+
+  test("lock packages no update", () => {
+    poetryService.lockPackages({ noUpdate: true });
+    assert.calledWith(sendText, "poetry lock --no-update");
   });
 });

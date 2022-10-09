@@ -1,4 +1,3 @@
-import { installOptions } from "./poetry-options";
 import defaultPoetryService, { PoetryService } from "./poetry-service";
 import { PoetryCommand } from "./types";
 
@@ -9,113 +8,41 @@ export class Commands {
     this.poetryService = poetryService;
   }
 
-  installPackages = async () => await this.managePackageInstall();
+  installPackages = () => this.poetryService.installPackages();
 
-  installPackagesWithOptions = async () =>
-    await this.managePackageInstall({ askOptions: true });
+  installPackagesWithOptions = () =>
+    this.poetryService.installPackages({ askOptions: true });
 
-  addPackage = async () =>
-    await this.managePackage({ command: PoetryCommand.add });
+  addPackage = () =>
+    this.poetryService.managePackages({ command: PoetryCommand.add });
 
-  addDevPackage = async () =>
-    await this.managePackage({ command: PoetryCommand.add, isDev: true });
+  addDevPackage = () =>
+    this.poetryService.managePackages({
+      command: PoetryCommand.add,
+      isDev: true,
+    });
 
-  removePackage = async () =>
-    await this.managePackage({ command: PoetryCommand.remove });
+  removePackage = () =>
+    this.poetryService.managePackages({ command: PoetryCommand.remove });
 
-  removeDevPackage = async () =>
-    await this.managePackage({ command: PoetryCommand.remove, isDev: true });
+  removeDevPackage = () =>
+    this.poetryService.managePackages({
+      command: PoetryCommand.remove,
+      isDev: true,
+    });
 
-  updatePackages = async () => await this.managePackageUpdate();
+  updatePackages = () => this.poetryService.updatePackages();
 
-  updatePackagesNoDev = async () =>
-    await this.managePackageUpdate({ noDev: true });
+  updatePackagesNoDev = () =>
+    this.poetryService.updatePackages({ noDev: true });
 
-  updatePackage = async () =>
-    await this.managePackageUpdate({ askPackageName: true });
+  updatePackage = () =>
+    this.poetryService.updatePackages({ askPackageName: true });
 
-  lockPackages = (): void => this.managePackageLock();
+  lockPackages = (): void => this.poetryService.lockPackages();
 
-  lockPackagesNoUpdate = (): void => this.managePackageLock({ noUpdate: true });
-
-  private managePackageInstall = async ({
-    askOptions = false,
-  }: {
-    askOptions?: boolean;
-  } = {}) => {
-    const args: string[] = [PoetryCommand.install];
-    if (askOptions) {
-      const options = await this.poetryService.promptOptions(
-        installOptions.map((option) => option.description)
-      );
-      if (!options?.length) {
-        return;
-      }
-      options.forEach((option) => {
-        const installOption = installOptions.find(
-          (e) => e.description === option
-        )?.option;
-        if (installOption) {
-          args.push(installOption);
-        }
-      });
-    }
-    this.poetryService.runPoetry(args);
-  };
-
-  private managePackage = async ({
-    command,
-    isDev = false,
-  }: {
-    command: PoetryCommand;
-    isDev?: boolean;
-  }) => {
-    const packageName = await this.poetryService.promptPackageName();
-    if (!packageName) {
-      return;
-    }
-
-    const args = [command, packageName];
-    if (isDev) {
-      args.push("--dev");
-    }
-    this.poetryService.runPoetry(args);
-  };
-
-  private managePackageUpdate = async ({
-    askPackageName = false,
-    noDev = false,
-  }: {
-    askPackageName?: boolean;
-    noDev?: boolean;
-  } = {}) => {
-    let packageName: string | undefined;
-    if (askPackageName) {
-      packageName = await this.poetryService.promptPackageName();
-      if (!packageName) {
-        return;
-      }
-    }
-
-    const args: string[] = [PoetryCommand.update];
-    if (packageName) {
-      args.push(packageName);
-    }
-    if (noDev) {
-      args.push("--no-dev");
-    }
-    this.poetryService.runPoetry(args);
-  };
-
-  private managePackageLock = ({
-    noUpdate = false,
-  }: { noUpdate?: boolean } = {}) => {
-    const args: string[] = [PoetryCommand.lock];
-    if (noUpdate) {
-      args.push("--no-update");
-    }
-    this.poetryService.runPoetry(args);
-  };
+  lockPackagesNoUpdate = (): void =>
+    this.poetryService.lockPackages({ noUpdate: true });
 }
 
 export default new Commands();
