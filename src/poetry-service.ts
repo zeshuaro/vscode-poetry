@@ -39,9 +39,11 @@ export class PoetryService {
   managePackages = async ({
     command,
     isDev = false,
+    askGroup = false,
   }: {
     command: PoetryCommand;
     isDev?: boolean;
+    askGroup?: boolean;
   }) => {
     const packageName = await this.promptPackageName();
     if (!packageName) {
@@ -52,6 +54,16 @@ export class PoetryService {
     if (isDev) {
       args.push("--dev");
     }
+    if (askGroup) {
+      const group = await this.promptGroup();
+      if (group === undefined) {
+        return;
+      }
+      if (group.length > 0) {
+        args.push(`--group ${group}`);
+      }
+    }
+
     this.runPoetry(args);
   };
 
@@ -109,6 +121,12 @@ export class PoetryService {
     return this.terminal;
   };
 
+  private promptGroup = () =>
+    window.showInputBox({
+      title: "Enter a dependency group",
+      placeHolder: "Leave it as empty to use the main dependency group",
+    });
+
   private promptOptions = (items: string[]) =>
     window.showQuickPick(items, {
       canPickMany: true,
@@ -118,8 +136,8 @@ export class PoetryService {
 
   private promptPackageName = () =>
     window.showInputBox({
-      placeHolder: "Package name, git URL or local path",
       title: "Enter a package name, git URL or local path",
+      placeHolder: "Package name, git URL or local path",
     });
 
   private runPoetry = (args: string[]): void => {

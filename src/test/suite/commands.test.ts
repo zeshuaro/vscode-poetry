@@ -40,12 +40,15 @@ suite("Commands", () => {
   test("add package", async () => {
     const managePackage = mockManagePackage();
     await commands.addPackage();
-    assert.calledWith(managePackage, { command: PoetryCommand.add });
+    assert.calledWith(managePackage, {
+      command: PoetryCommand.add,
+      askGroup: true,
+    });
   });
 
   test("add dev package", async () => {
     const managePackage = mockManagePackage();
-    await commands.addDevPackage();
+    await commands.addDevPackageLegacy();
     assert.calledWith(managePackage, {
       command: PoetryCommand.add,
       isDev: true,
@@ -55,12 +58,15 @@ suite("Commands", () => {
   test("remove package", async () => {
     const managePackage = mockManagePackage();
     await commands.removePackage();
-    assert.calledWith(managePackage, { command: PoetryCommand.remove });
+    assert.calledWith(managePackage, {
+      command: PoetryCommand.remove,
+      askGroup: true,
+    });
   });
 
   test("remove dev package", async () => {
     const managePackage = mockManagePackage();
-    await commands.removeDevPackage();
+    await commands.removeDevPackageLegacy();
     assert.calledWith(managePackage, {
       command: PoetryCommand.remove,
       isDev: true,

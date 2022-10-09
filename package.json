@@ -19,9 +19,9 @@
     "onCommand:vscode-python-poetry.installPackages",
     "onCommand:vscode-python-poetry.installPackagesWithOptions",
     "onCommand:vscode-python-poetry.addPackage",
-    "onCommand:vscode-python-poetry.addDevPackage",
+    "onCommand:vscode-python-poetry.addDevPackageLegacy",
     "onCommand:vscode-python-poetry.removePackage",
-    "onCommand:vscode-python-poetry.removeDevPackage",
+    "onCommand:vscode-python-poetry.removeDevPackageLegacy",
     "onCommand:vscode-python-poetry.updatePackages",
     "onCommand:vscode-python-poetry.updatePackagesNoDev",
     "onCommand:vscode-python-poetry.updatePackage",
@@ -47,8 +47,8 @@
         "category": "Poetry"
       },
       {
-        "command": "vscode-python-poetry.addDevPackage",
-        "title": "Add dev package(s)",
+        "command": "vscode-python-poetry.addDevPackageLegacy",
+        "title": "[DEPRECATED, use Add package(s)] Add dev package(s)",
         "category": "Poetry"
       },
       {
@@ -57,8 +57,8 @@
         "category": "Poetry"
       },
       {
-        "command": "vscode-python-poetry.removeDevPackage",
-        "title": "Remove dev package(s)",
+        "command": "vscode-python-poetry.removeDevPackageLegacy",
+        "title": "[DEPRECATED, use Remove package(s)] Remove dev package(s)",
         "category": "Poetry"
       },
       {
