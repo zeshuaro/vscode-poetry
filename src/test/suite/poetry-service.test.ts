@@ -12,10 +12,12 @@ suite("PoetryService", () => {
   let showInputBox: SinonStub;
   let command: PoetryCommand;
   let packageName: string;
+  let group: string;
 
   before(() => {
     command = PoetryCommand.add;
     packageName = "packageName";
+    group = "group";
   });
 
   beforeEach(() => {
@@ -43,10 +45,11 @@ suite("PoetryService", () => {
     showQuickPick.callsFake(() => Promise.resolve(values));
   };
 
-  const mockShowInputBox = (value: string | undefined) => {
-    showInputBox = stub(window, "showInputBox").callsFake(() =>
-      Promise.resolve(value)
-    );
+  const mockShowInputBox = (...values: Array<string | undefined>) => {
+    showInputBox = stub(window, "showInputBox");
+    values.forEach((value, index) => {
+      showInputBox.onCall(index).returns(value);
+    });
   };
 
   test("install packages", async () => {
@@ -111,6 +114,36 @@ suite("PoetryService", () => {
 
     assert.calledWith(sendText, `poetry ${command} ${packageName} --dev`);
     assert.calledOnce(showInputBox);
+  });
+
+  test("manage packages with group", async () => {
+    mockShowInputBox(packageName, group);
+
+    await poetryService.managePackages({ command, askGroup: true });
+
+    assert.calledWith(
+      sendText,
+      `poetry ${command} ${packageName} --group ${group}`
+    );
+    assert.calledTwice(showInputBox);
+  });
+
+  test("manage packages with undefined group", async () => {
+    mockShowInputBox(packageName, undefined);
+
+    await poetryService.managePackages({ command, askGroup: true });
+
+    assert.notCalled(sendText);
+    assert.calledTwice(showInputBox);
+  });
+
+  test("manage packages with empty string group", async () => {
+    mockShowInputBox(packageName, "");
+
+    await poetryService.managePackages({ command, askGroup: true });
+
+    assert.calledWith(sendText, `poetry ${command} ${packageName}`);
+    assert.calledTwice(showInputBox);
   });
 
   test("update packages", async () => {

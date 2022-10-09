@@ -1,52 +1,52 @@
-import * as vscode from "vscode";
-import commands from "./commands";
+import { commands, ExtensionContext } from "vscode";
+import poetryCommands from "./commands";
 
-export function activate(context: vscode.ExtensionContext): void {
+export function activate(context: ExtensionContext): void {
   context.subscriptions.push(
     ...[
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.installPackages",
-        commands.installPackages
+        poetryCommands.installPackages
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.installPackagesWithOptions",
-        commands.installPackagesWithOptions
+        poetryCommands.installPackagesWithOptions
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.addPackage",
-        commands.addPackage
+        poetryCommands.addPackage
       ),
-      vscode.commands.registerCommand(
-        "vscode-python-poetry.addDevPackage",
-        commands.addDevPackage
+      commands.registerCommand(
+        "vscode-python-poetry.addDevPackageLegacy",
+        poetryCommands.addDevPackageLegacy
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.removePackage",
-        commands.removePackage
+        poetryCommands.removePackage
       ),
-      vscode.commands.registerCommand(
-        "vscode-python-poetry.removeDevPackage",
-        commands.removeDevPackage
+      commands.registerCommand(
+        "vscode-python-poetry.removeDevPackageLegacy",
+        poetryCommands.removeDevPackageLegacy
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.updatePackages",
-        commands.updatePackages
+        poetryCommands.updatePackages
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.updatePackagesNoDev",
-        commands.updatePackagesNoDev
+        poetryCommands.updatePackagesNoDev
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.updatePackage",
-        commands.updatePackage
+        poetryCommands.updatePackage
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.lockPackages",
-        commands.lockPackages
+        poetryCommands.lockPackages
       ),
-      vscode.commands.registerCommand(
+      commands.registerCommand(
         "vscode-python-poetry.lockPackagesNoUpdate",
-        commands.lockPackagesNoUpdate
+        poetryCommands.lockPackagesNoUpdate
       ),
     ]
   );

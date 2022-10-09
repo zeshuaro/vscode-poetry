@@ -14,18 +14,24 @@ export class Commands {
     this.poetryService.installPackages({ askOptions: true });
 
   addPackage = () =>
-    this.poetryService.managePackages({ command: PoetryCommand.add });
+    this.poetryService.managePackages({
+      command: PoetryCommand.add,
+      askGroup: true,
+    });
 
-  addDevPackage = () =>
+  addDevPackageLegacy = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.add,
       isDev: true,
     });
 
   removePackage = () =>
-    this.poetryService.managePackages({ command: PoetryCommand.remove });
+    this.poetryService.managePackages({
+      command: PoetryCommand.remove,
+      askGroup: true,
+    });
 
-  removeDevPackage = () =>
+  removeDevPackageLegacy = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.remove,
       isDev: true,
