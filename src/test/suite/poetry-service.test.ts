@@ -63,7 +63,9 @@ suite("PoetryService", () => {
     mockShowQuickPick(
       PoetryService.installOptions.map((opt) => opt.description)
     );
-    mockShowInputBox(optionValue);
+    showInputBox = stub(window, "showInputBox").returns(
+      Promise.resolve(optionValue)
+    );
 
     await poetryService.installPackages({ askOptions: true });
 
