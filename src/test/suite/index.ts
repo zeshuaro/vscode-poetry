@@ -1,11 +1,11 @@
-import * as path from "path";
-import * as Mocha from "mocha";
-import * as glob from "glob";
+import { sync } from "glob";
+import { join, resolve } from "path";
+import * as Mocha from "mocha"; // skipcq: JS-C1003
 
 function setupCoverage() {
   const NYC = require("nyc");
   const nyc = new NYC({
-    cwd: path.join(__dirname, "..", "..", ".."),
+    cwd: join(__dirname, "..", "..", ".."),
     exclude: ["vscode-service.ts", "**/test/**", ".vscode-test/**"],
     reporter: ["text", "html", "lcov"],
     all: true,
@@ -28,19 +28,22 @@ export async function run(): Promise<void> {
     color: true,
   });
 
-  const testsRoot = path.resolve(__dirname, "..");
+  const testsRoot = resolve(__dirname, "..");
   const nyc = setupCoverage();
-  const files = glob.sync("**/**.test.js", { cwd: testsRoot });
-  files.forEach((f) => mocha.addFile(path.resolve(testsRoot, f)));
+  const files = sync("**/**.test.js", { cwd: testsRoot });
+  files.forEach((f) => mocha.addFile(resolve(testsRoot, f)));
 
   try {
     await new Promise<void>((resolve, reject) => {
-      mocha.run((failures) =>
-        failures ? reject(new Error(`${failures} tests failed`)) : resolve()
-      );
+      mocha.run((failures) => {
+        return failures
+          ? reject(new Error(`${failures} tests failed`))
+          : resolve();
+      });
     });
   } catch (err) {
     console.error(err);
+    throw err;
   } finally {
     nyc.writeCoverageFile();
     await nyc.report();
