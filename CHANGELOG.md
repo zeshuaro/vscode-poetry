@@ -1,3 +1,36 @@
+## v0.5.0
+
+## 🚀 Features
+
+- feat: add group support for add and remove commands ([#150](https://github.com/zeshuaro/vscode-poetry/pull/150))
+- feat: add without option support to install command ([#165](https://github.com/zeshuaro/vscode-poetry/pull/165))
+- feat: add only option support to install command ([#166](https://github.com/zeshuaro/vscode-poetry/pull/166))
+- feat: deprecate no dev option for install command ([#168](https://github.com/zeshuaro/vscode-poetry/pull/168))
+
+## 🧪 Tests
+
+- test: fix failing test and test suite exit code ([#167](https://github.com/zeshuaro/vscode-poetry/pull/167))
+
+## 📄 Documentation
+
+- docs: update readme on install and remove commands ([#155](https://github.com/zeshuaro/vscode-poetry/pull/155))
+- docs: fix readme undefined references ([#156](https://github.com/zeshuaro/vscode-poetry/pull/156))
+- docs: update changelog config dependencies section ([#157](https://github.com/zeshuaro/vscode-poetry/pull/157))
+
+## 📦 Dependencies
+
+- chore(deps): update dependency @types/node to v16.11.64 ([#146](https://github.com/zeshuaro/vscode-poetry/pull/146))
+- chore(deps): update dependency sinon to v14.0.1 ([#147](https://github.com/zeshuaro/vscode-poetry/pull/147))
+- chore(deps): update typescript-eslint monorepo to v5.39.0 ([#148](https://github.com/zeshuaro/vscode-poetry/pull/148))
+- chore(deps): lock file maintenance ([#158](https://github.com/zeshuaro/vscode-poetry/pull/158))
+- chore(deps): update vs code dependencies to ^1.72.0 ([#159](https://github.com/zeshuaro/vscode-poetry/pull/159))
+- chore(deps): update dependency eslint to v8.25.0 ([#160](https://github.com/zeshuaro/vscode-poetry/pull/160))
+- chore(deps): update typescript-eslint monorepo to v5.40.0 ([#163](https://github.com/zeshuaro/vscode-poetry/pull/163))
+
+## 💬 Other
+
+- refactor: update code with better abstractions ([#149](https://github.com/zeshuaro/vscode-poetry/pull/149))
+
 ## v0.4.3
 
 ## 💬 Other
