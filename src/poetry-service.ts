@@ -4,18 +4,29 @@ import { PoetryCommand, PoetryOption } from "./types";
 export class PoetryService {
   terminal?: Terminal;
 
+  static globalOptions: PoetryOption[] = [
+    {
+      description: "Run without the dependency group(s) (--without)",
+      value: "--without",
+      promptDescription: "Enter the dependency group(s) to ignore (--without)",
+    },
+  ];
+
   static installOptions: PoetryOption[] = [
+    ...this.globalOptions,
     {
-      description: "Do not install the development dependencies",
-      option: "--no-dev",
+      description: "Do not install the development dependencies (--no-dev)",
+      value: "--no-dev",
     },
     {
-      description: "Do not install the root package (the current project)",
-      option: "--no-root",
+      description:
+        "Do not install the root package (the current project) (--no-root)",
+      value: "--no-root",
     },
     {
-      description: "Removes packages not present in the lock file",
-      option: "--remove-untracked",
+      description:
+        "Remove packages not present in the lock file (--remove-untracked)",
+      value: "--remove-untracked",
     },
   ];
 
@@ -26,12 +37,11 @@ export class PoetryService {
   } = {}) => {
     const args: string[] = [PoetryCommand.install];
     if (askOptions) {
-      const options = await this.getInstallOptions();
-      options?.forEach((option) => {
-        if (option) {
-          args.push(option);
-        }
-      });
+      const opts = await this.getInstallOptions();
+      if (opts) {
+        const optionArgs = await this.getCommandOptions(opts);
+        args.push(...optionArgs);
+      }
     }
     this.runPoetry(args);
   };
@@ -99,6 +109,22 @@ export class PoetryService {
     this.runPoetry(args);
   };
 
+  private getCommandOptions = async (options: PoetryOption[]) => {
+    const args = [];
+    for (const opt of options) {
+      if (opt.promptDescription) {
+        const optVal = await this.promptOptionValue(opt.promptDescription);
+        if (optVal !== undefined && optVal.length > 0) {
+          args.push(`${opt.value} ${optVal}`);
+        }
+      } else {
+        args.push(opt.value);
+      }
+    }
+
+    return args;
+  };
+
   private getInstallOptions = async () => {
     const options = await this.promptOptions(
       PoetryService.installOptions.map((option) => option.description)
@@ -107,11 +133,11 @@ export class PoetryService {
       return;
     }
 
-    return options.map(
-      (option) =>
-        PoetryService.installOptions.find((e) => e.description === option)
-          ?.option
-    );
+    return options
+      .map((opt) =>
+        PoetryService.installOptions.find((e) => e.description === opt)
+      )
+      .filter((opt): opt is PoetryOption => opt !== undefined);
   };
 
   private getTerminal = () => {
@@ -132,6 +158,12 @@ export class PoetryService {
       canPickMany: true,
       title: "Select one or more options to run with the command",
       placeHolder: "Press space to select/unselect an option",
+    });
+
+  private promptOptionValue = (placeholder: string) =>
+    window.showInputBox({
+      title: "Enter a value for the option",
+      placeHolder: placeholder,
     });
 
   private promptPackageName = () =>

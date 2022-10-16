@@ -13,11 +13,13 @@ suite("PoetryService", () => {
   let command: PoetryCommand;
   let packageName: string;
   let group: string;
+  let optionValue: string;
 
   before(() => {
     command = PoetryCommand.add;
     packageName = "packageName";
     group = "group";
+    optionValue = "optionValue";
   });
 
   beforeEach(() => {
@@ -58,7 +60,10 @@ suite("PoetryService", () => {
   });
 
   test("install packages ask options", async () => {
-    mockShowQuickPick(PoetryService.installOptions.map((e) => e.description));
+    mockShowQuickPick(
+      PoetryService.installOptions.map((opt) => opt.description)
+    );
+    mockShowInputBox(optionValue);
 
     await poetryService.installPackages({ askOptions: true });
 
@@ -66,7 +71,12 @@ suite("PoetryService", () => {
     assert.calledWith(
       sendText,
       `poetry install ${PoetryService.installOptions
-        .map((e) => e.option)
+        .map((opt) => {
+          if (opt.promptDescription) {
+            return `${opt.value} ${optionValue}`;
+          }
+          return opt.value;
+        })
         .join(" ")}`
     );
   });
@@ -78,6 +88,24 @@ suite("PoetryService", () => {
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(sendText, "poetry install");
+  });
+
+  test("install packages ask options prompt undefined", async () => {
+    mockShowQuickPick(
+      PoetryService.installOptions.map((opt) => opt.description)
+    );
+    mockShowInputBox(undefined);
+
+    await poetryService.installPackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(
+      sendText,
+      `poetry install ${PoetryService.installOptions
+        .filter((opt) => !("promptDescription" in opt))
+        .map((opt) => opt.value)
+        .join(" ")}`
+    );
   });
 
   test("install packages unknown option", async () => {
