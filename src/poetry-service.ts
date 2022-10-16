@@ -6,9 +6,14 @@ export class PoetryService {
 
   static globalOptions: PoetryOption[] = [
     {
-      description: "Run without the dependency group(s) (--without)",
+      description: "Run without the dependency groups (--without)",
       value: "--without",
-      promptDescription: "Enter the dependency group(s) to ignore (--without)",
+      promptDescription: "Enter the dependency groups to ignore (--without)",
+    },
+    {
+      description: "Only include certain dependency groups (--only)",
+      value: "--only",
+      promptDescription: "Enter the dependency groups to include only (--only)",
     },
   ];
 
@@ -113,7 +118,7 @@ export class PoetryService {
     const args = [];
     for (const opt of options) {
       if (opt.promptDescription) {
-        const optVal = await this.promptOptionValue(opt.promptDescription);
+        const optVal = await this.promptOptionValue(opt.promptDescription); // skipcq: JS-0032
         if (optVal !== undefined && optVal.length > 0) {
           args.push(`${opt.value} ${optVal}`);
         }
