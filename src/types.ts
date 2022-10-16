@@ -8,5 +8,6 @@ export enum PoetryCommand {
 
 export type PoetryOption = {
   description: string;
-  option: string;
+  value: string;
+  promptDescription?: string;
 };
