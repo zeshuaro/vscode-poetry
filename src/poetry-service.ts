@@ -20,7 +20,8 @@ export class PoetryService {
   static installOptions: PoetryOption[] = [
     ...this.globalOptions,
     {
-      description: "Do not install the development dependencies (--no-dev)",
+      description:
+        "[DEPRECATED, use --without] Do not install the development dependencies (--no-dev)",
       value: "--no-dev",
     },
     {
