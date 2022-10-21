@@ -5,9 +5,8 @@
 [![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/zeshuaro.vscode-python-poetry)](https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry)
 [![GitHub license](https://img.shields.io/github/license/zeshuaro/vscode-poetry)](https://github.com/zeshuaro/vscode-poetry/blob/main/LICENSE)
 [![GitHub Actions](https://github.com/zeshuaro/vscode-poetry/actions/workflows/github-actions.yml/badge.svg)](https://github.com/zeshuaro/vscode-poetry/actions/workflows/github-actions.yml)
-[![codecov](https://codecov.io/gh/zeshuaro/vscode-poetry/branch/main/graph/badge.svg?token=JNWUUW0XDE)](https://codecov.io/gh/zeshuaro/vscode-poetry)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/49b5ec82beee426dbfacab87311960ee)](https://www.codacy.com/gh/zeshuaro/vscode-poetry/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zeshuaro/vscode-poetry&amp;utm_campaign=Badge_Grade)
-[![DeepSource](https://deepsource.io/gh/zeshuaro/vscode-poetry.svg/?label=active+issues&token=qCAmnymVcLjqZmQOIYGhkArV)](https://deepsource.io/gh/zeshuaro/vscode-poetry/?ref=repository-badge)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vscode-poetry&metric=coverage)](https://sonarcloud.io/summary/new_code?id=vscode-poetry)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vscode-poetry&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vscode-poetry)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Installation
