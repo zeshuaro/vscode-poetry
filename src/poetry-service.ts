@@ -31,8 +31,13 @@ export class PoetryService {
     },
     {
       description:
-        "Remove packages not present in the lock file (--remove-untracked)",
+        "[DEPRECATED, use --sync] Remove packages not present in the lock file (--remove-untracked)",
       value: "--remove-untracked",
+    },
+    {
+      description:
+        "Synchronize the environment with the locked packages (--sync)",
+      value: "--sync",
     },
   ];
 
