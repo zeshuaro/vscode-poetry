@@ -66,6 +66,8 @@ jobs:
   snyk-scan:
     name: Snyk Scan
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
 
     steps:
       - name: Checkout 🛎️
