@@ -19,16 +19,16 @@ You can activate the commands by launching the command palette (View > Command P
 
 ### Commands
 
-| Command Palette                      | Poetry command                  | Description                                                                              |
-| ------------------------------------ | ------------------------------- | ---------------------------------------------------------------------------------------- |
-| Install packages                     | `poetry install`                | Read the `pyproject.toml` file, resolve the packages, and install them                   |
-| Install packages (with options)      | `poetry install [--options]`    | Install the packages with additional options                                             |
-| Add package(s)                       | `poetry add <package>`          | Add required packages to your `pyproject.toml` and install them                          |
-| **Deprecated** Add dev package(s)    | `poetry add --dev <package>`    | **Deprecated**, use `Add package(s)` instead. Add required dev packages and install them |
-| Remove package(s)                    | `poetry remove <package>`       | Remove packages from the current list of installed packages                              |
-| **Deprecated** Remove dev package(s) | `poetry remove --dev <package>` | **Deprecated**, use `Remove package(s)` instead. Remove dev packages                     |
-| Update all packages                  | `poetry update`                 | Update all packages from the current list of installed packages                          |
-| Update all packages (ignore dev)     | `poetry update --no-dev`        | Update all packages without the dev packages                                             |
-| Update selected package(s)           | `poetry update <package>`       | Update selected packages                                                                 |
-| Lock packages                        | `poetry lock`                   | Lock the packages specified in `pyproject.toml`                                          |
-| Lock packages (no update)            | `poetry lock --no-update`       | Lock the packages without updating the locked versions                                   |
+| Command Palette                    | Poetry command                  | Description                                                                            |
+| ---------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------- |
+| Install packages                   | `poetry install`                | Read the `pyproject.toml` file, resolve the packages, and install them                 |
+| Install packages (with options)    | `poetry install [--options]`    | Install the packages with additional options                                           |
+| Add packages                       | `poetry add <package>`          | Add required packages to your `pyproject.toml` and install them                        |
+| **Deprecated** Add dev packages    | `poetry add --dev <package>`    | **Deprecated**, use `Add packages` instead. Add required dev packages and install them |
+| Remove packages                    | `poetry remove <package>`       | Remove packages from the current list of installed packages                            |
+| **Deprecated** Remove dev packages | `poetry remove --dev <package>` | **Deprecated**, use `Remove packages` instead. Remove dev packages                     |
+| Update all packages                | `poetry update`                 | Update all packages from the current list of installed packages                        |
+| Update all packages (ignore dev)   | `poetry update --no-dev`        | Update all packages without the dev packages                                           |
+| Update selected packages           | `poetry update <package>`       | Update selected packages                                                               |
+| Lock packages                      | `poetry lock`                   | Lock the packages specified in `pyproject.toml`                                        |
+| Lock packages (no update)          | `poetry lock --no-update`       | Lock the packages without updating the locked versions                                 |
