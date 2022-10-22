@@ -1,3 +1,19 @@
+## v0.5.1
+
+## 📄 Documentation
+
+- docs: update readme badges, remove unused configs ([#173](https://github.com/zeshuaro/vscode-poetry/pull/173))
+
+## 📦 Dependencies
+
+- chore(deps): update dependency mocha to v10.1.0 ([#169](https://github.com/zeshuaro/vscode-poetry/pull/169))
+- chore(deps): update typescript-eslint monorepo to v5.40.1 ([#171](https://github.com/zeshuaro/vscode-poetry/pull/171))
+- chore(deps): update dependency @types/node to v16.11.68 ([#162](https://github.com/zeshuaro/vscode-poetry/pull/162))
+
+## 💬 Other
+
+- refactor: update command titles ([#176](https://github.com/zeshuaro/vscode-poetry/pull/176))
+
 ## v0.5.0
 
 ## 🚀 Features
