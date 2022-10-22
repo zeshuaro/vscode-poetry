@@ -1,3 +1,9 @@
+# v0.5.2
+
+## 📄 Documentation
+
+- docs: fix v0.5.1 changelog and update format ([#178](https://github.com/zeshuaro/vscode-poetry/pull/178))
+
 # v0.5.1
 
 ## 🚀 Features
