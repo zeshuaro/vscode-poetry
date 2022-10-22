@@ -69,7 +69,7 @@ jobs:
           git push --delete origin ${{ env.version }}
 
           # Update changelog file
-          printf "## ${{ env.version }}\n\n${{ steps.generate-changelog.outputs.changelog }}" | cat - CHANGELOG.md > /tmp/changelog && mv /tmp/changelog CHANGELOG.md
+          printf "# ${{ env.version }}\n\n${{ steps.generate-changelog.outputs.changelog }}" | cat - CHANGELOG.md > /tmp/changelog && mv /tmp/changelog CHANGELOG.md
           git add CHANGELOG.md
           git commit -am "docs(changelog): ${{ env.version }} [skip ci]"
 
