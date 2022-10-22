@@ -43,22 +43,22 @@
       },
       {
         "command": "vscode-python-poetry.addPackage",
-        "title": "Add package(s)",
+        "title": "Add packages",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.addDevPackageLegacy",
-        "title": "[DEPRECATED, use Add package(s)] Add dev package(s)",
+        "title": "[DEPRECATED, use Add packages] Add dev packages",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.removePackage",
-        "title": "Remove package(s)",
+        "title": "Remove packages",
         "category": "Poetry"
       },
       {
         "command": "vscode-python-poetry.removeDevPackageLegacy",
-        "title": "[DEPRECATED, use Remove package(s)] Remove dev package(s)",
+        "title": "[DEPRECATED, use Remove packages] Remove dev packages",
         "category": "Poetry"
       },
       {
@@ -73,7 +73,7 @@
       },
       {
         "command": "vscode-python-poetry.updatePackage",
-        "title": "Update selected package(s)",
+        "title": "Update selected packages",
         "category": "Poetry"
       },
       {
