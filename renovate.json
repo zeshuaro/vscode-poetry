@@ -11,7 +11,11 @@
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "stabilityDays": 3,
+      "stabilityDays": 3
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     },
     {
