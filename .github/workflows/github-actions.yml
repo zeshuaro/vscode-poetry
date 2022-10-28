@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node 💻
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version-file: .nvmrc
           cache: yarn
 
       - name: Run tests on Linux 🧪
@@ -55,7 +55,7 @@ jobs:
       - name: Setup Node 💻
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version-file: .nvmrc
           cache: yarn
 
       - name: Run linting 🧪
@@ -79,7 +79,7 @@ jobs:
       - name: Setup Node 💻
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version-file: .nvmrc
           cache: yarn
 
       - name: Install dependencies 📦

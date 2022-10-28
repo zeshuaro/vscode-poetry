@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node 💻
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version-file: .nvmrc
           cache: yarn
 
       - name: Get previous tag 🏷️
