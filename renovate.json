@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:base", ":automergeMinor"],
   "labels": ["dependencies"],
   "lockFileMaintenance": { "enabled": true },
   "postUpdateOptions": ["yarnDedupeFewer"],
@@ -12,10 +12,6 @@
     {
       "matchDatasources": ["npm"],
       "stabilityDays": 3
-    },
-    {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
     },
     {
       "groupName": "VS Code dependencies",
