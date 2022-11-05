@@ -74,7 +74,7 @@
       },
       {
         "command": "vscode-python-poetry.updatePackagesNoDev",
-        "title": "Update all packages (ignore dev)",
+        "title": "[DEPRECATED, use Update all packages] Update all packages (ignore dev)",
         "category": "Poetry"
       },
       {
