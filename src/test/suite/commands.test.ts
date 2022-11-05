@@ -79,6 +79,12 @@ suite("Commands", () => {
     assert.calledOnce(updatePackages);
   });
 
+  test("update packages with options", async () => {
+    const updatePackages = mockUpdatePackages();
+    await commands.updatePackagesWithOptions();
+    assert.calledWith(updatePackages, { askOptions: true });
+  });
+
   test("update packages no dev", async () => {
     const updatePackages = mockUpdatePackages();
     await commands.updatePackagesNoDev();

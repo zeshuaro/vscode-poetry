@@ -39,6 +39,9 @@ export class Commands {
 
   updatePackages = () => this.poetryService.updatePackages();
 
+  updatePackagesWithOptions = () =>
+    this.poetryService.updatePackages({ askOptions: true });
+
   updatePackagesNoDev = () =>
     this.poetryService.updatePackages({ noDev: true });
 

@@ -2,7 +2,7 @@ import { afterEach, before, beforeEach } from "mocha";
 import { assert, restore, SinonStub, stub } from "sinon";
 import { Terminal, window } from "vscode";
 import { PoetryService } from "../../poetry-service";
-import { PoetryCommand } from "../../types";
+import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("PoetryService", () => {
   let poetryService: PoetryService;
@@ -39,30 +39,14 @@ suite("PoetryService", () => {
     restore();
   });
 
-  const mockShowQuickPick = (values: string[] | undefined) => {
-    showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
-      [items: string[]],
-      Thenable<string[] | undefined>
-    >;
-    showQuickPick.callsFake(() => Promise.resolve(values));
-  };
-
-  const mockShowInputBox = (...values: Array<string | undefined>) => {
-    showInputBox = stub(window, "showInputBox");
-    values.forEach((value, index) => {
-      showInputBox.onCall(index).returns(value);
-    });
-  };
-
   test("install packages", async () => {
     await poetryService.installPackages();
     assert.calledWith(sendText, "poetry install");
   });
 
   test("install packages ask options", async () => {
-    mockShowQuickPick(
-      PoetryService.installOptions.map((opt) => opt.description)
-    );
+    const opts = PoetryService.installOptions;
+    mockShowQuickPick(opts.map((opt) => opt.description));
     showInputBox = stub(window, "showInputBox").returns(
       Promise.resolve(optionValue)
     );
@@ -72,14 +56,7 @@ suite("PoetryService", () => {
     assert.calledOnce(showQuickPick);
     assert.calledWith(
       sendText,
-      `poetry install ${PoetryService.installOptions
-        .map((opt) => {
-          if (opt.promptDescription) {
-            return `${opt.value} ${optionValue}`;
-          }
-          return opt.value;
-        })
-        .join(" ")}`
+      `poetry install ${getMappedPoetryOptions(opts)}`
     );
   });
 
@@ -93,9 +70,8 @@ suite("PoetryService", () => {
   });
 
   test("install packages ask options prompt undefined", async () => {
-    mockShowQuickPick(
-      PoetryService.installOptions.map((opt) => opt.description)
-    );
+    const opts = PoetryService.installOptions;
+    mockShowQuickPick(opts.map((opt) => opt.description));
     mockShowInputBox(undefined);
 
     await poetryService.installPackages({ askOptions: true });
@@ -103,7 +79,7 @@ suite("PoetryService", () => {
     assert.calledOnce(showQuickPick);
     assert.calledWith(
       sendText,
-      `poetry install ${PoetryService.installOptions
+      `poetry install ${opts
         .filter((opt) => !("promptDescription" in opt))
         .map((opt) => opt.value)
         .join(" ")}`
@@ -181,6 +157,31 @@ suite("PoetryService", () => {
     assert.calledWith(sendText, "poetry update");
   });
 
+  test("update packages ask options", async () => {
+    const opts = PoetryService.updateOptions;
+    mockShowQuickPick(opts.map((opt) => opt.description));
+    showInputBox = stub(window, "showInputBox").returns(
+      Promise.resolve(optionValue)
+    );
+
+    await poetryService.updatePackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(
+      sendText,
+      `poetry update ${getMappedPoetryOptions(opts)}`
+    );
+  });
+
+  test("update packages ask options without selections", async () => {
+    mockShowQuickPick(undefined);
+
+    await poetryService.updatePackages({ askOptions: true });
+
+    assert.calledOnce(showQuickPick);
+    assert.calledWith(sendText, "poetry update");
+  });
+
   test("update packages no dev", async () => {
     await poetryService.updatePackages({ noDev: true });
     assert.calledWith(sendText, "poetry update --no-dev");
@@ -213,4 +214,29 @@ suite("PoetryService", () => {
     poetryService.lockPackages({ noUpdate: true });
     assert.calledWith(sendText, "poetry lock --no-update");
   });
+
+  const mockShowQuickPick = (values: string[] | undefined) => {
+    showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
+      [items: string[]],
+      Thenable<string[] | undefined>
+    >;
+    showQuickPick.callsFake(() => Promise.resolve(values));
+  };
+
+  const mockShowInputBox = (...values: Array<string | undefined>) => {
+    showInputBox = stub(window, "showInputBox");
+    values.forEach((value, index) => {
+      showInputBox.onCall(index).returns(value);
+    });
+  };
+
+  const getMappedPoetryOptions = (options: PoetryOption[]) =>
+    options
+      .map((opt) => {
+        if (opt.promptDescription) {
+          return `${opt.value} ${optionValue}`;
+        }
+        return opt.value;
+      })
+      .join(" ");
 });

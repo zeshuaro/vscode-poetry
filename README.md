@@ -28,6 +28,7 @@ You can activate the commands by launching the command palette (View > Command P
 | Remove packages                    | `poetry remove <package>`       | Remove packages from the current list of installed packages                            |
 | **Deprecated** Remove dev packages | `poetry remove --dev <package>` | **Deprecated**, use `Remove packages` instead. Remove dev packages                     |
 | Update all packages                | `poetry update`                 | Update all packages from the current list of installed packages                        |
+| Update all packages (with options) | `poetry update  [--options]`    | Update all packages with additional options                                            |
 | Update all packages (ignore dev)   | `poetry update --no-dev`        | Update all packages without the dev packages                                           |
 | Update selected packages           | `poetry update <package>`       | Update selected packages                                                               |
 | Lock packages                      | `poetry lock`                   | Lock the packages specified in `pyproject.toml`                                        |
