@@ -4,7 +4,7 @@ import { PoetryCommand, PoetryOption } from "./types";
 export class PoetryService {
   terminal?: Terminal;
 
-  static globalOptions: PoetryOption[] = [
+  static groupOptions: PoetryOption[] = [
     {
       description: "Run without the dependency groups (--without)",
       value: "--without",
@@ -18,7 +18,7 @@ export class PoetryService {
   ];
 
   static installOptions: PoetryOption[] = [
-    ...this.globalOptions,
+    ...this.groupOptions,
     {
       description:
         "[DEPRECATED, use --without] Do not install the development dependencies (--no-dev)",
@@ -41,6 +41,8 @@ export class PoetryService {
     },
   ];
 
+  static updateOptions: PoetryOption[] = [...this.groupOptions];
+
   installPackages = async ({
     askOptions = false,
   }: {
@@ -48,7 +50,7 @@ export class PoetryService {
   } = {}) => {
     const args: string[] = [PoetryCommand.install];
     if (askOptions) {
-      const opts = await this.getInstallOptions();
+      const opts = await this.getOptions(PoetryService.installOptions);
       if (opts) {
         const optionArgs = await this.getCommandOptions(opts);
         args.push(...optionArgs);
@@ -90,9 +92,11 @@ export class PoetryService {
 
   updatePackages = async ({
     askPackageName = false,
+    askOptions = false,
     noDev = false,
   }: {
     askPackageName?: boolean;
+    askOptions?: boolean;
     noDev?: boolean;
   } = {}) => {
     const args: string[] = [PoetryCommand.update];
@@ -104,6 +108,13 @@ export class PoetryService {
         return;
       }
       args.push(packageName);
+    }
+    if (askOptions) {
+      const opts = await this.getOptions(PoetryService.updateOptions);
+      if (opts) {
+        const optionArgs = await this.getCommandOptions(opts);
+        args.push(...optionArgs);
+      }
     }
     if (noDev) {
       args.push("--no-dev");
@@ -136,18 +147,16 @@ export class PoetryService {
     return args;
   };
 
-  private getInstallOptions = async () => {
-    const options = await this.promptOptions(
-      PoetryService.installOptions.map((option) => option.description)
+  private getOptions = async (options: PoetryOption[]) => {
+    const selectedOpts = await this.promptOptions(
+      options.map((option) => option.description)
     );
-    if (!options || !options?.length) {
+    if (!selectedOpts || !selectedOpts?.length) {
       return;
     }
 
-    return options
-      .map((opt) =>
-        PoetryService.installOptions.find((e) => e.description === opt)
-      )
+    return selectedOpts
+      .map((opt) => options.find((e) => e.description === opt))
       .filter((opt): opt is PoetryOption => opt !== undefined);
   };
 

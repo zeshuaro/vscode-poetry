@@ -23,6 +23,7 @@
     "onCommand:vscode-python-poetry.removePackage",
     "onCommand:vscode-python-poetry.removeDevPackageLegacy",
     "onCommand:vscode-python-poetry.updatePackages",
+    "onCommand:vscode-python-poetry.updatePackagesWithOptions",
     "onCommand:vscode-python-poetry.updatePackagesNoDev",
     "onCommand:vscode-python-poetry.updatePackage",
     "onCommand:vscode-python-poetry.lockPackages",
@@ -64,6 +65,11 @@
       {
         "command": "vscode-python-poetry.updatePackages",
         "title": "Update all packages",
+        "category": "Poetry"
+      },
+      {
+        "command": "vscode-python-poetry.updatePackagesWithOptions",
+        "title": "Update all packages (with options)",
         "category": "Poetry"
       },
       {

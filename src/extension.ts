@@ -33,6 +33,10 @@ export function activate(context: ExtensionContext): void {
         poetryCommands.updatePackages
       ),
       commands.registerCommand(
+        "vscode-python-poetry.updatePackagesWithOptions",
+        poetryCommands.updatePackagesWithOptions
+      ),
+      commands.registerCommand(
         "vscode-python-poetry.updatePackagesNoDev",
         poetryCommands.updatePackagesNoDev
       ),
