@@ -1,3 +1,18 @@
+# v0.6.0
+
+## 🚀 Features
+
+- feat: add  and  options support to update command ([#199](https://github.com/zeshuaro/vscode-poetry/pull/199))
+- feat: deprecate  option for update command ([#200](https://github.com/zeshuaro/vscode-poetry/pull/200))
+
+## 📦 Dependencies
+
+- chore(deps): update dependency @types/node to v18.11.7 ([#193](https://github.com/zeshuaro/vscode-poetry/pull/193))
+- chore(deps): update dependency @types/node to v18.11.8 ([#194](https://github.com/zeshuaro/vscode-poetry/pull/194))
+- chore(deps): update typescript-eslint monorepo to v5.42.0 ([#195](https://github.com/zeshuaro/vscode-poetry/pull/195))
+- chore(deps): update dependency @types/node to v18.11.9 ([#196](https://github.com/zeshuaro/vscode-poetry/pull/196))
+- chore(deps): update vs code dependencies to ^1.73.0 ([#201](https://github.com/zeshuaro/vscode-poetry/pull/201))
+
 # v0.5.3
 
 ## 📦 Dependencies
