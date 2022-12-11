@@ -1,3 +1,15 @@
+# v0.7.0
+
+## 📦 Dependencies
+
+- chore(deps): update dependency eslint to v8.29.0 ([#217](https://github.com/zeshuaro/vscode-poetry/pull/217))
+- chore(deps): update dependency vsce to v2.15.0 ([#218](https://github.com/zeshuaro/vscode-poetry/pull/218))
+- chore(deps): update dependency @types/node to v18.11.11 ([#219](https://github.com/zeshuaro/vscode-poetry/pull/219))
+- chore(deps): update typescript-eslint monorepo to v5.45.1 ([#220](https://github.com/zeshuaro/vscode-poetry/pull/220))
+- chore(deps): update dependency @vscode/test-electron to v2.2.1 ([#221](https://github.com/zeshuaro/vscode-poetry/pull/221))
+- chore(deps): update dependency prettier to v2.8.1 ([#222](https://github.com/zeshuaro/vscode-poetry/pull/222))
+- chore(deps): update dependency vscode to ^1.74.0 ([#223](https://github.com/zeshuaro/vscode-poetry/pull/223))
+
 # v0.6.1
 
 ## 📦 Dependencies
