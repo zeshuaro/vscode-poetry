@@ -52,7 +52,7 @@ jobs:
 
       - name: Generate changelog 📝
         id: generate-changelog
-        uses: mikepenz/release-changelog-builder-action@v3.4.0
+        uses: mikepenz/release-changelog-builder-action@v3.5.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -83,7 +83,7 @@ jobs:
           yarn vsce publish --yarn -p ${{ secrets.VSCE_PAT }}
 
       - name: Release 🚀
-        uses: ncipollo/release-action@v1.11.2
+        uses: ncipollo/release-action@v1.12.0
         with:
           tag: ${{ steps.latest-tag.outputs.tag }}
           artifacts: "vscode-python-poetry-*.vsix"
