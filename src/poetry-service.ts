@@ -43,11 +43,11 @@ export class PoetryService {
 
   static updateOptions: PoetryOption[] = [...this.groupOptions];
 
-  async installPackages({
+  installPackages = async ({
     askOptions = false,
   }: {
     askOptions?: boolean;
-  } = {}) {
+  } = {}) => {
     const args: string[] = [PoetryCommand.install];
     if (askOptions) {
       const opts = await this.getOptions(PoetryService.installOptions);
@@ -57,9 +57,9 @@ export class PoetryService {
       }
     }
     this.runPoetry(args);
-  }
+  };
 
-  async managePackages({
+  managePackages = async ({
     command,
     isDev = false,
     askGroup = false,
@@ -67,7 +67,7 @@ export class PoetryService {
     command: PoetryCommand;
     isDev?: boolean;
     askGroup?: boolean;
-  }) {
+  }) => {
     const packageName = await this.promptPackageName();
     if (!packageName) {
       return;
@@ -88,9 +88,9 @@ export class PoetryService {
     }
 
     this.runPoetry(args);
-  }
+  };
 
-  async updatePackages({
+  updatePackages = async ({
     askPackageName = false,
     askOptions = false,
     noDev = false,
@@ -98,7 +98,7 @@ export class PoetryService {
     askPackageName?: boolean;
     askOptions?: boolean;
     noDev?: boolean;
-  } = {}) {
+  } = {}) => {
     const args: string[] = [PoetryCommand.update];
     let packageName: string | undefined;
 
@@ -121,17 +121,17 @@ export class PoetryService {
     }
 
     this.runPoetry(args);
-  }
+  };
 
-  lockPackages({ noUpdate = false }: { noUpdate?: boolean } = {}) {
+  lockPackages = ({ noUpdate = false }: { noUpdate?: boolean } = {}) => {
     const args: string[] = [PoetryCommand.lock];
     if (noUpdate) {
       args.push("--no-update");
     }
     this.runPoetry(args);
-  }
+  };
 
-  private async getCommandOptions(options: PoetryOption[]) {
+  private getCommandOptions = async (options: PoetryOption[]) => {
     const args = [];
     for (const opt of options) {
       if (opt.promptDescription) {
@@ -145,9 +145,9 @@ export class PoetryService {
     }
 
     return args;
-  }
+  };
 
-  private async getOptions(options: PoetryOption[]) {
+  private getOptions = async (options: PoetryOption[]) => {
     const selectedOpts = await this.promptOptions(
       options.map((option) => option.description)
     );
@@ -158,48 +158,44 @@ export class PoetryService {
     return selectedOpts
       .map((opt) => options.find((e) => e.description === opt))
       .filter((opt): opt is PoetryOption => opt !== undefined);
-  }
+  };
 
-  private getTerminal() {
+  private getTerminal = () => {
     if (!this.terminal || this.terminal.exitStatus) {
       this.terminal = window.createTerminal();
     }
     return this.terminal;
-  }
+  };
 
-  private promptGroup() {
-    return window.showInputBox({
+  private promptGroup = () =>
+    window.showInputBox({
       title: "Enter a dependency group",
       placeHolder: "Leave it as empty to use the main dependency group",
     });
-  }
 
-  private promptOptions(items: string[]) {
-    return window.showQuickPick(items, {
+  private promptOptions = (items: string[]) =>
+    window.showQuickPick(items, {
       canPickMany: true,
       title: "Select one or more options to run with the command",
       placeHolder: "Press space to select/unselect an option",
     });
-  }
 
-  private promptOptionValue(placeholder: string) {
-    return window.showInputBox({
+  private promptOptionValue = (placeholder: string) =>
+    window.showInputBox({
       title: "Enter a value for the option",
       placeHolder: placeholder,
     });
-  }
 
-  private promptPackageName() {
-    return window.showInputBox({
+  private promptPackageName = () =>
+    window.showInputBox({
       title: "Enter a package name, git URL or local path",
       placeHolder: "Package name, git URL or local path",
     });
-  }
 
-  private runPoetry(args: string[]) {
+  private runPoetry = (args: string[]): void => {
     const terminal = this.getTerminal();
     terminal.sendText(`poetry ${args.join(" ")}`);
-  }
+  };
 }
 
 export default new PoetryService();
