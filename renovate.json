@@ -1,13 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "npm:unpublishSafe", ":automergeMinor"],
-  "labels": ["dependencies"],
-  "lockFileMaintenance": { "enabled": true },
-  "postUpdateOptions": ["yarnDedupeFewer"],
-  "prCreation": "not-pending",
-  "semanticCommits": "enabled",
-  "schedule": ["after 6pm every weekday", "every weekend"],
-  "timezone": "Australia/Sydney",
+  "extends": [
+    "github>zeshuaro/renovate-configs",
+    "github>zeshuaro/renovate-configs:javascript"
+  ],
   "packageRules": [
     {
       "groupName": "VS Code dependencies",
@@ -16,11 +12,6 @@
       "rangeStrategy": "bump",
       "patch": false,
       "automerge": false
-    },
-    {
-      "groupName": "GitHub Actions dependencies",
-      "matchPaths": [".github/workflows/*.yml"],
-      "addLabels": ["ci"]
     }
   ]
 }
