@@ -8,65 +8,50 @@ export class Commands {
     this.poetryService = poetryService;
   }
 
-  installPackages() {
-    this.poetryService.installPackages();
-  }
+  installPackages = () => this.poetryService.installPackages();
 
-  installPackagesWithOptions() {
+  installPackagesWithOptions = () =>
     this.poetryService.installPackages({ askOptions: true });
-  }
 
-  addPackage() {
+  addPackage = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.add,
       askGroup: true,
     });
-  }
 
-  addDevPackageLegacy() {
+  addDevPackageLegacy = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.add,
       isDev: true,
     });
-  }
 
-  removePackage() {
+  removePackage = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.remove,
       askGroup: true,
     });
-  }
 
-  removeDevPackageLegacy() {
+  removeDevPackageLegacy = () =>
     this.poetryService.managePackages({
       command: PoetryCommand.remove,
       isDev: true,
     });
-  }
 
-  updatePackages() {
-    this.poetryService.updatePackages();
-  }
+  updatePackages = () => this.poetryService.updatePackages();
 
-  updatePackagesWithOptions() {
+  updatePackagesWithOptions = () =>
     this.poetryService.updatePackages({ askOptions: true });
-  }
 
-  updatePackagesNoDev() {
+  updatePackagesNoDev = () =>
     this.poetryService.updatePackages({ noDev: true });
-  }
 
-  updatePackage() {
+  updatePackage = () =>
     this.poetryService.updatePackages({ askPackageName: true });
-  }
 
-  lockPackages() {
-    this.poetryService.lockPackages();
-  }
+  lockPackages = (): void => this.poetryService.lockPackages();
 
-  lockPackagesNoUpdate() {
+  lockPackagesNoUpdate = (): void =>
     this.poetryService.lockPackages({ noUpdate: true });
-  }
 }
 
 export default new Commands();
