@@ -17,13 +17,21 @@ suite("Commands", () => {
     restore();
   });
 
-  const mockInstallPackages = () => stub(poetryService, "installPackages");
+  function mockInstallPackages() {
+    return stub(poetryService, "installPackages");
+  }
 
-  const mockManagePackage = () => stub(poetryService, "managePackages");
+  function mockManagePackage() {
+    return stub(poetryService, "managePackages");
+  }
 
-  const mockUpdatePackages = () => stub(poetryService, "updatePackages");
+  function mockUpdatePackages() {
+    return stub(poetryService, "updatePackages");
+  }
 
-  const mockLockPackages = () => stub(poetryService, "lockPackages");
+  function mockLockPackages() {
+    return stub(poetryService, "lockPackages");
+  }
 
   test("install packages", async () => {
     const installPackages = mockInstallPackages();

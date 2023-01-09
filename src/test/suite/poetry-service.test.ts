@@ -215,23 +215,23 @@ suite("PoetryService", () => {
     assert.calledWith(sendText, "poetry lock --no-update");
   });
 
-  const mockShowQuickPick = (values: string[] | undefined) => {
+  function mockShowQuickPick(values: string[] | undefined) {
     showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
       [items: string[]],
       Thenable<string[] | undefined>
     >;
     showQuickPick.callsFake(() => Promise.resolve(values));
-  };
+  }
 
-  const mockShowInputBox = (...values: Array<string | undefined>) => {
+  function mockShowInputBox(...values: Array<string | undefined>) {
     showInputBox = stub(window, "showInputBox");
     values.forEach((value, index) => {
       showInputBox.onCall(index).returns(value);
     });
-  };
+  }
 
-  const getMappedPoetryOptions = (options: PoetryOption[]) =>
-    options
+  function getMappedPoetryOptions(options: PoetryOption[]) {
+    return options
       .map((opt) => {
         if (opt.promptDescription) {
           return `${opt.value} ${optionValue}`;
@@ -239,4 +239,5 @@ suite("PoetryService", () => {
         return opt.value;
       })
       .join(" ");
+  }
 });
