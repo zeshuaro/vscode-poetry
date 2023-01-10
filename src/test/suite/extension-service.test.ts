@@ -4,13 +4,13 @@ import { ExtensionService } from "../../extension-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand } from "../../types";
 
-suite("Commands", () => {
+suite("ExtensionService", () => {
   let poetryService: PoetryService;
-  let commands: ExtensionService;
+  let extensionService: ExtensionService;
 
   beforeEach(() => {
     poetryService = new PoetryService();
-    commands = new ExtensionService(poetryService);
+    extensionService = new ExtensionService(poetryService);
   });
 
   afterEach(() => {
@@ -27,19 +27,19 @@ suite("Commands", () => {
 
   test("install packages", async () => {
     const installPackages = mockInstallPackages();
-    await commands.installPackages();
+    await extensionService.installPackages();
     assert.calledOnce(installPackages);
   });
 
   test("install packages with options", async () => {
     const installPackages = mockInstallPackages();
-    await commands.installPackagesWithOptions();
+    await extensionService.installPackagesWithOptions();
     assert.calledWith(installPackages, { askOptions: true });
   });
 
   test("add package", async () => {
     const managePackage = mockManagePackage();
-    await commands.addPackage();
+    await extensionService.addPackage();
     assert.calledWith(managePackage, {
       command: PoetryCommand.add,
       askGroup: true,
@@ -48,7 +48,7 @@ suite("Commands", () => {
 
   test("add dev package", async () => {
     const managePackage = mockManagePackage();
-    await commands.addDevPackageLegacy();
+    await extensionService.addDevPackageLegacy();
     assert.calledWith(managePackage, {
       command: PoetryCommand.add,
       isDev: true,
@@ -57,7 +57,7 @@ suite("Commands", () => {
 
   test("remove package", async () => {
     const managePackage = mockManagePackage();
-    await commands.removePackage();
+    await extensionService.removePackage();
     assert.calledWith(managePackage, {
       command: PoetryCommand.remove,
       askGroup: true,
@@ -66,7 +66,7 @@ suite("Commands", () => {
 
   test("remove dev package", async () => {
     const managePackage = mockManagePackage();
-    await commands.removeDevPackageLegacy();
+    await extensionService.removeDevPackageLegacy();
     assert.calledWith(managePackage, {
       command: PoetryCommand.remove,
       isDev: true,
@@ -75,19 +75,19 @@ suite("Commands", () => {
 
   test("update packages", async () => {
     const updatePackages = mockUpdatePackages();
-    await commands.updatePackages();
+    await extensionService.updatePackages();
     assert.calledOnce(updatePackages);
   });
 
   test("update packages with options", async () => {
     const updatePackages = mockUpdatePackages();
-    await commands.updatePackagesWithOptions();
+    await extensionService.updatePackagesWithOptions();
     assert.calledWith(updatePackages, { askOptions: true });
   });
 
   test("update packages no dev", async () => {
     const updatePackages = mockUpdatePackages();
-    await commands.updatePackagesNoDev();
+    await extensionService.updatePackagesNoDev();
     assert.calledWith(updatePackages, {
       noDev: true,
     });
@@ -95,7 +95,7 @@ suite("Commands", () => {
 
   test("update package", async () => {
     const updatePackages = mockUpdatePackages();
-    await commands.updatePackage();
+    await extensionService.updatePackage();
     assert.calledWith(updatePackages, {
       askPackageName: true,
     });
@@ -103,13 +103,13 @@ suite("Commands", () => {
 
   test("lock packages", () => {
     const lockPackages = mockLockPackages();
-    commands.lockPackages();
+    extensionService.lockPackages();
     assert.calledOnce(lockPackages);
   });
 
   test("lock packages no update", () => {
     const lockPackages = mockLockPackages();
-    commands.lockPackagesNoUpdate();
+    extensionService.lockPackagesNoUpdate();
     assert.calledWith(lockPackages, {
       noUpdate: true,
     });
