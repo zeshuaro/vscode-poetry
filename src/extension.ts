@@ -1,56 +1,56 @@
 import { commands, ExtensionContext } from "vscode";
-import poetryCommands from "./commands";
+import extensionService from "./extension-service";
 
 export function activate(context: ExtensionContext): void {
   context.subscriptions.push(
     ...[
       commands.registerCommand(
         "vscode-python-poetry.installPackages",
-        poetryCommands.installPackages
+        extensionService.installPackages
       ),
       commands.registerCommand(
         "vscode-python-poetry.installPackagesWithOptions",
-        poetryCommands.installPackagesWithOptions
+        extensionService.installPackagesWithOptions
       ),
       commands.registerCommand(
         "vscode-python-poetry.addPackage",
-        poetryCommands.addPackage
+        extensionService.addPackage
       ),
       commands.registerCommand(
         "vscode-python-poetry.addDevPackageLegacy",
-        poetryCommands.addDevPackageLegacy
+        extensionService.addDevPackageLegacy
       ),
       commands.registerCommand(
         "vscode-python-poetry.removePackage",
-        poetryCommands.removePackage
+        extensionService.removePackage
       ),
       commands.registerCommand(
         "vscode-python-poetry.removeDevPackageLegacy",
-        poetryCommands.removeDevPackageLegacy
+        extensionService.removeDevPackageLegacy
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackages",
-        poetryCommands.updatePackages
+        extensionService.updatePackages
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesWithOptions",
-        poetryCommands.updatePackagesWithOptions
+        extensionService.updatePackagesWithOptions
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesNoDev",
-        poetryCommands.updatePackagesNoDev
+        extensionService.updatePackagesNoDev
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackage",
-        poetryCommands.updatePackage
+        extensionService.updatePackage
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackages",
-        poetryCommands.lockPackages
+        extensionService.lockPackages
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackagesNoUpdate",
-        poetryCommands.lockPackagesNoUpdate
+        extensionService.lockPackagesNoUpdate
       ),
     ]
   );
