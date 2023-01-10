@@ -1,16 +1,16 @@
 import { afterEach, beforeEach } from "mocha";
 import { restore, stub, assert } from "sinon";
-import { Commands } from "../../commands";
+import { ExtensionService } from "../../extension-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand } from "../../types";
 
 suite("Commands", () => {
   let poetryService: PoetryService;
-  let commands: Commands;
+  let commands: ExtensionService;
 
   beforeEach(() => {
     poetryService = new PoetryService();
-    commands = new Commands(poetryService);
+    commands = new ExtensionService(poetryService);
   });
 
   afterEach(() => {

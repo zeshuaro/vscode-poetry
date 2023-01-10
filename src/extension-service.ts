@@ -1,7 +1,7 @@
 import defaultPoetryService, { PoetryService } from "./poetry-service";
 import { PoetryCommand } from "./types";
 
-export class Commands {
+export class ExtensionService {
   poetryService: PoetryService;
 
   constructor(poetryService: PoetryService = defaultPoetryService) {
@@ -54,4 +54,4 @@ export class Commands {
     this.poetryService.lockPackages({ noUpdate: true });
 }
 
-export default new Commands();
+export default new ExtensionService();
