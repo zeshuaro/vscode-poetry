@@ -1,10 +1,10 @@
-import defaultPoetryService, { PoetryService } from "./poetry-service";
+import { PoetryService } from "./poetry-service";
 import { PoetryCommand } from "./types";
 
 export class ExtensionService {
   poetryService: PoetryService;
 
-  constructor(poetryService: PoetryService = defaultPoetryService) {
+  constructor(poetryService: PoetryService) {
     this.poetryService = poetryService;
   }
 
@@ -53,5 +53,3 @@ export class ExtensionService {
   lockPackagesNoUpdate = (): void =>
     this.poetryService.lockPackages({ noUpdate: true });
 }
-
-export default new ExtensionService();

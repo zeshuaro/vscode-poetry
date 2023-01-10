@@ -1,9 +1,8 @@
 import { Terminal, window } from "vscode";
+import { CacheService } from "./cache-service";
 import { PoetryCommand, PoetryOption } from "./types";
 
 export class PoetryService {
-  terminal?: Terminal;
-
   static groupOptions: PoetryOption[] = [
     {
       description: "Run without the dependency groups (--without)",
@@ -42,6 +41,13 @@ export class PoetryService {
   ];
 
   static updateOptions: PoetryOption[] = [...this.groupOptions];
+
+  constructor(cacheService: CacheService) {
+    this.cacheService = cacheService;
+  }
+
+  private cacheService: CacheService;
+  private terminal?: Terminal;
 
   installPackages = async ({
     askOptions = false,
@@ -197,5 +203,3 @@ export class PoetryService {
     terminal.sendText(`poetry ${args.join(" ")}`);
   };
 }
-
-export default new PoetryService();
