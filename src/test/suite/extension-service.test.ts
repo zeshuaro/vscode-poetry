@@ -1,15 +1,21 @@
 import { afterEach, beforeEach } from "mocha";
 import { restore, stub, assert } from "sinon";
+import { Memento } from "vscode";
+import { CacheService } from "../../cache-service";
 import { ExtensionService } from "../../extension-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand } from "../../types";
 
 suite("ExtensionService", () => {
+  let globalState: Memento;
+  let cacheService: CacheService;
   let poetryService: PoetryService;
   let extensionService: ExtensionService;
 
   beforeEach(() => {
-    poetryService = new PoetryService();
+    globalState = <Memento>{};
+    cacheService = new CacheService(globalState);
+    poetryService = new PoetryService(cacheService);
     extensionService = new ExtensionService(poetryService);
   });
 

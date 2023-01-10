@@ -1,7 +1,13 @@
 import { commands, ExtensionContext } from "vscode";
-import extensionService from "./extension-service";
+import { CacheService } from "./cache-service";
+import { ExtensionService } from "./extension-service";
+import { PoetryService } from "./poetry-service";
 
 export function activate(context: ExtensionContext): void {
+  const cacheService = new CacheService(context.globalState);
+  const poetryService = new PoetryService(cacheService);
+  const extensionService = new ExtensionService(poetryService);
+
   context.subscriptions.push(
     ...[
       commands.registerCommand(

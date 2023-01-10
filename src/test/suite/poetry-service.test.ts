@@ -1,10 +1,13 @@
 import { afterEach, before, beforeEach } from "mocha";
 import { assert, restore, SinonStub, stub } from "sinon";
-import { Terminal, window } from "vscode";
+import { Memento, Terminal, window } from "vscode";
+import { CacheService } from "../../cache-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("PoetryService", () => {
+  let globalState: Memento;
+  let cacheService: CacheService;
   let poetryService: PoetryService;
   let terminal: Terminal;
   let sendText: SinonStub;
@@ -23,6 +26,9 @@ suite("PoetryService", () => {
   });
 
   beforeEach(() => {
+    globalState = <Memento>{};
+    cacheService = new CacheService(globalState);
+
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {
         // for mocking
@@ -32,7 +38,7 @@ suite("PoetryService", () => {
     sendText = stub(terminal, "sendText");
     stub(window, "createTerminal").callsFake(() => terminal);
 
-    poetryService = new PoetryService();
+    poetryService = new PoetryService(cacheService);
   });
 
   afterEach(() => {
