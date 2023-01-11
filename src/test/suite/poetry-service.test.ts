@@ -11,6 +11,7 @@ suite("PoetryService", () => {
   let poetryService: PoetryService;
   let terminal: Terminal;
   let sendText: SinonStub;
+  let createTerminal: SinonStub;
   let showQuickPick: SinonStub;
   let showInputBox: SinonStub;
   let command: PoetryCommand;
@@ -30,13 +31,11 @@ suite("PoetryService", () => {
     cacheService = new CacheService(globalState);
 
     terminal = <Terminal>{
-      sendText: (_text: string, _addNewLine?: boolean) => {
-        // for mocking
-      },
+      sendText: (_text: string, _addNewLine?: boolean) => {},
       exitStatus: undefined,
     };
     sendText = stub(terminal, "sendText");
-    stub(window, "createTerminal").callsFake(() => terminal);
+    createTerminal = stub(window, "createTerminal").returns(terminal);
 
     poetryService = new PoetryService(cacheService);
   });
@@ -219,6 +218,27 @@ suite("PoetryService", () => {
   test("lock packages no update", () => {
     poetryService.lockPackages({ noUpdate: true });
     assert.calledWith(sendText, "poetry lock --no-update");
+  });
+
+  test("terminal active", () => {
+    poetryService.lockPackages();
+    poetryService.lockPackages();
+
+    assert.calledOnce(createTerminal);
+  });
+
+  test("terminal inactive", () => {
+    (window.createTerminal as unknown as SinonStub).restore();
+    terminal = <Terminal>{
+      sendText: (_text: string, _addNewLine?: boolean) => {},
+      exitStatus: {},
+    };
+    const createTerminal = stub(window, "createTerminal").returns(terminal);
+
+    poetryService.lockPackages();
+    poetryService.lockPackages();
+
+    assert.calledTwice(createTerminal);
   });
 
   const mockShowQuickPick = (values: string[] | undefined) => {
