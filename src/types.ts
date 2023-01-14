@@ -11,3 +11,11 @@ export type PoetryOption = {
   value: string;
   promptDescription?: string;
 };
+
+export type CachePackage = {
+  name: string;
+};
+
+export type CachePackageData = {
+  packages: CachePackage[];
+};

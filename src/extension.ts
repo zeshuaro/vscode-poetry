@@ -4,7 +4,7 @@ import { ExtensionService } from "./extension-service";
 import { PoetryService } from "./poetry-service";
 
 export function activate(context: ExtensionContext): void {
-  const cacheService = new CacheService(context.globalState);
+  const cacheService = new CacheService(context.globalStorageUri);
   const poetryService = new PoetryService(cacheService);
   const extensionService = new ExtensionService(poetryService);
 

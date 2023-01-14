@@ -1,44 +1,101 @@
 import { afterEach, beforeEach } from "mocha";
-import { restore, stub, assert } from "sinon";
-import { Memento } from "vscode";
+import { restore, stub, assert, createStubInstance, SinonStub } from "sinon";
+import { FileSystem, Uri, workspace } from "vscode";
 import { CacheService } from "../../cache-service";
+import { CachePackageData } from "../../types";
 
-suite("Commands", () => {
-  const packages = new Set(["packageA", "packageB"]);
-  const emptyPackages = new Set();
+suite("CacheService", () => {
+  const packagesCacheName = "packages-cache.json";
+  const textEncoder = new TextEncoder();
 
-  let globalState: Memento;
-  let cacheService: CacheService;
+  const cachePackageList: CachePackageData = {
+    packages: [{ name: "packageA" }, { name: "packageB" }],
+  };
+  const cachePackageListBytes = textEncoder.encode(
+    JSON.stringify(cachePackageList)
+  );
+
+  const newPackages = [{ name: "packageB" }, { name: "packageC" }];
+  const newCachePackageList: CachePackageData = {
+    packages: [
+      { name: "packageA" },
+      { name: "packageB" },
+      { name: "packageC" },
+    ],
+  };
+  const newCachePackageListBytes = textEncoder.encode(
+    JSON.stringify(newCachePackageList)
+  );
+
+  let packagesCacheUri: Uri;
+  let fs: FileSystem;
+  let readFile: SinonStub;
+  let writeFile: SinonStub;
+  let joinPath: SinonStub;
+
+  let globalStoragePath: Uri;
+  let sut: CacheService;
 
   beforeEach(() => {
-    globalState = <Memento>{
-      get: <T>(_key: string, _defaultValue: T) => {},
-      update: (_key: string, _value: any) => {},
+    packagesCacheUri = createStubInstance(Uri);
+    fs = <FileSystem>{
+      readFile: (_uri: Uri) => {},
+      writeFile: (_uri: Uri, _content: Uint8Array) => {},
     };
-    cacheService = new CacheService(globalState);
+
+    readFile = stub(fs, "readFile");
+    writeFile = stub(fs, "writeFile");
+    stub(workspace, "fs").value(fs);
+    joinPath = stub(Uri, "joinPath").returns(packagesCacheUri);
+
+    globalStoragePath = createStubInstance(Uri);
+    sut = new CacheService(globalStoragePath);
   });
 
   afterEach(() => {
     restore();
   });
 
-  test("get packages", () => {
-    const get = stub(globalState, "get").returns(packages);
+  test("get packages", async () => {
+    readFile.returns(Promise.resolve(cachePackageListBytes));
 
-    const actual = cacheService.getPackages();
+    const actual = await sut.getPackages();
 
-    assert.match(actual, packages);
-    assert.calledWith(get, "packages", emptyPackages);
+    assert.match(actual, cachePackageList);
+    assert.calledOnceWithExactly(readFile, packagesCacheUri);
+    assert.calledOnceWithExactly(
+      joinPath,
+      globalStoragePath,
+      packagesCacheName
+    );
+  });
+
+  test("get packages error", async () => {
+    readFile.throws();
+
+    const actual = await sut.getPackages();
+
+    assert.match(actual, { packages: [] });
+    assert.calledOnceWithExactly(readFile, packagesCacheUri);
+    assert.calledOnceWithExactly(
+      joinPath,
+      globalStoragePath,
+      packagesCacheName
+    );
   });
 
   test("update packages", async () => {
-    const newPackages = new Set(["newPackage"]);
-    stub(cacheService, "getPackages").returns(packages);
-    const update = stub(globalState, "update");
+    const getPackages = stub(sut, "getPackages").returns(
+      Promise.resolve(cachePackageList)
+    );
 
-    await cacheService.updatePackages(newPackages);
+    await sut.updatePackages(newPackages);
 
-    const expectedPackages = new Set([...packages, ...newPackages]);
-    assert.calledWith(update, "packages", expectedPackages);
+    assert.calledOnceWithExactly(
+      writeFile,
+      packagesCacheUri,
+      newCachePackageListBytes
+    );
+    assert.calledOnce(getPackages);
   });
 });

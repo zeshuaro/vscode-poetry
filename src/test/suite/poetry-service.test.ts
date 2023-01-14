@@ -1,12 +1,12 @@
 import { afterEach, before, beforeEach } from "mocha";
-import { assert, restore, SinonStub, stub } from "sinon";
-import { Memento, Terminal, window } from "vscode";
+import { assert, createStubInstance, restore, SinonStub, stub } from "sinon";
+import { Terminal, Uri, window } from "vscode";
 import { CacheService } from "../../cache-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("PoetryService", () => {
-  let globalState: Memento;
+  let globalStoragePath: Uri;
   let cacheService: CacheService;
   let poetryService: PoetryService;
   let terminal: Terminal;
@@ -27,8 +27,8 @@ suite("PoetryService", () => {
   });
 
   beforeEach(() => {
-    globalState = <Memento>{};
-    cacheService = new CacheService(globalState);
+    globalStoragePath = createStubInstance(Uri);
+    cacheService = new CacheService(globalStoragePath);
 
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {},
