@@ -1,24 +1,38 @@
-import { Memento } from "vscode";
+import { Uri, workspace } from "vscode";
+import { CachePackage, CachePackageData } from "./types";
 
 export class CacheService {
-  static packages = "packages";
-  static emptyPackages = new Set<string>();
+  private static packagesCacheName = "packages-cache.json";
 
-  private globalState: Memento;
+  private globalStoragePath: Uri;
 
-  constructor(globalState: Memento) {
-    this.globalState = globalState;
+  constructor(globalStoragePath: Uri) {
+    this.globalStoragePath = globalStoragePath;
   }
 
-  getPackages = () =>
-    this.globalState.get<Set<string>>(
-      CacheService.packages,
-      CacheService.emptyPackages
-    );
+  private get packagesCacheUri(): Uri {
+    return Uri.joinPath(this.globalStoragePath, CacheService.packagesCacheName);
+  }
 
-  updatePackages = (packages: Set<string>) => {
-    const cachedPackages = this.getPackages();
-    const newPackages = new Set([...cachedPackages, ...packages]);
-    return this.globalState.update(CacheService.packages, newPackages);
+  getPackages = async (): Promise<CachePackageData> => {
+    try {
+      const bytes = await workspace.fs.readFile(this.packagesCacheUri);
+      const contents = new TextDecoder().decode(bytes);
+      return JSON.parse(contents) as CachePackageData;
+    } catch (e) {}
+    return { packages: [] };
+  };
+
+  updatePackages = async (packages: Iterable<CachePackage>) => {
+    const cachePackageList = await this.getPackages();
+    const newPackages = [...cachePackageList.packages, ...packages].filter(
+      (value, index, self) =>
+        index ===
+        self.findIndex((cachePackage) => cachePackage.name === value.name)
+    );
+    cachePackageList.packages = newPackages;
+
+    const byptes = new TextEncoder().encode(JSON.stringify(cachePackageList));
+    await workspace.fs.writeFile(this.packagesCacheUri, byptes);
   };
 }
