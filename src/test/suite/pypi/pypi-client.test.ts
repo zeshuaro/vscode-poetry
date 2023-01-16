@@ -7,7 +7,7 @@ import {
   createStubInstance,
   SinonStubbedInstance,
 } from "sinon";
-import { PypiClient } from "../../pypi-client";
+import { PypiClient } from "../../../pypi/pypi-client";
 
 suite("PypiClient", () => {
   const simpleResponse = {
