@@ -14,16 +14,16 @@ export class CacheService {
     return Uri.joinPath(this.globalStoragePath, CacheService.packagesCacheName);
   }
 
-  getPackages = async (): Promise<CachePackageData> => {
+  async getPackages(): Promise<CachePackageData> {
     try {
       const bytes = await workspace.fs.readFile(this.packagesCacheUri);
       const contents = new TextDecoder().decode(bytes);
       return JSON.parse(contents) as CachePackageData;
     } catch (e) {}
     return { packages: [] };
-  };
+  }
 
-  updatePackages = async (packages: Iterable<CachePackage>) => {
+  async updatePackages(packages: Iterable<CachePackage>) {
     const cachePackageList = await this.getPackages();
     const newPackages = [...cachePackageList.packages, ...packages].filter(
       (value, index, self) =>
@@ -34,5 +34,5 @@ export class CacheService {
 
     const byptes = new TextEncoder().encode(JSON.stringify(cachePackageList));
     await workspace.fs.writeFile(this.packagesCacheUri, byptes);
-  };
+  }
 }

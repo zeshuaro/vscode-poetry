@@ -12,6 +12,14 @@
     "@typescript-eslint/semi": "warn",
     "curly": "warn",
     "eqeqeq": "warn",
+    "func-style": ["error", "declaration"],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "PropertyDefinition > ArrowFunctionExpression.value",
+        "message": "Expected a function declaration"
+      }
+    ],
     "no-throw-literal": "warn",
     "semi": "off",
     "no-unused-vars": "off",

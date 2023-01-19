@@ -1,122 +1,105 @@
 import { afterEach, beforeEach } from "mocha";
-import { restore, stub, assert, createStubInstance } from "sinon";
-import { Uri } from "vscode";
-import { CacheService } from "../../cache-service";
+import {
+  restore,
+  assert,
+  createStubInstance,
+  SinonStubbedInstance,
+} from "sinon";
 import { ExtensionService } from "../../extension-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand } from "../../types";
 
 suite("ExtensionService", () => {
-  let globalStoragePath: Uri;
-  let cacheService: CacheService;
-  let poetryService: PoetryService;
-  let extensionService: ExtensionService;
+  let poetryService: SinonStubbedInstance<PoetryService>;
+  let sut: ExtensionService;
 
   beforeEach(() => {
-    globalStoragePath = createStubInstance(Uri);
-    cacheService = new CacheService(globalStoragePath);
-    poetryService = new PoetryService(cacheService);
-    extensionService = new ExtensionService(poetryService);
+    poetryService = createStubInstance(PoetryService);
+    sut = new ExtensionService(poetryService);
   });
 
   afterEach(() => {
     restore();
   });
 
-  const mockInstallPackages = () => stub(poetryService, "installPackages");
-
-  const mockManagePackage = () => stub(poetryService, "managePackages");
-
-  const mockUpdatePackages = () => stub(poetryService, "updatePackages");
-
-  const mockLockPackages = () => stub(poetryService, "lockPackages");
-
   test("install packages", async () => {
-    const installPackages = mockInstallPackages();
-    await extensionService.installPackages();
-    assert.calledOnce(installPackages);
+    await sut.installPackages();
+    assert.calledOnce(poetryService.installPackages);
   });
 
   test("install packages with options", async () => {
-    const installPackages = mockInstallPackages();
-    await extensionService.installPackagesWithOptions();
-    assert.calledWith(installPackages, { askOptions: true });
+    await sut.installPackagesWithOptions();
+    assert.calledOnceWithExactly(poetryService.installPackages, {
+      askOptions: true,
+    });
   });
 
   test("add package", async () => {
-    const managePackage = mockManagePackage();
-    await extensionService.addPackage();
-    assert.calledWith(managePackage, {
+    await sut.addPackage();
+    assert.calledOnceWithExactly(poetryService.managePackages, {
       command: PoetryCommand.add,
       askGroup: true,
     });
   });
 
   test("add dev package", async () => {
-    const managePackage = mockManagePackage();
-    await extensionService.addDevPackageLegacy();
-    assert.calledWith(managePackage, {
+    await sut.addDevPackageLegacy();
+    assert.calledOnceWithExactly(poetryService.managePackages, {
       command: PoetryCommand.add,
       isDev: true,
     });
   });
 
   test("remove package", async () => {
-    const managePackage = mockManagePackage();
-    await extensionService.removePackage();
-    assert.calledWith(managePackage, {
+    await sut.removePackage();
+    assert.calledOnceWithExactly(poetryService.managePackages, {
       command: PoetryCommand.remove,
       askGroup: true,
     });
   });
 
   test("remove dev package", async () => {
-    const managePackage = mockManagePackage();
-    await extensionService.removeDevPackageLegacy();
-    assert.calledWith(managePackage, {
+    await sut.removeDevPackageLegacy();
+    assert.calledOnceWithExactly(poetryService.managePackages, {
       command: PoetryCommand.remove,
       isDev: true,
     });
   });
 
   test("update packages", async () => {
-    const updatePackages = mockUpdatePackages();
-    await extensionService.updatePackages();
-    assert.calledOnce(updatePackages);
+    await sut.updatePackages();
+    assert.calledOnce(poetryService.updatePackages);
   });
 
   test("update packages with options", async () => {
-    const updatePackages = mockUpdatePackages();
-    await extensionService.updatePackagesWithOptions();
-    assert.calledWith(updatePackages, { askOptions: true });
+    await sut.updatePackagesWithOptions();
+    assert.calledOnceWithExactly(poetryService.updatePackages, {
+      askOptions: true,
+    });
   });
 
   test("update packages no dev", async () => {
-    const updatePackages = mockUpdatePackages();
-    await extensionService.updatePackagesNoDev();
-    assert.calledWith(updatePackages, {
+    await sut.updatePackagesNoDev();
+    assert.calledOnceWithExactly(poetryService.updatePackages, {
       noDev: true,
     });
   });
 
   test("update package", async () => {
-    const updatePackages = mockUpdatePackages();
-    await extensionService.updatePackage();
-    assert.calledWith(updatePackages, {
+    await sut.updatePackage();
+    assert.calledOnceWithExactly(poetryService.updatePackages, {
       askPackageName: true,
     });
   });
 
   test("lock packages", () => {
-    const lockPackages = mockLockPackages();
-    extensionService.lockPackages();
-    assert.calledOnce(lockPackages);
+    sut.lockPackages();
+    assert.calledOnce(poetryService.lockPackages);
   });
 
   test("lock packages no update", () => {
-    const lockPackages = mockLockPackages();
-    extensionService.lockPackagesNoUpdate();
-    assert.calledWith(lockPackages, {
+    sut.lockPackagesNoUpdate();
+    assert.calledOnceWithExactly(poetryService.lockPackages, {
       noUpdate: true,
     });
   });

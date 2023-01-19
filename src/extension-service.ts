@@ -8,48 +8,63 @@ export class ExtensionService {
     this.poetryService = poetryService;
   }
 
-  installPackages = () => this.poetryService.installPackages();
+  installPackages() {
+    return this.poetryService.installPackages();
+  }
 
-  installPackagesWithOptions = () =>
-    this.poetryService.installPackages({ askOptions: true });
+  installPackagesWithOptions() {
+    return this.poetryService.installPackages({ askOptions: true });
+  }
 
-  addPackage = () =>
-    this.poetryService.managePackages({
+  addPackage() {
+    return this.poetryService.managePackages({
       command: PoetryCommand.add,
       askGroup: true,
     });
+  }
 
-  addDevPackageLegacy = () =>
-    this.poetryService.managePackages({
+  addDevPackageLegacy() {
+    return this.poetryService.managePackages({
       command: PoetryCommand.add,
       isDev: true,
     });
+  }
 
-  removePackage = () =>
-    this.poetryService.managePackages({
+  removePackage() {
+    return this.poetryService.managePackages({
       command: PoetryCommand.remove,
       askGroup: true,
     });
+  }
 
-  removeDevPackageLegacy = () =>
-    this.poetryService.managePackages({
+  removeDevPackageLegacy() {
+    return this.poetryService.managePackages({
       command: PoetryCommand.remove,
       isDev: true,
     });
+  }
 
-  updatePackages = () => this.poetryService.updatePackages();
+  updatePackages() {
+    return this.poetryService.updatePackages();
+  }
 
-  updatePackagesWithOptions = () =>
-    this.poetryService.updatePackages({ askOptions: true });
+  updatePackagesWithOptions() {
+    return this.poetryService.updatePackages({ askOptions: true });
+  }
 
-  updatePackagesNoDev = () =>
-    this.poetryService.updatePackages({ noDev: true });
+  updatePackagesNoDev() {
+    return this.poetryService.updatePackages({ noDev: true });
+  }
 
-  updatePackage = () =>
-    this.poetryService.updatePackages({ askPackageName: true });
+  updatePackage() {
+    return this.poetryService.updatePackages({ askPackageName: true });
+  }
 
-  lockPackages = (): void => this.poetryService.lockPackages();
+  lockPackages() {
+    return this.poetryService.lockPackages();
+  }
 
-  lockPackagesNoUpdate = (): void =>
-    this.poetryService.lockPackages({ noUpdate: true });
+  lockPackagesNoUpdate() {
+    return this.poetryService.lockPackages({ noUpdate: true });
+  }
 }
