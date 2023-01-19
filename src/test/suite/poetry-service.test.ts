@@ -8,12 +8,12 @@ import {
   stub,
 } from "sinon";
 import { Terminal, window } from "vscode";
-import { CacheService } from "../../cache-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand, PoetryOption } from "../../types";
+import { PypiService } from "../../pypi/pypi-service";
 
 suite("PoetryService", () => {
-  let cacheService: SinonStubbedInstance<CacheService>;
+  let pypiService: SinonStubbedInstance<PypiService>;
   let sut: PoetryService;
   let terminal: Terminal;
   let sendText: SinonStub;
@@ -33,8 +33,6 @@ suite("PoetryService", () => {
   });
 
   beforeEach(() => {
-    cacheService = createStubInstance(CacheService);
-
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {},
       exitStatus: undefined,
@@ -42,7 +40,8 @@ suite("PoetryService", () => {
     sendText = stub(terminal, "sendText");
     createTerminal = stub(window, "createTerminal").returns(terminal);
 
-    sut = new PoetryService(cacheService);
+    pypiService = createStubInstance(PypiService);
+    sut = new PoetryService(pypiService);
   });
 
   afterEach(() => {

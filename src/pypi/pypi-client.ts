@@ -15,9 +15,10 @@ export class PypiClient {
     this.axios = axios;
   }
 
-  getPackages() {
-    return this.axios.get<PypiSimple>("/simple", {
+  async getPackages() {
+    const res = await this.axios.get<PypiSimple>("/simple", {
       headers: { accept: "application/vnd.pypi.simple.v1+json" },
     });
+    return res.data;
   }
 }
