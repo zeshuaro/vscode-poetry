@@ -12,51 +12,63 @@ export function activate(context: ExtensionContext): void {
     ...[
       commands.registerCommand(
         "vscode-python-poetry.installPackages",
-        extensionService.installPackages
+        /* istanbul ignore next */
+        () => extensionService.installPackages()
       ),
       commands.registerCommand(
         "vscode-python-poetry.installPackagesWithOptions",
-        extensionService.installPackagesWithOptions
+        /* istanbul ignore next */
+        () => extensionService.installPackagesWithOptions()
       ),
       commands.registerCommand(
         "vscode-python-poetry.addPackage",
-        extensionService.addPackage
+        /* istanbul ignore next */
+        () => extensionService.addPackage()
       ),
       commands.registerCommand(
         "vscode-python-poetry.addDevPackageLegacy",
-        extensionService.addDevPackageLegacy
+        /* istanbul ignore next */
+        () => extensionService.addDevPackageLegacy()
       ),
       commands.registerCommand(
         "vscode-python-poetry.removePackage",
-        extensionService.removePackage
+        /* istanbul ignore next */
+        () => extensionService.removePackage()
       ),
       commands.registerCommand(
         "vscode-python-poetry.removeDevPackageLegacy",
-        extensionService.removeDevPackageLegacy
+        /* istanbul ignore next */
+        () => extensionService.removeDevPackageLegacy()
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackages",
-        extensionService.updatePackages
+        /* istanbul ignore next */
+        () => extensionService.updatePackages()
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesWithOptions",
-        extensionService.updatePackagesWithOptions
+        /* istanbul ignore next */
+        () => extensionService.updatePackagesWithOptions()
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesNoDev",
-        extensionService.updatePackagesNoDev
+        /* istanbul ignore next */
+        () => extensionService.updatePackagesNoDev()
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackage",
-        extensionService.updatePackage
+        /* istanbul ignore next */
+        () => extensionService.updatePackage()
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackages",
-        extensionService.lockPackages
+        /* istanbul ignore next */
+        () => extensionService.lockPackages()
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackagesNoUpdate",
-        extensionService.lockPackagesNoUpdate
+        /* istanbul ignore next */
+        () => extensionService.lockPackagesNoUpdate()
       ),
     ]
   );

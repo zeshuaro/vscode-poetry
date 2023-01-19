@@ -1,14 +1,20 @@
 import { afterEach, before, beforeEach } from "mocha";
-import { assert, createStubInstance, restore, SinonStub, stub } from "sinon";
-import { Terminal, Uri, window } from "vscode";
+import {
+  assert,
+  createStubInstance,
+  restore,
+  SinonStub,
+  SinonStubbedInstance,
+  stub,
+} from "sinon";
+import { Terminal, window } from "vscode";
 import { CacheService } from "../../cache-service";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("PoetryService", () => {
-  let globalStoragePath: Uri;
-  let cacheService: CacheService;
-  let poetryService: PoetryService;
+  let cacheService: SinonStubbedInstance<CacheService>;
+  let sut: PoetryService;
   let terminal: Terminal;
   let sendText: SinonStub;
   let createTerminal: SinonStub;
@@ -27,8 +33,7 @@ suite("PoetryService", () => {
   });
 
   beforeEach(() => {
-    globalStoragePath = createStubInstance(Uri);
-    cacheService = new CacheService(globalStoragePath);
+    cacheService = createStubInstance(CacheService);
 
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {},
@@ -37,7 +42,7 @@ suite("PoetryService", () => {
     sendText = stub(terminal, "sendText");
     createTerminal = stub(window, "createTerminal").returns(terminal);
 
-    poetryService = new PoetryService(cacheService);
+    sut = new PoetryService(cacheService);
   });
 
   afterEach(() => {
@@ -45,7 +50,7 @@ suite("PoetryService", () => {
   });
 
   test("install packages", async () => {
-    await poetryService.installPackages();
+    await sut.installPackages();
     assert.calledWith(sendText, "poetry install");
   });
 
@@ -56,7 +61,7 @@ suite("PoetryService", () => {
       Promise.resolve(optionValue)
     );
 
-    await poetryService.installPackages({ askOptions: true });
+    await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(
@@ -68,7 +73,7 @@ suite("PoetryService", () => {
   test("install packages ask options without selections", async () => {
     mockShowQuickPick(undefined);
 
-    await poetryService.installPackages({ askOptions: true });
+    await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(sendText, "poetry install");
@@ -79,7 +84,7 @@ suite("PoetryService", () => {
     mockShowQuickPick(opts.map((opt) => opt.description));
     mockShowInputBox(undefined);
 
-    await poetryService.installPackages({ askOptions: true });
+    await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(
@@ -94,7 +99,7 @@ suite("PoetryService", () => {
   test("install packages unknown option", async () => {
     mockShowQuickPick(["clearlyRandomOption"]);
 
-    await poetryService.installPackages({ askOptions: true });
+    await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(sendText, "poetry install");
@@ -103,7 +108,7 @@ suite("PoetryService", () => {
   test("manage packages", async () => {
     mockShowInputBox(packageName);
 
-    await poetryService.managePackages({ command });
+    await sut.managePackages({ command });
 
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
     assert.calledOnce(showInputBox);
@@ -112,7 +117,7 @@ suite("PoetryService", () => {
   test("manage packages without package name", async () => {
     mockShowInputBox(undefined);
 
-    await poetryService.managePackages({ command });
+    await sut.managePackages({ command });
 
     assert.notCalled(sendText);
     assert.calledOnce(showInputBox);
@@ -121,7 +126,7 @@ suite("PoetryService", () => {
   test("manage dev packages", async () => {
     mockShowInputBox(packageName);
 
-    await poetryService.managePackages({ command, isDev: true });
+    await sut.managePackages({ command, isDev: true });
 
     assert.calledWith(sendText, `poetry ${command} ${packageName} --dev`);
     assert.calledOnce(showInputBox);
@@ -130,7 +135,7 @@ suite("PoetryService", () => {
   test("manage packages with group", async () => {
     mockShowInputBox(packageName, group);
 
-    await poetryService.managePackages({ command, askGroup: true });
+    await sut.managePackages({ command, askGroup: true });
 
     assert.calledWith(
       sendText,
@@ -142,7 +147,7 @@ suite("PoetryService", () => {
   test("manage packages with undefined group", async () => {
     mockShowInputBox(packageName, undefined);
 
-    await poetryService.managePackages({ command, askGroup: true });
+    await sut.managePackages({ command, askGroup: true });
 
     assert.notCalled(sendText);
     assert.calledTwice(showInputBox);
@@ -151,14 +156,14 @@ suite("PoetryService", () => {
   test("manage packages with empty string group", async () => {
     mockShowInputBox(packageName, "");
 
-    await poetryService.managePackages({ command, askGroup: true });
+    await sut.managePackages({ command, askGroup: true });
 
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
     assert.calledTwice(showInputBox);
   });
 
   test("update packages", async () => {
-    await poetryService.updatePackages();
+    await sut.updatePackages();
     assert.calledWith(sendText, "poetry update");
   });
 
@@ -169,7 +174,7 @@ suite("PoetryService", () => {
       Promise.resolve(optionValue)
     );
 
-    await poetryService.updatePackages({ askOptions: true });
+    await sut.updatePackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(
@@ -181,21 +186,21 @@ suite("PoetryService", () => {
   test("update packages ask options without selections", async () => {
     mockShowQuickPick(undefined);
 
-    await poetryService.updatePackages({ askOptions: true });
+    await sut.updatePackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
     assert.calledWith(sendText, "poetry update");
   });
 
   test("update packages no dev", async () => {
-    await poetryService.updatePackages({ noDev: true });
+    await sut.updatePackages({ noDev: true });
     assert.calledWith(sendText, "poetry update --no-dev");
   });
 
   test("update packages with package name", async () => {
     mockShowInputBox(packageName);
 
-    await poetryService.updatePackages({ askPackageName: true });
+    await sut.updatePackages({ askPackageName: true });
 
     assert.calledWith(sendText, `poetry update ${packageName}`);
     assert.calledOnce(showInputBox);
@@ -204,25 +209,25 @@ suite("PoetryService", () => {
   test("update packages without package name", async () => {
     mockShowInputBox(undefined);
 
-    await poetryService.updatePackages({ askPackageName: true });
+    await sut.updatePackages({ askPackageName: true });
 
     assert.notCalled(sendText);
     assert.calledOnce(showInputBox);
   });
 
   test("lock packages", () => {
-    poetryService.lockPackages();
+    sut.lockPackages();
     assert.calledWith(sendText, "poetry lock");
   });
 
   test("lock packages no update", () => {
-    poetryService.lockPackages({ noUpdate: true });
+    sut.lockPackages({ noUpdate: true });
     assert.calledWith(sendText, "poetry lock --no-update");
   });
 
   test("terminal active", () => {
-    poetryService.lockPackages();
-    poetryService.lockPackages();
+    sut.lockPackages();
+    sut.lockPackages();
 
     assert.calledOnce(createTerminal);
   });
@@ -235,29 +240,29 @@ suite("PoetryService", () => {
     };
     const createTerminal = stub(window, "createTerminal").returns(terminal);
 
-    poetryService.lockPackages();
-    poetryService.lockPackages();
+    sut.lockPackages();
+    sut.lockPackages();
 
     assert.calledTwice(createTerminal);
   });
 
-  const mockShowQuickPick = (values: string[] | undefined) => {
+  function mockShowQuickPick(values: string[] | undefined) {
     showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
       [items: string[]],
       Thenable<string[] | undefined>
     >;
     showQuickPick.callsFake(() => Promise.resolve(values));
-  };
+  }
 
-  const mockShowInputBox = (...values: Array<string | undefined>) => {
+  function mockShowInputBox(...values: Array<string | undefined>) {
     showInputBox = stub(window, "showInputBox");
     values.forEach((value, index) => {
       showInputBox.onCall(index).returns(value);
     });
-  };
+  }
 
-  const getMappedPoetryOptions = (options: PoetryOption[]) =>
-    options
+  function getMappedPoetryOptions(options: PoetryOption[]) {
+    return options
       .map((opt) => {
         if (opt.promptDescription) {
           return `${opt.value} ${optionValue}`;
@@ -265,4 +270,5 @@ suite("PoetryService", () => {
         return opt.value;
       })
       .join(" ");
+  }
 });
