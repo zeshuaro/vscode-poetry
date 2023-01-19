@@ -9,9 +9,7 @@ import {
   SinonStubbedInstance,
 } from "sinon";
 import { FileSystem, Uri, workspace } from "vscode";
-import { PypiClient } from "../../../pypi";
-import { PypiService } from "../../../pypi/pypi-service";
-import { PypiSimple } from "../../../pypi/types";
+import { PypiClient, PypiService, PypiSimple } from "../../../pypi";
 
 suite("PypiService", () => {
   const packagesCacheName = "packages-cache.json";

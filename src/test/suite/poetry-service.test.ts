@@ -10,7 +10,7 @@ import {
 import { Terminal, window } from "vscode";
 import { PoetryService } from "../../poetry-service";
 import { PoetryCommand, PoetryOption } from "../../types";
-import { PypiService } from "../../pypi/pypi-service";
+import { PypiService } from "../../pypi";
 
 suite("PoetryService", () => {
   let pypiService: SinonStubbedInstance<PypiService>;
