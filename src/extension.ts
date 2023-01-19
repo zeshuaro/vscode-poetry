@@ -1,11 +1,13 @@
 import { commands, ExtensionContext } from "vscode";
-import { CacheService } from "./cache-service";
+import { PypiService } from "./pypi/pypi-service";
 import { ExtensionService } from "./extension-service";
 import { PoetryService } from "./poetry-service";
+import { PypiClient } from "./pypi";
 
 export function activate(context: ExtensionContext): void {
-  const cacheService = new CacheService(context.globalStorageUri);
-  const poetryService = new PoetryService(cacheService);
+  const pypiClient = PypiClient.default();
+  const pypiService = new PypiService(context.globalStorageUri, pypiClient);
+  const poetryService = new PoetryService(pypiService);
   const extensionService = new ExtensionService(poetryService);
 
   context.subscriptions.push(

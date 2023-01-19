@@ -1,16 +1,19 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { Axios } from "axios";
+import { Axios, AxiosResponse } from "axios";
 import { afterEach, beforeEach } from "mocha";
 import {
   restore,
   assert,
   createStubInstance,
   SinonStubbedInstance,
+  match,
+  stub,
 } from "sinon";
 import { PypiClient } from "../../../pypi/pypi-client";
 
 suite("PypiClient", () => {
-  const simpleResponse = {
+  const axiosRes = <AxiosResponse>{ data: undefined };
+  const packages = {
     meta: {
       "_last-serial": 16434683,
       "api-version": "1.0",
@@ -40,13 +43,18 @@ suite("PypiClient", () => {
   });
 
   test("get packages", async () => {
-    axios.get.returns(Promise.resolve(simpleResponse));
+    stub(axiosRes, "data").value(packages);
+    axios.get.returns(Promise.resolve(axiosRes));
 
     const actual = await sut.getPackages();
 
-    assert.match(actual, simpleResponse);
-    assert.calledOnceWithExactly(axios.get, "/simple", {
-      headers: { accept: "application/vnd.pypi.simple.v1+json" },
-    });
+    assert.match(actual, packages);
+    assert.calledWithMatch(
+      axios.get,
+      "/simple",
+      match({
+        headers: { accept: "application/vnd.pypi.simple.v1+json" },
+      })
+    );
   });
 });

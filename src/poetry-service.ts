@@ -1,6 +1,6 @@
 import { Terminal, window } from "vscode";
-import { CacheService } from "./cache-service";
 import { PoetryCommand, PoetryOption } from "./types";
+import { PypiService } from "./pypi/pypi-service";
 
 export class PoetryService {
   static groupOptions: PoetryOption[] = [
@@ -42,12 +42,12 @@ export class PoetryService {
 
   static updateOptions: PoetryOption[] = [...this.groupOptions];
 
-  constructor(cacheService: CacheService) {
-    this.cacheService = cacheService;
-  }
-
-  private cacheService: CacheService;
+  private pypiService: PypiService;
   private terminal?: Terminal;
+
+  constructor(pypiService: PypiService) {
+    this.pypiService = pypiService;
+  }
 
   async installPackages({
     askOptions = false,
