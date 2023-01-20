@@ -10,17 +10,19 @@ import {
 } from "sinon";
 import { FileSystem, Uri, workspace } from "vscode";
 import { PypiClient, PypiService, PypiSimple } from "../../../pypi";
+import { PypiProject } from "../../../pypi/types";
 
 suite("PypiService", () => {
   const packagesCacheName = "packages-cache.json";
   const textEncoder = new TextEncoder();
 
+  const project: PypiProject = { "_last-serial": 123, name: "packageA" };
   const packages: PypiSimple = {
     meta: {
       "_last-serial": 123,
       "api-version": "v1",
     },
-    projects: [{ "_last-serial": 123, name: "packageA" }],
+    projects: [project],
   };
   const packagesBytes = textEncoder.encode(JSON.stringify(packages));
 
@@ -61,7 +63,7 @@ suite("PypiService", () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     assertInitializeSucceed();
-  }).timeout(5000);
+  });
 
   test("initialize get cache error", async () => {
     readFile.throws();
@@ -70,7 +72,26 @@ suite("PypiService", () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     assertInitializeSucceed();
-  }).timeout(5000);
+  });
+
+  test("search packages", async () => {
+    const sut = new PypiService(globalStoragePath, pypiClient);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const actual = sut.searchPackages(project.name);
+
+    assert.match(actual, [project]);
+  });
+
+  test("search packages without cache", async () => {
+    const sut = new PypiService(globalStoragePath, pypiClient);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    sut.clearPackages();
+    const actual = sut.searchPackages(project.name);
+
+    assert.match(actual, undefined);
+  });
 
   function assertInitializeSucceed() {
     // Assert get cached packages
@@ -86,4 +107,4 @@ suite("PypiService", () => {
     assert.calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
     assert.calledTwice(joinPath);
   }
-});
+}).timeout(5000);

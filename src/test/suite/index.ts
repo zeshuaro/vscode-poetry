@@ -1,6 +1,6 @@
 import { sync } from "glob";
 import { join, resolve } from "path";
-import * as Mocha from "mocha"; // skipcq: JS-C1003
+import Mocha from "mocha";
 
 function setupCoverage() {
   const NYC = require("nyc");

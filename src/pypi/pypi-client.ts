@@ -18,6 +18,11 @@ export class PypiClient {
   async getPackages() {
     const res = await this.axios.get<PypiSimple>("/simple", {
       headers: { accept: "application/vnd.pypi.simple.v1+json" },
+      // Axios doesn't transform the data automatically
+      transformResponse: (data) => {
+        /* istanbul ignore next */
+        return JSON.parse(data);
+      },
     });
     return res.data;
   }
