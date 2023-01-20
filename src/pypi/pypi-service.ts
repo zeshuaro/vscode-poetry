@@ -1,6 +1,7 @@
 import { Uri, workspace } from "vscode";
 import { PypiClient } from "./pypi-client";
-import { PypiSimple } from "./types";
+import { PypiProject, PypiSimple } from "./types";
+import Fuse from "fuse.js";
 
 export class PypiService {
   private static packagesCacheName = "packages-cache.json";
@@ -9,15 +10,23 @@ export class PypiService {
   private pypiClient: PypiClient;
   private packages: PypiSimple | undefined;
 
-  constructor(
-    globalStoragePath: Uri,
-    pypiClient: PypiClient
-    // bypassLoadPackages: boolean = false
-  ) {
+  constructor(globalStoragePath: Uri, pypiClient: PypiClient) {
     this.globalStoragePath = globalStoragePath;
     this.pypiClient = pypiClient;
 
     this.loadAndGetPackages();
+  }
+
+  searchPackages(query: string): PypiProject[] | undefined {
+    if (this.packages) {
+      const fuse = new Fuse(this.packages.projects, { keys: ["name"] });
+      return fuse.search(query, { limit: 10 }).map((result) => result.item);
+    }
+    return undefined;
+  }
+
+  clearPackages() {
+    this.packages = undefined;
   }
 
   private get packagesCacheUri(): Uri {
