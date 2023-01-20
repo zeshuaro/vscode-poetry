@@ -114,7 +114,7 @@
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
     "@vscode/test-electron": "2.2.2",
-    "axios": "1.2.2",
+    "axios": "1.2.3",
     "eslint": "8.32.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "fuse.js": "6.6.2",
