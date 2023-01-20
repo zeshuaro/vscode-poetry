@@ -87,7 +87,7 @@ suite("PypiService", () => {
     const sut = new PypiService(globalStoragePath, pypiClient);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    sut.clearPackages();
+    sut.clearProjectsFuse();
     const actual = sut.searchPackages(project.name);
 
     assert.match(actual, undefined);
