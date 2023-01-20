@@ -8,7 +8,7 @@ export class PypiService {
 
   private globalStoragePath: Uri;
   private pypiClient: PypiClient;
-  private packages: PypiSimple | undefined;
+  private projectsFuse: Fuse<PypiProject> | undefined;
 
   constructor(globalStoragePath: Uri, pypiClient: PypiClient) {
     this.globalStoragePath = globalStoragePath;
@@ -18,15 +18,16 @@ export class PypiService {
   }
 
   searchPackages(query: string): PypiProject[] | undefined {
-    if (this.packages) {
-      const fuse = new Fuse(this.packages.projects, { keys: ["name"] });
-      return fuse.search(query, { limit: 10 }).map((result) => result.item);
+    if (this.projectsFuse) {
+      return this.projectsFuse
+        .search(query, { limit: 10 })
+        .map((result) => result.item);
     }
     return undefined;
   }
 
-  clearPackages() {
-    this.packages = undefined;
+  clearProjectsFuse() {
+    this.projectsFuse = undefined;
   }
 
   private get packagesCacheUri(): Uri {
@@ -34,8 +35,11 @@ export class PypiService {
   }
 
   private async loadAndGetPackages() {
-    this.packages = await this.getCachedPackages();
-    this.getAndCachePackages();
+    const packages = await this.getCachedPackages();
+    if (packages) {
+      this.projectsFuse = this.getProjectsFuse(packages);
+    }
+    await this.getAndCachePackages();
   }
 
   private async getCachedPackages(): Promise<PypiSimple | undefined> {
@@ -47,11 +51,18 @@ export class PypiService {
     return undefined;
   }
 
+  private getProjectsFuse(packages: PypiSimple) {
+    return new Fuse(packages.projects, {
+      minMatchCharLength: 2,
+      keys: ["name"],
+    });
+  }
+
   private async getAndCachePackages() {
     try {
       const packages = await this.pypiClient.getPackages();
       await this.cachePackages(packages);
-      this.packages = packages;
+      this.projectsFuse = this.getProjectsFuse(packages);
     } catch (e) {}
   }
 
