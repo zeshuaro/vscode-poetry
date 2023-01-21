@@ -1,4 +1,4 @@
-import { afterEach, before, beforeEach } from "mocha";
+import { afterEach, beforeEach } from "mocha";
 import {
   assert,
   createStubInstance,
@@ -13,24 +13,16 @@ import { PoetryCommand, PoetryOption } from "../../types";
 import { PypiService } from "../../pypi";
 
 suite("PoetryService", () => {
+  const command = PoetryCommand.add;
+  const packageName = "packageName";
+  const group = "group";
+  const optionValue = "optionValue";
+
   let pypiService: SinonStubbedInstance<PypiService>;
   let sut: PoetryService;
   let terminal: Terminal;
   let sendText: SinonStub;
   let createTerminal: SinonStub;
-  let showQuickPick: SinonStub;
-  let showInputBox: SinonStub;
-  let command: PoetryCommand;
-  let packageName: string;
-  let group: string;
-  let optionValue: string;
-
-  before(() => {
-    command = PoetryCommand.add;
-    packageName = "packageName";
-    group = "group";
-    optionValue = "optionValue";
-  });
 
   beforeEach(() => {
     terminal = <Terminal>{
@@ -55,14 +47,17 @@ suite("PoetryService", () => {
 
   test("install packages ask options", async () => {
     const opts = PoetryService.installOptions;
-    mockShowQuickPick(opts.map((opt) => opt.description));
-    showInputBox = stub(window, "showInputBox").returns(
-      Promise.resolve(optionValue)
+    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+
+    const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
+    const showInputBox = mockShowInputBox(
+      ...Array<string>(numExtraPompts).fill(optionValue)
     );
 
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.callCount(showInputBox, numExtraPompts);
     assert.calledWith(
       sendText,
       `poetry install ${getMappedPoetryOptions(opts)}`
@@ -70,7 +65,7 @@ suite("PoetryService", () => {
   });
 
   test("install packages ask options without selections", async () => {
-    mockShowQuickPick(undefined);
+    const showQuickPick = mockShowQuickPick(undefined);
 
     await sut.installPackages({ askOptions: true });
 
@@ -80,12 +75,17 @@ suite("PoetryService", () => {
 
   test("install packages ask options prompt undefined", async () => {
     const opts = PoetryService.installOptions;
-    mockShowQuickPick(opts.map((opt) => opt.description));
-    mockShowInputBox(undefined);
+    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+
+    const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
+    const showInputBox = mockShowInputBox(
+      ...Array<undefined>(numExtraPompts).fill(undefined)
+    );
 
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.callCount(showInputBox, numExtraPompts);
     assert.calledWith(
       sendText,
       `poetry install ${opts
@@ -96,7 +96,7 @@ suite("PoetryService", () => {
   });
 
   test("install packages unknown option", async () => {
-    mockShowQuickPick(["clearlyRandomOption"]);
+    const showQuickPick = mockShowQuickPick(["clearlyRandomOption"]);
 
     await sut.installPackages({ askOptions: true });
 
@@ -104,8 +104,19 @@ suite("PoetryService", () => {
     assert.calledWith(sendText, "poetry install");
   });
 
-  test("manage packages", async () => {
-    mockShowInputBox(packageName);
+  test("add packages", async () => {
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(packageName);
+
+    await sut.managePackages({ command });
+
+    assert.calledWith(sendText, `poetry ${command} ${packageName}`);
+    assert.calledOnce(promptPackageNameWithSearch);
+  });
+
+  test("remove packages", async () => {
+    const command = PoetryCommand.remove;
+    const showInputBox = mockShowInputBox(packageName);
 
     await sut.managePackages({ command });
 
@@ -114,25 +125,29 @@ suite("PoetryService", () => {
   });
 
   test("manage packages without package name", async () => {
-    mockShowInputBox(undefined);
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(undefined);
 
     await sut.managePackages({ command });
 
     assert.notCalled(sendText);
-    assert.calledOnce(showInputBox);
+    assert.calledOnce(promptPackageNameWithSearch);
   });
 
   test("manage dev packages", async () => {
-    mockShowInputBox(packageName);
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(packageName);
 
     await sut.managePackages({ command, isDev: true });
 
     assert.calledWith(sendText, `poetry ${command} ${packageName} --dev`);
-    assert.calledOnce(showInputBox);
+    assert.calledOnce(promptPackageNameWithSearch);
   });
 
   test("manage packages with group", async () => {
-    mockShowInputBox(packageName, group);
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(packageName);
+    const showInputBox = mockShowInputBox(group);
 
     await sut.managePackages({ command, askGroup: true });
 
@@ -140,25 +155,32 @@ suite("PoetryService", () => {
       sendText,
       `poetry ${command} ${packageName} --group ${group}`
     );
-    assert.calledTwice(showInputBox);
+    assert.calledOnce(promptPackageNameWithSearch);
+    assert.calledOnce(showInputBox);
   });
 
   test("manage packages with undefined group", async () => {
-    mockShowInputBox(packageName, undefined);
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(packageName);
+    const showInputBox = mockShowInputBox(undefined);
 
     await sut.managePackages({ command, askGroup: true });
 
     assert.notCalled(sendText);
-    assert.calledTwice(showInputBox);
+    assert.calledOnce(promptPackageNameWithSearch);
+    assert.calledOnce(showInputBox);
   });
 
   test("manage packages with empty string group", async () => {
-    mockShowInputBox(packageName, "");
+    const promptPackageNameWithSearch =
+      mockPromptPackageNameWithSearch(packageName);
+    const showInputBox = mockShowInputBox("");
 
     await sut.managePackages({ command, askGroup: true });
 
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
-    assert.calledTwice(showInputBox);
+    assert.calledOnce(promptPackageNameWithSearch);
+    assert.calledOnce(showInputBox);
   });
 
   test("update packages", async () => {
@@ -168,14 +190,17 @@ suite("PoetryService", () => {
 
   test("update packages ask options", async () => {
     const opts = PoetryService.updateOptions;
-    mockShowQuickPick(opts.map((opt) => opt.description));
-    showInputBox = stub(window, "showInputBox").returns(
-      Promise.resolve(optionValue)
+    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+
+    const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
+    const showInputBox = mockShowInputBox(
+      ...Array<string>(numExtraPompts).fill(optionValue)
     );
 
     await sut.updatePackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.callCount(showInputBox, numExtraPompts);
     assert.calledWith(
       sendText,
       `poetry update ${getMappedPoetryOptions(opts)}`
@@ -183,7 +208,7 @@ suite("PoetryService", () => {
   });
 
   test("update packages ask options without selections", async () => {
-    mockShowQuickPick(undefined);
+    const showQuickPick = mockShowQuickPick(undefined);
 
     await sut.updatePackages({ askOptions: true });
 
@@ -197,7 +222,7 @@ suite("PoetryService", () => {
   });
 
   test("update packages with package name", async () => {
-    mockShowInputBox(packageName);
+    const showInputBox = mockShowInputBox(packageName);
 
     await sut.updatePackages({ askPackageName: true });
 
@@ -206,7 +231,7 @@ suite("PoetryService", () => {
   });
 
   test("update packages without package name", async () => {
-    mockShowInputBox(undefined);
+    const showInputBox = mockShowInputBox(undefined);
 
     await sut.updatePackages({ askPackageName: true });
 
@@ -246,18 +271,26 @@ suite("PoetryService", () => {
   });
 
   function mockShowQuickPick(values: string[] | undefined) {
-    showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
+    const showQuickPick = stub(window, "showQuickPick") as unknown as SinonStub<
       [items: string[]],
       Thenable<string[] | undefined>
     >;
-    showQuickPick.callsFake(() => Promise.resolve(values));
+    showQuickPick.returns(Promise.resolve(values));
+
+    return showQuickPick;
   }
 
   function mockShowInputBox(...values: Array<string | undefined>) {
-    showInputBox = stub(window, "showInputBox");
+    const showInputBox = stub(window, "showInputBox");
     values.forEach((value, index) => {
-      showInputBox.onCall(index).returns(value);
+      showInputBox.onCall(index).returns(Promise.resolve(value));
     });
+
+    return showInputBox;
+  }
+
+  function mockPromptPackageNameWithSearch(value: string | undefined) {
+    return stub(sut, <any>"promptPackageNameWithSearch").returns(value);
   }
 
   function getMappedPoetryOptions(options: PoetryOption[]) {

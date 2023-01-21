@@ -74,7 +74,13 @@ export class PoetryService {
     isDev?: boolean;
     askGroup?: boolean;
   }) {
-    const packageName = await this.promptPackageName();
+    let packageName: string | undefined;
+    if (command === PoetryCommand.add) {
+      packageName = await this.promptPackageNameWithSearch();
+    } else {
+      packageName = await this.promptPackageName();
+    }
+
     if (!packageName) {
       return;
     }
@@ -193,6 +199,36 @@ export class PoetryService {
       title: "Enter a value for the option",
       placeHolder: placeholder,
     });
+  }
+
+  // TODO: Figure out how to mock QuickPick
+  /* istanbul ignore next */
+  private async promptPackageNameWithSearch() {
+    const quickPick = window.createQuickPick();
+    quickPick.title = "Enter a package name, git URL or local path";
+    quickPick.placeholder = "Package name, git URL or local path";
+    quickPick.onDidChangeValue((userInput) => {
+      const items = this.pypiService
+        .searchPackages(userInput)
+        ?.map((project) => {
+          return {
+            label: project.name,
+          };
+        });
+      if (items) {
+        quickPick.items = items;
+      }
+    });
+
+    const packageName = await new Promise<string | undefined>((resolve) => {
+      quickPick.onDidAccept(() => resolve(quickPick.value));
+      quickPick.onDidHide(() => resolve(undefined));
+      quickPick.show();
+    });
+
+    quickPick.dispose();
+
+    return packageName;
   }
 
   private promptPackageName() {
