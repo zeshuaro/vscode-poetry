@@ -1,3 +1,37 @@
+# v0.8.0
+
+## 🚀 Features
+
+- feat: add CacheService for caching package names ([#252](https://github.com/zeshuaro/vscode-poetry/pull/252))
+- feat: add pypi client for fetching packages metadata ([#260](https://github.com/zeshuaro/vscode-poetry/pull/260))
+- feat: add pypi service for fetching and caching package data ([#266](https://github.com/zeshuaro/vscode-poetry/pull/266))
+- feat: add search packages method in PypiService ([#268](https://github.com/zeshuaro/vscode-poetry/pull/268))
+- feat: add fuzzy search support when adding packages ([#273](https://github.com/zeshuaro/vscode-poetry/pull/273))
+
+## 🧪 Tests
+
+- test: refactor commands test ([#253](https://github.com/zeshuaro/vscode-poetry/pull/253))
+- test: add tests coverage for extension ([#255](https://github.com/zeshuaro/vscode-poetry/pull/255))
+- test: add tests coverage for PoetryService ([#256](https://github.com/zeshuaro/vscode-poetry/pull/256))
+
+## 📦 Dependencies
+
+- chore(deps): update dependency prettier to v2.8.2 ([#254](https://github.com/zeshuaro/vscode-poetry/pull/254))
+- chore(deps): update typescript-eslint monorepo to v5.48.1 ([#258](https://github.com/zeshuaro/vscode-poetry/pull/258))
+- chore(deps): update dependency @vscode/test-electron to v2.2.2 ([#257](https://github.com/zeshuaro/vscode-poetry/pull/257))
+- chore(deps): update dependency prettier to v2.8.3 ([#262](https://github.com/zeshuaro/vscode-poetry/pull/262))
+- chore(deps): update dependency eslint to v8.32.0 ([#263](https://github.com/zeshuaro/vscode-poetry/pull/263))
+- chore(deps): pin dependencies ([#269](https://github.com/zeshuaro/vscode-poetry/pull/269))
+- chore(deps): update typescript-eslint monorepo to v5.48.2 ([#270](https://github.com/zeshuaro/vscode-poetry/pull/270))
+- chore(deps): update dependency axios to v1.2.3 ([#272](https://github.com/zeshuaro/vscode-poetry/pull/272))
+
+## 💬 Other
+
+- refactor: rename command class to extension service ([#251](https://github.com/zeshuaro/vscode-poetry/pull/251))
+- refactor: update cache service to cache with file ([#259](https://github.com/zeshuaro/vscode-poetry/pull/259))
+- refactor: pypi folder structure ([#261](https://github.com/zeshuaro/vscode-poetry/pull/261))
+- refactor: update to initialise fuzzy search once ([#271](https://github.com/zeshuaro/vscode-poetry/pull/271))
+
 # v0.7.2
 
 ## 📦 Dependencies
