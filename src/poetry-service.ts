@@ -1,6 +1,6 @@
 import { Terminal, window } from "vscode";
-import { PoetryCommand, PoetryOption } from "./types";
 import { PypiService } from "./pypi";
+import { PoetryCommand, PoetryOption } from "./types";
 
 export class PoetryService {
   static groupOptions: PoetryOption[] = [

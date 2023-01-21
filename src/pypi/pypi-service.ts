@@ -1,7 +1,7 @@
+import Fuse from "fuse.js";
 import { Uri, workspace } from "vscode";
 import { PypiClient } from "./pypi-client";
 import { PypiProject, PypiSimple } from "./types";
-import Fuse from "fuse.js";
 
 export class PypiService {
   private static packagesCacheName = "packages-cache.json";

@@ -1,6 +1,6 @@
 import { sync } from "glob";
-import { join, resolve } from "path";
 import Mocha from "mocha";
+import { join, resolve } from "path";
 
 function setupCoverage() {
   const NYC = require("nyc");

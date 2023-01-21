@@ -1,16 +1,16 @@
 import { afterEach, beforeEach } from "mocha";
 import {
+  SinonStub,
+  SinonStubbedInstance,
   assert,
   createStubInstance,
   restore,
-  SinonStub,
-  SinonStubbedInstance,
   stub,
 } from "sinon";
 import { Terminal, window } from "vscode";
 import { PoetryService } from "../../poetry-service";
-import { PoetryCommand, PoetryOption } from "../../types";
 import { PypiService } from "../../pypi";
+import { PoetryCommand, PoetryOption } from "../../types";
 
 suite("PoetryService", () => {
   const command = PoetryCommand.add;

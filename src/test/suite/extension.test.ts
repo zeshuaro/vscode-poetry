@@ -1,11 +1,11 @@
 import { afterEach, beforeEach } from "mocha";
-import { assert, restore, SinonStub, stub } from "sinon";
-import { commands, ExtensionContext } from "vscode";
+import { SinonStub, assert, restore, stub } from "sinon";
+import { ExtensionContext, commands } from "vscode";
 import { activate } from "../../extension";
+import { ExtensionService } from "../../extension-service";
+import { PoetryService } from "../../poetry-service";
 import { PypiClient } from "../../pypi";
 import { PypiService } from "../../pypi/pypi-service";
-import { PoetryService } from "../../poetry-service";
-import { ExtensionService } from "../../extension-service";
 
 suite("Extension", () => {
   const numExtensions = 12;
