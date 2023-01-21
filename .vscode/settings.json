@@ -6,5 +6,11 @@
     "out": true
   },
   "typescript.tsc.autoDetect": "off",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    }
+  }
 }

@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { afterEach, beforeEach } from "mocha";
 import {
-  restore,
-  stub,
-  assert,
-  createStubInstance,
   SinonStub,
   SinonStubbedInstance,
+  assert,
+  createStubInstance,
+  restore,
+  stub,
 } from "sinon";
 import { FileSystem, Uri, workspace } from "vscode";
 import { PypiClient, PypiService, PypiSimple } from "../../../pypi";

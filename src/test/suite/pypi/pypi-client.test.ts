@@ -2,11 +2,11 @@
 import { Axios, AxiosResponse } from "axios";
 import { afterEach, beforeEach } from "mocha";
 import {
-  restore,
+  SinonStubbedInstance,
   assert,
   createStubInstance,
-  SinonStubbedInstance,
   match,
+  restore,
   stub,
 } from "sinon";
 import { PypiClient } from "../../../pypi/pypi-client";

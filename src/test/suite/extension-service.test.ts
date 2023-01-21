@@ -1,9 +1,9 @@
 import { afterEach, beforeEach } from "mocha";
 import {
-  restore,
+  SinonStubbedInstance,
   assert,
   createStubInstance,
-  SinonStubbedInstance,
+  restore,
 } from "sinon";
 import { ExtensionService } from "../../extension-service";
 import { PoetryService } from "../../poetry-service";
