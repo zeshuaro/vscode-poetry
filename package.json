@@ -105,6 +105,10 @@
     "package": "vsce package",
     "publish": "vsce publish"
   },
+  "dependencies": {
+    "axios": "1.2.3",
+    "fuse.js": "6.6.2"
+  },
   "devDependencies": {
     "@types/glob": "8.0.1",
     "@types/mocha": "10.0.1",
@@ -114,10 +118,8 @@
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
     "@vscode/test-electron": "2.2.2",
-    "axios": "1.2.3",
     "eslint": "8.32.0",
     "eslint-plugin-unused-imports": "2.0.0",
-    "fuse.js": "6.6.2",
     "glob": "8.1.0",
     "mocha": "10.2.0",
     "nyc": "15.1.0",
