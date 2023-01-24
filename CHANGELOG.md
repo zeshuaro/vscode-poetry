@@ -1,3 +1,15 @@
+# v0.8.1
+
+## 🐛 Fixes
+
+- fix: missing dependencies in packaged extension ([#277](https://github.com/zeshuaro/vscode-poetry/pull/277))
+
+## 📦 Dependencies
+
+- chore(deps): update dependency glob to v8.1.0 ([#264](https://github.com/zeshuaro/vscode-poetry/pull/264))
+- chore(deps): lock file maintenance ([#275](https://github.com/zeshuaro/vscode-poetry/pull/275))
+- chore(deps): update dependency @types/glob to v8.0.1 ([#276](https://github.com/zeshuaro/vscode-poetry/pull/276))
+
 # v0.8.0
 
 ## 🚀 Features
