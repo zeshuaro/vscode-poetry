@@ -80,7 +80,7 @@ jobs:
       - name: Publish 📡
         run: |
           yarn package
-          yarn vsce publish --yarn -p ${{ secrets.VSCE_PAT }}
+          yarn vsce publish -p ${{ secrets.VSCE_PAT }}
 
       - name: Release 🚀
         uses: ncipollo/release-action@v1.12.0
