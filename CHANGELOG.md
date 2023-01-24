@@ -1,3 +1,9 @@
+# v0.8.2
+
+## 🐛 Fixes
+
+- fix: move extension dependencies into dependencies group in  ([#278](https://github.com/zeshuaro/vscode-poetry/pull/278))
+
 # v0.8.1
 
 ## 🐛 Fixes
