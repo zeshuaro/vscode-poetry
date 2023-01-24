@@ -102,8 +102,8 @@
     "lint": "eslint src --ext ts && prettier src/**/*.ts --check",
     "format": "eslint src --ext ts --fix && prettier src/**/*.ts --write",
     "test": "node ./out/test/runTest.js",
-    "package": "vsce package --yarn",
-    "publish": "vsce publish --yarn"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/glob": "8.0.1",
