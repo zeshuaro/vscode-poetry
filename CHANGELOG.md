@@ -1,3 +1,15 @@
+# v0.8.4
+
+## 📦 Dependencies
+
+- fix(deps): update dependency axios to v1.2.6 ([#283](https://github.com/zeshuaro/vscode-poetry/pull/283))
+- chore(deps): update dependency eslint to v8.33.0 ([#284](https://github.com/zeshuaro/vscode-poetry/pull/284))
+- chore(deps): update dependency @vscode/test-electron to v2.2.3 ([#285](https://github.com/zeshuaro/vscode-poetry/pull/285))
+- fix(deps): update dependency axios to v1.3.0 ([#288](https://github.com/zeshuaro/vscode-poetry/pull/288))
+- chore(deps): update dependency typescript to v4.9.5 ([#286](https://github.com/zeshuaro/vscode-poetry/pull/286))
+- chore(deps): update typescript-eslint monorepo to v5.50.0 ([#287](https://github.com/zeshuaro/vscode-poetry/pull/287))
+- fix(deps): update dependency axios to v1.3.1 ([#290](https://github.com/zeshuaro/vscode-poetry/pull/290))
+
 # v0.8.3
 
 ## 📦 Dependencies
