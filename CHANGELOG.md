@@ -1,3 +1,16 @@
+# v0.8.5
+
+## 📦 Dependencies
+
+- chore(deps): update dependency vscode to ^1.75.0 ([#289](https://github.com/zeshuaro/vscode-poetry/pull/289))
+- chore(deps): lock file maintenance ([#291](https://github.com/zeshuaro/vscode-poetry/pull/291))
+- fix(deps): update dependency axios to v1.3.2 ([#292](https://github.com/zeshuaro/vscode-poetry/pull/292))
+- chore(deps): update dependency @types/node to v18.11.19 ([#293](https://github.com/zeshuaro/vscode-poetry/pull/293))
+- chore(deps): update dependency @types/node to v18.13.0 ([#294](https://github.com/zeshuaro/vscode-poetry/pull/294))
+- chore(deps): update typescript-eslint monorepo to v5.51.0 ([#295](https://github.com/zeshuaro/vscode-poetry/pull/295))
+- chore(deps): update dependency prettier to v2.8.4 ([#297](https://github.com/zeshuaro/vscode-poetry/pull/297))
+- chore(deps): lock file maintenance ([#298](https://github.com/zeshuaro/vscode-poetry/pull/298))
+
 # v0.8.4
 
 ## 📦 Dependencies
