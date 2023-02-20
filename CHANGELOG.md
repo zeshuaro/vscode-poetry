@@ -1,3 +1,12 @@
+# v0.8.6
+
+## 📦 Dependencies
+
+- chore(deps): update dependency eslint to v8.34.0 ([#299](https://github.com/zeshuaro/vscode-poetry/pull/299))
+- fix(deps): update dependency axios to v1.3.3 ([#300](https://github.com/zeshuaro/vscode-poetry/pull/300))
+- chore(deps): update typescript-eslint monorepo to v5.52.0 ([#301](https://github.com/zeshuaro/vscode-poetry/pull/301))
+- chore(deps): lock file maintenance ([#303](https://github.com/zeshuaro/vscode-poetry/pull/303))
+
 # v0.8.5
 
 ## 📦 Dependencies
