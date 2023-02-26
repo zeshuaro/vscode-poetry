@@ -1,3 +1,12 @@
+# v0.8.7
+
+## 📦 Dependencies
+
+- chore(deps): update dependency @types/node to v18.14.0 ([#304](https://github.com/zeshuaro/vscode-poetry/pull/304))
+- chore(deps): update typescript-eslint monorepo to v5.53.0 ([#305](https://github.com/zeshuaro/vscode-poetry/pull/305))
+- fix(deps): update dependency axios to v1.3.4 ([#306](https://github.com/zeshuaro/vscode-poetry/pull/306))
+- chore(deps): update dependency @types/glob to v8.1.0 ([#307](https://github.com/zeshuaro/vscode-poetry/pull/307))
+
 # v0.8.6
 
 ## 📦 Dependencies
