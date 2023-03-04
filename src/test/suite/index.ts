@@ -1,4 +1,4 @@
-import { sync } from "glob";
+import sync from "glob";
 import Mocha from "mocha";
 import { join, resolve } from "path";
 
@@ -30,7 +30,7 @@ export async function run(): Promise<void> {
 
   const testsRoot = resolve(__dirname, "..");
   const nyc = setupCoverage();
-  const files = sync("**/**.test.js", { cwd: testsRoot });
+  const files = await sync("**/**.test.js", { cwd: testsRoot });
   files.forEach((f) => mocha.addFile(resolve(testsRoot, f)));
 
   try {
