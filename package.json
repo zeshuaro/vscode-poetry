@@ -10,7 +10,7 @@
     "url": "https://github.com/zeshuaro/vscode-poetry"
   },
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.76.0"
   },
   "categories": [
     "Other"
