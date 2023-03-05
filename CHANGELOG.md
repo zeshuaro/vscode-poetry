@@ -1,3 +1,18 @@
+# v0.9.0
+
+## 📦 Dependencies
+
+- chore(deps): lock file maintenance ([#308](https://github.com/zeshuaro/vscode-poetry/pull/308))
+- chore(deps): update dependency @types/node to v18.14.1 ([#309](https://github.com/zeshuaro/vscode-poetry/pull/309))
+- chore(deps): update dependency @types/node to v18.14.2 ([#312](https://github.com/zeshuaro/vscode-poetry/pull/312))
+- chore(deps): update dependency eslint to v8.35.0 ([#311](https://github.com/zeshuaro/vscode-poetry/pull/311))
+- chore(deps): update dependency @vscode/test-electron to v2.3.0 ([#315](https://github.com/zeshuaro/vscode-poetry/pull/315))
+- chore(deps): update dependency vscode to ^1.76.0 ([#313](https://github.com/zeshuaro/vscode-poetry/pull/313))
+- chore(deps): update typescript-eslint monorepo to v5.54.0 ([#316](https://github.com/zeshuaro/vscode-poetry/pull/316))
+- chore(deps): update dependency glob to v9 ([#317](https://github.com/zeshuaro/vscode-poetry/pull/317))
+- chore(deps): update dependency glob to v9.1.2 ([#318](https://github.com/zeshuaro/vscode-poetry/pull/318))
+- chore(deps): update dependency @types/vscode to ^1.76.0 ([#319](https://github.com/zeshuaro/vscode-poetry/pull/319))
+
 # v0.8.7
 
 ## 📦 Dependencies
