@@ -1,3 +1,12 @@
+# v0.9.3
+
+## 📦 Dependencies
+
+- chore(deps): update dependency @types/node to v18.15.5 ([#336](https://github.com/zeshuaro/vscode-poetry/pull/336))
+- chore(deps): update dependency glob to v9.3.1 ([#337](https://github.com/zeshuaro/vscode-poetry/pull/337))
+- chore(deps): update typescript-eslint monorepo to v5.56.0 ([#338](https://github.com/zeshuaro/vscode-poetry/pull/338))
+- chore(deps): update dependency prettier to v2.8.6 ([#334](https://github.com/zeshuaro/vscode-poetry/pull/334))
+
 # v0.9.2
 
 ## 📦 Dependencies
