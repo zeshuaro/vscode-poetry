@@ -1,3 +1,14 @@
+# v0.10.0
+
+## 📦 Dependencies
+
+- chore(deps): lock file maintenance ([#348](https://github.com/zeshuaro/vscode-poetry/pull/348))
+- chore(deps): update dependency vscode to ^1.77.0 ([#350](https://github.com/zeshuaro/vscode-poetry/pull/350))
+- chore(deps): update dependency typescript to v5.0.3 ([#349](https://github.com/zeshuaro/vscode-poetry/pull/349))
+- chore(deps): update dependency glob to v9.3.4 ([#351](https://github.com/zeshuaro/vscode-poetry/pull/351))
+- chore(deps): update typescript-eslint monorepo to v5.57.1 ([#352](https://github.com/zeshuaro/vscode-poetry/pull/352))
+- fix(deps): update dependency axios to v1.3.5 ([#354](https://github.com/zeshuaro/vscode-poetry/pull/354))
+
 # v0.9.4
 
 ## 📦 Dependencies
