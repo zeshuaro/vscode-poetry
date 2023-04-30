@@ -1,3 +1,22 @@
+# v0.10.2
+
+## 📦 Dependencies
+
+- chore(deps): lock file maintenance ([#361](https://github.com/zeshuaro/vscode-poetry/pull/361))
+- chore(deps): update dependency glob to v10.1.0 ([#362](https://github.com/zeshuaro/vscode-poetry/pull/362))
+- chore(deps): update dependency @types/sinon to v10.0.14 ([#363](https://github.com/zeshuaro/vscode-poetry/pull/363))
+- chore(deps): update dependency glob to v10.2.1 ([#364](https://github.com/zeshuaro/vscode-poetry/pull/364))
+- chore(deps): update typescript-eslint monorepo to v5.59.0 ([#365](https://github.com/zeshuaro/vscode-poetry/pull/365))
+- fix(deps): update dependency axios to v1.3.6 ([#366](https://github.com/zeshuaro/vscode-poetry/pull/366))
+- chore(deps): update dependency sinon to v15.0.4 ([#369](https://github.com/zeshuaro/vscode-poetry/pull/369))
+- chore(deps): update dependency glob to v10.2.2 ([#371](https://github.com/zeshuaro/vscode-poetry/pull/371))
+- chore(deps): update dependency @types/node to v18.16.0 ([#367](https://github.com/zeshuaro/vscode-poetry/pull/367))
+- chore(deps): lock file maintenance ([#368](https://github.com/zeshuaro/vscode-poetry/pull/368))
+- chore(deps): update dependency prettier to v2.8.8 ([#372](https://github.com/zeshuaro/vscode-poetry/pull/372))
+- chore(deps): update typescript-eslint monorepo to v5.59.1 ([#373](https://github.com/zeshuaro/vscode-poetry/pull/373))
+- chore(deps): update dependency eslint to v8.39.0 ([#370](https://github.com/zeshuaro/vscode-poetry/pull/370))
+- chore(deps): update dependency @types/node to v18.16.1 ([#374](https://github.com/zeshuaro/vscode-poetry/pull/374))
+
 # v0.10.1
 
 ## 📦 Dependencies
