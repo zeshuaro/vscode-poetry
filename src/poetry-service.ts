@@ -163,7 +163,7 @@ export class PoetryService {
     const selectedOpts = await this.promptOptions(
       options.map((option) => option.description)
     );
-    if (!selectedOpts || !selectedOpts?.length) {
+    if (!selectedOpts?.length) {
       return;
     }
 
