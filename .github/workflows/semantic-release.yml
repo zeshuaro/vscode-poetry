@@ -2,6 +2,8 @@ name: Semantic release
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * SUN"
 
 permissions:
   contents: write
