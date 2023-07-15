@@ -16,6 +16,9 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3.4.2
         with:
           dry_run: true
+          extra_plugins: |
+            @semantic-release/git
+            semantic-release-vsce
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
