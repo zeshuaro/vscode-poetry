@@ -110,7 +110,6 @@
     "fuse.js": "6.6.2"
   },
   "devDependencies": {
-    "@semantic-release/git": "^10.0.1",
     "@types/glob": "8.1.0",
     "@types/mocha": "10.0.1",
     "@types/node": "18.16.19",
@@ -125,8 +124,6 @@
     "mocha": "10.2.0",
     "nyc": "15.1.0",
     "prettier": "3.0.0",
-    "semantic-release": "^21.0.7",
-    "semantic-release-vsce": "^5.6.0",
     "sinon": "15.2.0",
     "typescript": "5.1.6",
     "vsce": "2.15.0"
