@@ -5,6 +5,7 @@ on:
 
 jobs:
   semantic-release:
+    name: Semantic release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -12,13 +13,5 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Semantic release 🚀
-        uses: cycjimmy/semantic-release-action@v3.4.2
-        with:
-          dry_run: true
-          extra_plugins: |
-            @semantic-release/git
-            semantic-release-vsce
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - name: Release 🚀
+        run: npx semantic-release
