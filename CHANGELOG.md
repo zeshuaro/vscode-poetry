@@ -1,3 +1,18 @@
+# v0.13.0
+
+## 📦 Dependencies
+
+- chore(deps): update dependency vscode to ^1.80.0 ([#436](https://github.com/zeshuaro/vscode-poetry/pull/436))
+- chore(deps): update dependency prettier to v3 ([#438](https://github.com/zeshuaro/vscode-poetry/pull/438))
+- chore(deps): lock file maintenance ([#439](https://github.com/zeshuaro/vscode-poetry/pull/439))
+- chore(deps): update dependency glob to v10.3.3 ([#440](https://github.com/zeshuaro/vscode-poetry/pull/440))
+- chore(deps): update typescript-eslint monorepo to v5.62.0 ([#441](https://github.com/zeshuaro/vscode-poetry/pull/441))
+- chore(deps): update dependency eslint-plugin-unused-imports to v3 ([#443](https://github.com/zeshuaro/vscode-poetry/pull/443))
+- chore(deps): update typescript-eslint monorepo to v6 (major) ([#442](https://github.com/zeshuaro/vscode-poetry/pull/442))
+- chore: add semantic-release plugins ([#446](https://github.com/zeshuaro/vscode-poetry/pull/446))
+- chore: add semantic-release plugins ([#452](https://github.com/zeshuaro/vscode-poetry/pull/452))
+- chore(deps): pin dependencies ([#448](https://github.com/zeshuaro/vscode-poetry/pull/448))
+
 # v0.12.1
 
 ## 📦 Dependencies
