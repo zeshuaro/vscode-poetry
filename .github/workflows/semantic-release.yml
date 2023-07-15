@@ -1,0 +1,21 @@
+name: Semantic release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  semantic-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Semantic release 🚀
+        uses: cycjimmy/semantic-release-action@v3.4.2
+        with:
+          dry_run: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
