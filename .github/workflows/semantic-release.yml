@@ -3,6 +3,9 @@ name: Semantic release
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   semantic-release:
     name: Semantic release
