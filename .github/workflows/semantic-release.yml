@@ -28,3 +28,4 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
