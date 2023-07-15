@@ -13,6 +13,7 @@
       "automerge": false,
       "patch": false,
       "rangeStrategy": "bump",
+      "semanticCommitType": "fix",
       "semanticCommitScope": "vscode"
     }
   ]
