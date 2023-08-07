@@ -11,4 +11,4 @@ on:
 
 jobs:
   check:
-    uses: zeshuaro/github-actions-workflows/.github/workflows/check-pull-request.yml@9e2c06558435e12cf64e73dd210306b4883aafdd
+    uses: zeshuaro/github-actions-workflows/.github/workflows/check-pull-request.yml@f38c53a9a689b989e617cf72f3c91322639219d0
