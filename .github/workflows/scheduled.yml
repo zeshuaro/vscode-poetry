@@ -7,7 +7,7 @@ on:
 jobs:
   stale:
     name: Close stale
-    uses: zeshuaro/github-actions-workflows/.github/workflows/close-stale.yml@f38c53a9a689b989e617cf72f3c91322639219d0
+    uses: zeshuaro/github-actions-workflows/.github/workflows/close-stale.yml@de1d095ed7299374421389eae787b7720efea5c6
   lock:
     name: Lock threads
-    uses: zeshuaro/github-actions-workflows/.github/workflows/lock-threads.yml@f38c53a9a689b989e617cf72f3c91322639219d0
+    uses: zeshuaro/github-actions-workflows/.github/workflows/lock-threads.yml@de1d095ed7299374421389eae787b7720efea5c6
