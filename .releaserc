@@ -90,6 +90,7 @@
     [
       "@semantic-release/github",
       {
+        "releasedLabels": false,
         "assets": [
           {
             "path": "*.vsix"
