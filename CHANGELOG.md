@@ -1,3 +1,10 @@
+## [0.14.1](https://github.com/zeshuaro/vscode-poetry/compare/v0.14.0...v0.14.1) (2023-09-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.5.0 ([#519](https://github.com/zeshuaro/vscode-poetry/issues/519)) ([d3beec0](https://github.com/zeshuaro/vscode-poetry/commit/d3beec087ce691c0ab4012718cbf6ad00c561a84))
+
 # v0.14.0
 
 ## 📦 Dependencies
