@@ -104,7 +104,11 @@ suite("PypiService", () => {
     assert.calledOnceWithExactly(writeFile, packagesCacheUri, packagesBytes);
 
     // Join path should be called twice, reading and writing the cache
-    assert.calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
-    assert.calledTwice(joinPath);
+    joinPath
+      .getCall(0)
+      .calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
+    joinPath
+      .getCall(1)
+      .calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
   }
 }).timeout(5000);
