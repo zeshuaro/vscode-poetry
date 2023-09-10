@@ -1,3 +1,10 @@
+# [0.15.0](https://github.com/zeshuaro/vscode-poetry/compare/v0.14.1...v0.15.0) (2023-09-10)
+
+
+### Features
+
+* add extension icon ([#530](https://github.com/zeshuaro/vscode-poetry/issues/530)) ([2c1ba5d](https://github.com/zeshuaro/vscode-poetry/commit/2c1ba5d3660b98521e6d6459026e41e07babed00))
+
 ## [0.14.1](https://github.com/zeshuaro/vscode-poetry/compare/v0.14.0...v0.14.1) (2023-09-03)
 
 
