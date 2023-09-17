@@ -129,7 +129,7 @@
     "prettier": "3.0.3",
     "semantic-release": "21.1.1",
     "semantic-release-vsce": "5.6.1",
-    "sinon": "15.2.0",
+    "sinon": "16.0.0",
     "typescript": "5.2.2"
   },
   "__metadata": {
