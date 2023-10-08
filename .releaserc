@@ -31,15 +31,6 @@
       }
     ]
   ],
-  "analyzeCommits": {
-    "releaseRules": [
-      {
-        "type": "fix",
-        "scope": "vscode",
-        "release": "minor"
-      }
-    ]
-  },
   "preset": "conventionalcommits",
   "presetConfig": {
     "types": [
