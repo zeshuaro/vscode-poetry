@@ -10,7 +10,6 @@
       "groupName": "VS Code dependencies",
       "matchPaths": ["package.json"],
       "matchPackageNames": ["vscode", "@types/vscode"],
-      "automerge": false,
       "patch": false,
       "rangeStrategy": "bump",
       "semanticCommitType": "fix",
