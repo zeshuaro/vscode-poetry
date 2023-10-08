@@ -1,3 +1,20 @@
+## [0.17.0](https://github.com/zeshuaro/vscode-poetry/compare/v0.16.1...v0.17.0) (2023-10-08)
+
+
+### Bug Fixes
+
+* **vscode:** update dependency vscode to ^1.83.0 ([#567](https://github.com/zeshuaro/vscode-poetry/issues/567)) ([e73449f](https://github.com/zeshuaro/vscode-poetry/commit/e73449fc614a17dd962fa76088235a3c982f83fd))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @types/node to v18.18.1 ([#563](https://github.com/zeshuaro/vscode-poetry/issues/563)) ([aa9c4a2](https://github.com/zeshuaro/vscode-poetry/commit/aa9c4a2436663fb9bc560954c9d6daad7acc6d53))
+* **deps:** update dependency @types/node to v18.18.3 ([#564](https://github.com/zeshuaro/vscode-poetry/issues/564)) ([2caebce](https://github.com/zeshuaro/vscode-poetry/commit/2caebce63c338d70f8ea99da6fec0f6d07078f51))
+* **deps:** update dependency @types/sinon to v10.0.18 ([#565](https://github.com/zeshuaro/vscode-poetry/issues/565)) ([ff95017](https://github.com/zeshuaro/vscode-poetry/commit/ff95017f22da5178bf9daaa6152782010f932fcc))
+* **deps:** update dependency @vscode/test-electron to v2.3.5 ([#569](https://github.com/zeshuaro/vscode-poetry/issues/569)) ([006f370](https://github.com/zeshuaro/vscode-poetry/commit/006f370ad1d4e422de7795f4c6387c91f20260fc))
+* **deps:** update dependency semantic-release-vsce to v5.6.3 ([#568](https://github.com/zeshuaro/vscode-poetry/issues/568)) ([b1b703f](https://github.com/zeshuaro/vscode-poetry/commit/b1b703f3cb6cd35ea698d7344eaa175d0554fb7a))
+* **deps:** update typescript-eslint monorepo to v6.7.4 ([#566](https://github.com/zeshuaro/vscode-poetry/issues/566)) ([5ccdfd6](https://github.com/zeshuaro/vscode-poetry/commit/5ccdfd6b3cd767e014ac734b95785b671d46689f))
+
 ## [0.16.1](https://github.com/zeshuaro/vscode-poetry/compare/v0.16.0...v0.16.1) (2023-10-01)
 
 
