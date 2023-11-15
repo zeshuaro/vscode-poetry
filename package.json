@@ -11,7 +11,7 @@
     "url": "https://github.com/zeshuaro/vscode-poetry"
   },
   "engines": {
-    "vscode": "^1.84.0"
+    "vscode": "^2023.8.100"
   },
   "categories": [
     "Other"
