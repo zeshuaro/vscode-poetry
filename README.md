@@ -1,13 +1,21 @@
 # Python Poetry
 
-[Python Poetry](https://python-poetry.org/) support for [VS Code](https://code.visualstudio.com/) to manage Poetry commands.
-
 [![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/zeshuaro.vscode-python-poetry)](https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry)
 [![GitHub license](https://img.shields.io/github/license/zeshuaro/vscode-poetry)](https://github.com/zeshuaro/vscode-poetry/blob/main/LICENSE)
 [![GitHub Actions](https://github.com/zeshuaro/vscode-poetry/actions/workflows/github-actions.yml/badge.svg)](https://github.com/zeshuaro/vscode-poetry/actions/workflows/github-actions.yml)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vscode-poetry&metric=coverage)](https://sonarcloud.io/summary/new_code?id=vscode-poetry)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vscode-poetry&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vscode-poetry)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/zeshuaro)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/zeshuaro)
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/zeshuaro)
+[![LiberaPay](https://img.shields.io/badge/Liberapay-F6C915?style=for-the-badge&logo=liberapay&logoColor=black)](https://liberapay.com/zeshuaro/)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/zeshuaro)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/JoshuaTang)
+
+[Python Poetry](https://python-poetry.org/) support for [VS Code](https://code.visualstudio.com/) to manage Poetry commands.
+
 
 ## Installation
 
