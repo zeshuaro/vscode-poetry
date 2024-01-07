@@ -1,3 +1,25 @@
+## [0.17.9](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.8...v0.17.9) (2024-01-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.6.4 ([#684](https://github.com/zeshuaro/vscode-poetry/issues/684)) ([48f8ab7](https://github.com/zeshuaro/vscode-poetry/commit/48f8ab76abbfd3a994edc81d159bbe09d79f039b))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#677](https://github.com/zeshuaro/vscode-poetry/issues/677)) ([b5f2369](https://github.com/zeshuaro/vscode-poetry/commit/b5f2369cb23fb04c4670384eb0d45ed2f366352a))
+* **deps:** update dependency @types/node to v20.10.6 ([#678](https://github.com/zeshuaro/vscode-poetry/issues/678)) ([70f870d](https://github.com/zeshuaro/vscode-poetry/commit/70f870d906d40bb534ac0766f4f45f00bb777ab4))
+* **deps:** update typescript-eslint monorepo to v6.17.0 ([#681](https://github.com/zeshuaro/vscode-poetry/issues/681)) ([25f408b](https://github.com/zeshuaro/vscode-poetry/commit/25f408b82d4baacf71969ad52c15b8a6f60771b4))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 04a2125 ([#680](https://github.com/zeshuaro/vscode-poetry/issues/680)) ([746e8cd](https://github.com/zeshuaro/vscode-poetry/commit/746e8cd1fc7c76add0c2ef84db8638c9b4059429))
+* **deps:** update zeshuaro/github-actions-workflows digest to 8050038 ([#679](https://github.com/zeshuaro/vscode-poetry/issues/679)) ([177d529](https://github.com/zeshuaro/vscode-poetry/commit/177d5294a3657055714a4d5fbb9708e02ff0e69e))
+* **deps:** update zeshuaro/github-actions-workflows digest to b8a4973 ([#683](https://github.com/zeshuaro/vscode-poetry/issues/683)) ([3b358e4](https://github.com/zeshuaro/vscode-poetry/commit/3b358e4b86e521b9ee793f9a8919934ee572b95a))
+* separate `pull_request` and `pull_request_target` actions ([#682](https://github.com/zeshuaro/vscode-poetry/issues/682)) ([1bd103f](https://github.com/zeshuaro/vscode-poetry/commit/1bd103f62a36f736392ce6f8b80a7c1d932a1053))
+
 ## [0.17.8](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.7...v0.17.8) (2023-12-31)
 
 
