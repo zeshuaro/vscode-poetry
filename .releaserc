@@ -1,4 +1,5 @@
 {
+  "dryRun": true,
   "branches": [
     "main"
   ],
