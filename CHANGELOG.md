@@ -1,3 +1,34 @@
+## [0.17.10](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.9...v0.17.10) (2024-01-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.6.5 ([#686](https://github.com/zeshuaro/vscode-poetry/issues/686)) ([dbd23d7](https://github.com/zeshuaro/vscode-poetry/commit/dbd23d7c0aabc7c7d5c0a313d5ddae308b99dfea))
+
+
+### Documentation
+
+* **license:** update copyright year to 2024 ([#691](https://github.com/zeshuaro/vscode-poetry/issues/691)) ([b27c84f](https://github.com/zeshuaro/vscode-poetry/commit/b27c84fc19b3f70fbb3c44f2b54ba78dcfb0876a))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#685](https://github.com/zeshuaro/vscode-poetry/issues/685)) ([a3f4eae](https://github.com/zeshuaro/vscode-poetry/commit/a3f4eae3b8c551c794479fc3c048665d80be4f61))
+* **deps:** update dependency @types/node to v20.10.7 ([#690](https://github.com/zeshuaro/vscode-poetry/issues/690)) ([c164577](https://github.com/zeshuaro/vscode-poetry/commit/c1645779e59c1765445bca3ebab99c80c2b2bbea))
+* **deps:** update dependency @types/node to v20.10.8 ([#694](https://github.com/zeshuaro/vscode-poetry/issues/694)) ([93ff4eb](https://github.com/zeshuaro/vscode-poetry/commit/93ff4eba62ea2320a429c0c8512b046de9d49546))
+* **deps:** update typescript-eslint monorepo to v6.18.0 ([#689](https://github.com/zeshuaro/vscode-poetry/issues/689)) ([73660c0](https://github.com/zeshuaro/vscode-poetry/commit/73660c0090584a0f8416735c87f890fbfca0de80))
+* **deps:** update typescript-eslint monorepo to v6.18.1 ([#693](https://github.com/zeshuaro/vscode-poetry/issues/693)) ([5112acb](https://github.com/zeshuaro/vscode-poetry/commit/5112acbb8dfec281cb377a19df934f5a48b42e4d))
+
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 1b78c32 ([#688](https://github.com/zeshuaro/vscode-poetry/issues/688)) ([84126d5](https://github.com/zeshuaro/vscode-poetry/commit/84126d581371f6e1870d85f3464515b59d645219))
+* **deps:** update zeshuaro/github-actions-workflows digest to b4bf0b4 ([#692](https://github.com/zeshuaro/vscode-poetry/issues/692)) ([7456ab9](https://github.com/zeshuaro/vscode-poetry/commit/7456ab9a06dca3eed5cb13784934cb1fdd72210b))
+* **release:** combine release workflow into main workflow ([#697](https://github.com/zeshuaro/vscode-poetry/issues/697)) ([fbcd63f](https://github.com/zeshuaro/vscode-poetry/commit/fbcd63f4d4d1cc616c9aaf98957ad9f2ecee2182))
+* **scheduled:** provide `PAT` to workflow ([#687](https://github.com/zeshuaro/vscode-poetry/issues/687)) ([91f93a0](https://github.com/zeshuaro/vscode-poetry/commit/91f93a08fef8b6751e5dfb2a26c024c0c55195c6))
+* **semantic-release:** remove `dryRun` option ([#696](https://github.com/zeshuaro/vscode-poetry/issues/696)) ([0032f7f](https://github.com/zeshuaro/vscode-poetry/commit/0032f7f274330d8bb8fe31c1cdc5318cc513f70e))
+* **semantic-release:** use github app token ([#695](https://github.com/zeshuaro/vscode-poetry/issues/695)) ([baa228f](https://github.com/zeshuaro/vscode-poetry/commit/baa228feb580f8426e144bd0da83bb6a77a5b159))
+
 ## [0.17.9](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.8...v0.17.9) (2024-01-07)
 
 
