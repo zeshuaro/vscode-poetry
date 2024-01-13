@@ -76,6 +76,11 @@ jobs:
     needs: [test, lint]
     if: ${{ (github.ref == 'refs/heads/main') && (contains(fromJSON('["workflow_dispatch", "schedule"]'), github.event_name)) }}
 
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
     steps:
       - name: Create GitHub App token 🔑
         id: create-app-token
