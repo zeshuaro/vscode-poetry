@@ -23,13 +23,17 @@ suite("PoetryService", () => {
   let terminal: Terminal;
   let sendText: SinonStub;
   let createTerminal: SinonStub;
+  let show: SinonStub;
 
   beforeEach(() => {
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {},
+      show: () => {},
       exitStatus: undefined,
     };
     sendText = stub(terminal, "sendText");
+    show = stub(terminal, "show");
+
     createTerminal = stub(window, "createTerminal").returns(terminal);
 
     pypiService = createStubInstance(PypiService);
@@ -42,6 +46,7 @@ suite("PoetryService", () => {
 
   test("install packages", async () => {
     await sut.installPackages();
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry install");
   });
 
@@ -58,6 +63,7 @@ suite("PoetryService", () => {
 
     assert.calledOnce(showQuickPick);
     assert.callCount(showInputBox, numExtraPompts);
+    assert.calledOnce(show);
     assert.calledWith(
       sendText,
       `poetry install ${getMappedPoetryOptions(opts)}`
@@ -70,6 +76,7 @@ suite("PoetryService", () => {
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry install");
   });
 
@@ -86,6 +93,7 @@ suite("PoetryService", () => {
 
     assert.calledOnce(showQuickPick);
     assert.callCount(showInputBox, numExtraPompts);
+    assert.calledOnce(show);
     assert.calledWith(
       sendText,
       `poetry install ${opts
@@ -101,6 +109,7 @@ suite("PoetryService", () => {
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry install");
   });
 
@@ -110,6 +119,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command });
 
+    assert.calledOnce(show);
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
     assert.calledOnce(promptPackageNameWithSearch);
   });
@@ -120,6 +130,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command });
 
+    assert.calledOnce(show);
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
     assert.calledOnce(showInputBox);
   });
@@ -130,6 +141,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command });
 
+    assert.notCalled(show);
     assert.notCalled(sendText);
     assert.calledOnce(promptPackageNameWithSearch);
   });
@@ -140,6 +152,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command, isDev: true });
 
+    assert.calledOnce(show);
     assert.calledWith(sendText, `poetry ${command} ${packageName} --dev`);
     assert.calledOnce(promptPackageNameWithSearch);
   });
@@ -151,6 +164,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command, askGroup: true });
 
+    assert.calledOnce(show);
     assert.calledWith(
       sendText,
       `poetry ${command} ${packageName} --group ${group}`
@@ -166,6 +180,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command, askGroup: true });
 
+    assert.notCalled(show);
     assert.notCalled(sendText);
     assert.calledOnce(promptPackageNameWithSearch);
     assert.calledOnce(showInputBox);
@@ -178,6 +193,7 @@ suite("PoetryService", () => {
 
     await sut.managePackages({ command, askGroup: true });
 
+    assert.calledOnce(show);
     assert.calledWith(sendText, `poetry ${command} ${packageName}`);
     assert.calledOnce(promptPackageNameWithSearch);
     assert.calledOnce(showInputBox);
@@ -185,6 +201,8 @@ suite("PoetryService", () => {
 
   test("update packages", async () => {
     await sut.updatePackages();
+
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry update");
   });
 
@@ -201,6 +219,7 @@ suite("PoetryService", () => {
 
     assert.calledOnce(showQuickPick);
     assert.callCount(showInputBox, numExtraPompts);
+    assert.calledOnce(show);
     assert.calledWith(
       sendText,
       `poetry update ${getMappedPoetryOptions(opts)}`
@@ -213,11 +232,14 @@ suite("PoetryService", () => {
     await sut.updatePackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry update");
   });
 
   test("update packages no dev", async () => {
     await sut.updatePackages({ noDev: true });
+
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry update --no-dev");
   });
 
@@ -226,6 +248,7 @@ suite("PoetryService", () => {
 
     await sut.updatePackages({ askPackageName: true });
 
+    assert.calledOnce(show);
     assert.calledWith(sendText, `poetry update ${packageName}`);
     assert.calledOnce(showInputBox);
   });
@@ -235,17 +258,22 @@ suite("PoetryService", () => {
 
     await sut.updatePackages({ askPackageName: true });
 
+    assert.notCalled(show);
     assert.notCalled(sendText);
     assert.calledOnce(showInputBox);
   });
 
   test("lock packages", () => {
     sut.lockPackages();
+
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry lock");
   });
 
   test("lock packages no update", () => {
     sut.lockPackages({ noUpdate: true });
+
+    assert.calledOnce(show);
     assert.calledWith(sendText, "poetry lock --no-update");
   });
 
@@ -260,6 +288,7 @@ suite("PoetryService", () => {
     (window.createTerminal as unknown as SinonStub).restore();
     terminal = <Terminal>{
       sendText: (_text: string, _addNewLine?: boolean) => {},
+      show: () => {},
       exitStatus: {},
     };
     const createTerminal = stub(window, "createTerminal").returns(terminal);
