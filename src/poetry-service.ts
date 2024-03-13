@@ -240,6 +240,7 @@ export class PoetryService {
 
   private runPoetry(args: string[]) {
     const terminal = this.getTerminal();
+    terminal.show();
     terminal.sendText(`poetry ${args.join(" ")}`);
   }
 }
