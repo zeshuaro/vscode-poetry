@@ -1,3 +1,20 @@
+## [0.17.14](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.13...v0.17.14) (2024-03-15)
+
+
+### Bug Fixes
+
+* vscode terminal not showing up when running commands ([#783](https://github.com/zeshuaro/vscode-poetry/issues/783)) ([5d329c4](https://github.com/zeshuaro/vscode-poetry/commit/5d329c49096b09fdbfa84c49db2b2bf99a80970d))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#776](https://github.com/zeshuaro/vscode-poetry/issues/776)) ([f0f2cc0](https://github.com/zeshuaro/vscode-poetry/commit/f0f2cc08736d125b0951f5f1dc8da34981864dfb))
+* **deps:** update dependency @types/node to v20.11.24 ([#777](https://github.com/zeshuaro/vscode-poetry/issues/777)) ([03c14cf](https://github.com/zeshuaro/vscode-poetry/commit/03c14cf32086a44e56fee563eaf97a4789b3b21e))
+* **deps:** update dependency @types/node to v20.11.25 ([#780](https://github.com/zeshuaro/vscode-poetry/issues/780)) ([b541884](https://github.com/zeshuaro/vscode-poetry/commit/b541884d27361179bf96761914d5974c53c29d21))
+* **deps:** update dependency semantic-release-vsce to v5.7.0 ([#778](https://github.com/zeshuaro/vscode-poetry/issues/778)) ([d0cb2c0](https://github.com/zeshuaro/vscode-poetry/commit/d0cb2c084ab03f09d6adb7e45c43101395a47ba3))
+* **deps:** update dependency typescript to v5.4.2 ([#781](https://github.com/zeshuaro/vscode-poetry/issues/781)) ([7d6a355](https://github.com/zeshuaro/vscode-poetry/commit/7d6a355affb69c00206cd6f66830159c103f6a6c))
+* **deps:** update typescript-eslint monorepo to v7.1.1 ([#779](https://github.com/zeshuaro/vscode-poetry/issues/779)) ([225c3ad](https://github.com/zeshuaro/vscode-poetry/commit/225c3ad26d6252e8faaf304bb9455d43c1300ed5))
+
 ## [0.17.13](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.12...v0.17.13) (2024-03-03)
 
 
