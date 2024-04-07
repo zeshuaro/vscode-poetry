@@ -1,3 +1,36 @@
+## [0.17.16](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.15...v0.17.16) (2024-04-07)
+
+
+### Bug Fixes
+
+* **vscode:** update dependency vscode to ^1.88.0 ([#814](https://github.com/zeshuaro/vscode-poetry/issues/814)) ([5bc1191](https://github.com/zeshuaro/vscode-poetry/commit/5bc11912eb073f69ef94b31460bb5c05d75cf6b1))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#798](https://github.com/zeshuaro/vscode-poetry/issues/798)) ([596844c](https://github.com/zeshuaro/vscode-poetry/commit/596844c8975c20461f13d4c48070e9135efdb4e2))
+* **deps:** lock file maintenance ([#805](https://github.com/zeshuaro/vscode-poetry/issues/805)) ([c57dca5](https://github.com/zeshuaro/vscode-poetry/commit/c57dca5ae1c8f2e6253c17dbc69d5545397c7019))
+* **deps:** update dependency @types/node to v20.12.2 ([#807](https://github.com/zeshuaro/vscode-poetry/issues/807)) ([bf09d51](https://github.com/zeshuaro/vscode-poetry/commit/bf09d51445e97c1b91447945229b98d63ab1b25f))
+* **deps:** update dependency @types/node to v20.12.3 ([#813](https://github.com/zeshuaro/vscode-poetry/issues/813)) ([c215387](https://github.com/zeshuaro/vscode-poetry/commit/c21538773d4367704a36200a3b50ac987fdc11f1))
+* **deps:** update dependency @types/node to v20.12.4 ([#816](https://github.com/zeshuaro/vscode-poetry/issues/816)) ([e09ef42](https://github.com/zeshuaro/vscode-poetry/commit/e09ef424268de54255f194c4f31c7e2a37d941dd))
+* **deps:** update dependency glob to v10.3.12 ([#806](https://github.com/zeshuaro/vscode-poetry/issues/806)) ([b5e7cdc](https://github.com/zeshuaro/vscode-poetry/commit/b5e7cdc37ed6f4589fece585eb43d6509a3d0fd7))
+* **deps:** update dependency mocha to v10.4.0 ([#804](https://github.com/zeshuaro/vscode-poetry/issues/804)) ([083819c](https://github.com/zeshuaro/vscode-poetry/commit/083819ca6daef15d25fb2fc264165b60afcddf63))
+* **deps:** update dependency semantic-release to v23.0.6 ([#801](https://github.com/zeshuaro/vscode-poetry/issues/801)) ([84a79ba](https://github.com/zeshuaro/vscode-poetry/commit/84a79ba5be8892a7116f45b596544e2d03acc8f1))
+* **deps:** update dependency semantic-release to v23.0.7 ([#815](https://github.com/zeshuaro/vscode-poetry/issues/815)) ([af6d7d5](https://github.com/zeshuaro/vscode-poetry/commit/af6d7d54feb2cd060f7253734f79804947499462))
+* **deps:** update dependency semantic-release-vsce to v5.7.1 ([#803](https://github.com/zeshuaro/vscode-poetry/issues/803)) ([a959e65](https://github.com/zeshuaro/vscode-poetry/commit/a959e657dc70328485b07fae68c9cf6437073611))
+* **deps:** update typescript-eslint monorepo to v7.4.0 ([#802](https://github.com/zeshuaro/vscode-poetry/issues/802)) ([0c68fc2](https://github.com/zeshuaro/vscode-poetry/commit/0c68fc26c51896b85dca2de7f03a4f9724029e49))
+* **deps:** update typescript-eslint monorepo to v7.5.0 ([#811](https://github.com/zeshuaro/vscode-poetry/issues/811)) ([b62db0b](https://github.com/zeshuaro/vscode-poetry/commit/b62db0b2776c1f83cb8603da0ce31fda9d530017))
+
+
+### Continuous Integration
+
+* **deps:** update codecov/codecov-action action to v4.1.1 ([#799](https://github.com/zeshuaro/vscode-poetry/issues/799)) ([e96f449](https://github.com/zeshuaro/vscode-poetry/commit/e96f449e766959b4468796a2f67d6cf8f8c8c5f0))
+* **deps:** update codecov/codecov-action action to v4.2.0 ([#810](https://github.com/zeshuaro/vscode-poetry/issues/810)) ([1e9c3aa](https://github.com/zeshuaro/vscode-poetry/commit/1e9c3aa23a5c849c94c3f2710a3a26cbfb9990b0))
+* **deps:** update zeshuaro/github-actions-workflows digest to 00bf43e ([#808](https://github.com/zeshuaro/vscode-poetry/issues/808)) ([f2868d5](https://github.com/zeshuaro/vscode-poetry/commit/f2868d5936c7a115ad8b2bf610e8115fbef1afb5))
+* **deps:** update zeshuaro/github-actions-workflows digest to 0708de0 ([#812](https://github.com/zeshuaro/vscode-poetry/issues/812)) ([106f053](https://github.com/zeshuaro/vscode-poetry/commit/106f0539a50aa8f00a9991a4d676370c431fe393))
+* **deps:** update zeshuaro/github-actions-workflows digest to 4929678 ([#809](https://github.com/zeshuaro/vscode-poetry/issues/809)) ([1e94565](https://github.com/zeshuaro/vscode-poetry/commit/1e945659aeaa7b86a7a051cb7451ae1a17b02e80))
+* **deps:** update zeshuaro/github-actions-workflows digest to 62153fd ([#800](https://github.com/zeshuaro/vscode-poetry/issues/800)) ([1acf21b](https://github.com/zeshuaro/vscode-poetry/commit/1acf21b408033f6cb14734eafc96946fbaa8ee27))
+
 ## [0.17.15](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.14...v0.17.15) (2024-03-24)
 
 
