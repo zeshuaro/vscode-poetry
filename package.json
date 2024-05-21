@@ -121,7 +121,7 @@
     "@typescript-eslint/parser": "7.9.0",
     "@vscode/test-electron": "2.3.10",
     "conventional-changelog-conventionalcommits": "7.0.2",
-    "eslint": "8.57.0",
+    "eslint": "9.3.0",
     "eslint-plugin-unused-imports": "3.2.0",
     "glob": "10.3.15",
     "mocha": "10.4.0",
