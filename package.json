@@ -100,8 +100,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile",
-    "lint": "eslint src --ext ts && prettier src/**/*.ts --check",
-    "format": "eslint src --ext ts --fix && prettier src/**/*.ts --write",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint src --ext ts && prettier src/**/*.ts --check",
+    "format": "ESLINT_USE_FLAT_CONFIG=false eslint src --ext ts --fix && prettier src/**/*.ts --write",
     "test": "node ./out/test/runTest.js",
     "package": "vsce package",
     "publish": "vsce publish"
