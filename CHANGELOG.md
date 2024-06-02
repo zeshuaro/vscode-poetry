@@ -1,3 +1,21 @@
+## [0.17.20](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.19...v0.17.20) (2024-06-02)
+
+
+### Bug Fixes
+
+* **node:** update dependency node to v20.14.0 ([#879](https://github.com/zeshuaro/vscode-poetry/issues/879)) ([3be607c](https://github.com/zeshuaro/vscode-poetry/commit/3be607cfce257e2e74b8e7ba4d791acf95c42b12))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#876](https://github.com/zeshuaro/vscode-poetry/issues/876)) ([056b617](https://github.com/zeshuaro/vscode-poetry/commit/056b617e3f83e4ddab2314a2b69d9ef8e0089108))
+* **deps:** update dependency @types/node to v20.12.13 ([#881](https://github.com/zeshuaro/vscode-poetry/issues/881)) ([18fbf23](https://github.com/zeshuaro/vscode-poetry/commit/18fbf232b8aa9eb0f4c42b3b1131a0675a683214))
+* **deps:** update dependency @vscode/test-electron to v2.4.0 ([#882](https://github.com/zeshuaro/vscode-poetry/issues/882)) ([ad8323e](https://github.com/zeshuaro/vscode-poetry/commit/ad8323ed1a6e0c6512485d1c1b26826431311a98))
+* **deps:** update dependency eslint to v9 ([#851](https://github.com/zeshuaro/vscode-poetry/issues/851)) ([3474bc8](https://github.com/zeshuaro/vscode-poetry/commit/3474bc830c28fd82c070f35f2ff35029a25f79d4))
+* **deps:** update dependency eslint-plugin-unused-imports to v4 ([#878](https://github.com/zeshuaro/vscode-poetry/issues/878)) ([1390b39](https://github.com/zeshuaro/vscode-poetry/commit/1390b39242094ef4cad9d21ab417110f3d464806))
+* **deps:** update dependency glob to v10.4.1 ([#877](https://github.com/zeshuaro/vscode-poetry/issues/877)) ([ddc6d2d](https://github.com/zeshuaro/vscode-poetry/commit/ddc6d2d751174966ac00218f767d444f29ceb932))
+* **deps:** update typescript-eslint monorepo to v7.11.0 ([#880](https://github.com/zeshuaro/vscode-poetry/issues/880)) ([2c63aeb](https://github.com/zeshuaro/vscode-poetry/commit/2c63aebfda925e3ec425123f3950b3e0fb4af185))
+
 ## [0.17.19](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.18...v0.17.19) (2024-05-26)
 
 
