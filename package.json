@@ -113,7 +113,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/mocha": "10.0.6",
+    "@types/mocha": "10.0.7",
     "@types/node": "20.14.8",
     "@types/sinon": "17.0.3",
     "@types/vscode": "^1.90.0",
