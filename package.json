@@ -124,7 +124,7 @@
     "eslint": "9.5.0",
     "eslint-plugin-unused-imports": "4.0.0",
     "glob": "10.4.2",
-    "mocha": "10.5.1",
+    "mocha": "10.5.2",
     "nyc": "17.0.0",
     "prettier": "3.3.2",
     "semantic-release": "24.0.0",
