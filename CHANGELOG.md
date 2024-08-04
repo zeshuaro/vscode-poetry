@@ -1,3 +1,20 @@
+## [0.17.25](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.24...v0.17.25) (2024-08-04)
+
+### Bug Fixes
+
+* **vscode:** update dependency vscode to ^1.92.0 ([#962](https://github.com/zeshuaro/vscode-poetry/issues/962)) ([aa390e9](https://github.com/zeshuaro/vscode-poetry/commit/aa390e9fd6d6bb48fb6c8051a022efa6282edf75))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#956](https://github.com/zeshuaro/vscode-poetry/issues/956)) ([0b489fa](https://github.com/zeshuaro/vscode-poetry/commit/0b489fa72887561f320665bb31e37b0e1ba22083))
+* **deps:** update dependency @types/node to v20.14.13 ([#958](https://github.com/zeshuaro/vscode-poetry/issues/958)) ([0dc98fc](https://github.com/zeshuaro/vscode-poetry/commit/0dc98fcac085fbd35b57c69270edf7e31ae81562))
+* **deps:** update dependency eslint to v9.8.0 ([#957](https://github.com/zeshuaro/vscode-poetry/issues/957)) ([36ed589](https://github.com/zeshuaro/vscode-poetry/commit/36ed58932d2bf0d1c57a4a9a53ccf36bd5097bd2))
+* **deps:** update typescript-eslint monorepo to v7.18.0 ([#960](https://github.com/zeshuaro/vscode-poetry/issues/960)) ([d859af6](https://github.com/zeshuaro/vscode-poetry/commit/d859af6947fdcac4e57a61baa11a97422467e18c))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 536ff71 ([#959](https://github.com/zeshuaro/vscode-poetry/issues/959)) ([bf581b3](https://github.com/zeshuaro/vscode-poetry/commit/bf581b31390a581880a7c843d975982bd6ab3cdd))
+
 ## [0.17.24](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.23...v0.17.24) (2024-07-28)
 
 ### Bug Fixes
