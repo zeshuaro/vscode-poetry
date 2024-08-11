@@ -1,3 +1,14 @@
+## [0.17.26](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.25...v0.17.26) (2024-08-11)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.7.3 ([#965](https://github.com/zeshuaro/vscode-poetry/issues/965)) ([15664ec](https://github.com/zeshuaro/vscode-poetry/commit/15664ec631b0001d180b550cd0f7adfcba983972))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#963](https://github.com/zeshuaro/vscode-poetry/issues/963)) ([0efb53e](https://github.com/zeshuaro/vscode-poetry/commit/0efb53e2c35d68148070ff2e6587c71cb2fd853a))
+* **deps:** update dependency @types/node to v20.14.14 ([#964](https://github.com/zeshuaro/vscode-poetry/issues/964)) ([b8c557f](https://github.com/zeshuaro/vscode-poetry/commit/b8c557f6a3b5fee033b9efc30211eadfa834fd4a))
+
 ## [0.17.25](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.24...v0.17.25) (2024-08-04)
 
 ### Bug Fixes
