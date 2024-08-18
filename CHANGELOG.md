@@ -1,3 +1,17 @@
+## [0.17.27](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.26...v0.17.27) (2024-08-18)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.7.4 [security] ([#971](https://github.com/zeshuaro/vscode-poetry/issues/971)) ([16d54ca](https://github.com/zeshuaro/vscode-poetry/commit/16d54cadf2c6a4ba223eeca8424b6bcad6032216))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#966](https://github.com/zeshuaro/vscode-poetry/issues/966)) ([9a5aa7e](https://github.com/zeshuaro/vscode-poetry/commit/9a5aa7eeb9b490d136eec4908b5f415cca8fbec0))
+* **deps:** update dependency @types/node to v20.14.15 ([#969](https://github.com/zeshuaro/vscode-poetry/issues/969)) ([00de7e4](https://github.com/zeshuaro/vscode-poetry/commit/00de7e47373628fe04689bc276e63d2486547dab))
+* **deps:** update dependency eslint to v9.9.0 ([#970](https://github.com/zeshuaro/vscode-poetry/issues/970)) ([2ee8fc6](https://github.com/zeshuaro/vscode-poetry/commit/2ee8fc67e0d0c0fa3efe08428eff15c3cd81851e))
+* **deps:** update dependency eslint-plugin-unused-imports to v4.1.3 ([#968](https://github.com/zeshuaro/vscode-poetry/issues/968)) ([d0a5d53](https://github.com/zeshuaro/vscode-poetry/commit/d0a5d533963a9bb2d3c9a7970f660541ad600565))
+* **deps:** update dependency mocha to v10.7.3 ([#967](https://github.com/zeshuaro/vscode-poetry/issues/967)) ([d6ec07e](https://github.com/zeshuaro/vscode-poetry/commit/d6ec07e4bed7e1c77bd2524f77790389a4048b92))
+
 ## [0.17.26](https://github.com/zeshuaro/vscode-poetry/compare/v0.17.25...v0.17.26) (2024-08-11)
 
 ### Bug Fixes
