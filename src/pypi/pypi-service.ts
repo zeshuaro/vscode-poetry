@@ -47,7 +47,9 @@ export class PypiService {
       const bytes = await workspace.fs.readFile(this.packagesCacheUri);
       const packagesStr = new TextDecoder().decode(bytes);
       return JSON.parse(packagesStr) as PypiSimple;
-    } catch (e) {}
+    } catch (e) {
+      console.error("Failed to get cached packages", e);
+    }
     return undefined;
   }
 
@@ -63,7 +65,9 @@ export class PypiService {
       const packages = await this.pypiClient.getPackages();
       await this.cachePackages(packages);
       this.projectsFuse = this.getProjectsFuse(packages);
-    } catch (e) {}
+    } catch (e) {
+      console.error("Failed to get packages", e);
+    }
   }
 
   private cachePackages(packages: PypiSimple) {

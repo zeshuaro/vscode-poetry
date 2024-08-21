@@ -319,6 +319,7 @@ suite("PoetryService", () => {
   }
 
   function mockPromptPackageNameWithSearch(value: string | undefined) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return stub(sut, <any>"promptPackageNameWithSearch").returns(value);
   }
 

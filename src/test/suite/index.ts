@@ -3,6 +3,7 @@ import Mocha from "mocha";
 import { join, resolve } from "path";
 
 function setupCoverage() {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const NYC = require("nyc");
   const nyc = new NYC({
     cwd: join(__dirname, "..", "..", ".."),
