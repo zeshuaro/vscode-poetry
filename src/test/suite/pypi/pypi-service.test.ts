@@ -59,6 +59,7 @@ suite("PypiService", () => {
   });
 
   test("initialize", async () => {
+    // eslint-disable-next-line no-new
     new PypiService(globalStoragePath, pypiClient);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -68,10 +69,21 @@ suite("PypiService", () => {
   test("initialize get cache error", async () => {
     readFile.throws();
 
+    // eslint-disable-next-line no-new
     new PypiService(globalStoragePath, pypiClient);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     assertInitializeSucceed();
+  });
+
+  test("initialize get packages error", async () => {
+    pypiClient.getPackages.throws();
+
+    // eslint-disable-next-line no-new
+    new PypiService(globalStoragePath, pypiClient);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    assertInitializeSucceed({ assertWriteCache: false });
   });
 
   test("search packages", async () => {
@@ -93,7 +105,7 @@ suite("PypiService", () => {
     assert.match(actual, undefined);
   });
 
-  function assertInitializeSucceed() {
+  function assertInitializeSucceed({ assertWriteCache = true } = {}) {
     // Assert get cached packages
     assert.calledOnceWithExactly(readFile, packagesCacheUri);
 
@@ -101,14 +113,18 @@ suite("PypiService", () => {
     assert.calledOnce(pypiClient.getPackages);
 
     // Assert cache packages
-    assert.calledOnceWithExactly(writeFile, packagesCacheUri, packagesBytes);
+    if (assertWriteCache) {
+      assert.calledOnceWithExactly(writeFile, packagesCacheUri, packagesBytes);
+    }
 
-    // Join path should be called twice, reading and writing the cache
+    // Join path should be called twice if we wrote into cache, reading and writing the cache
     joinPath
       .getCall(0)
       .calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
-    joinPath
-      .getCall(1)
-      .calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
+    if (assertWriteCache) {
+      joinPath
+        .getCall(1)
+        .calledWithExactly(joinPath, globalStoragePath, packagesCacheName);
+    }
   }
 }).timeout(5000);

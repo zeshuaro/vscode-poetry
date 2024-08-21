@@ -1,18 +1,18 @@
 {
   "root": true,
+  "extends": [
+    "semistandard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "unused-imports"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/naming-convention": "warn",
-    "@typescript-eslint/no-non-null-assertion": "error",
-    "@typescript-eslint/semi": "warn",
-    "curly": "warn",
-    "eqeqeq": "warn",
-    "func-style": ["error", "declaration"],
     "no-restricted-syntax": [
       "error",
       {
@@ -20,16 +20,13 @@
         "message": "Expected a function declaration"
       }
     ],
-    "no-throw-literal": "warn",
-    "semi": "off",
     "no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
       {
         "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
+        "args": "all",
+        "ignoreRestSiblings": false,
         "argsIgnorePattern": "^_"
       }
     ]
