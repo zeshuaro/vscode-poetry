@@ -45,7 +45,7 @@ jobs:
           yarn test
 
       - name: Upload coverage report 📡
-        uses: codecov/codecov-action@v5.0.5
+        uses: codecov/codecov-action@v5.0.7
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
