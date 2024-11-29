@@ -127,7 +127,7 @@
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-n": "17.14.0",
-    "eslint-plugin-promise": "7.1.0",
+    "eslint-plugin-promise": "7.2.0",
     "glob": "11.0.0",
     "mocha": "10.8.2",
     "nyc": "17.1.0",
