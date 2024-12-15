@@ -9,7 +9,7 @@
     {
       "groupName": "VS Code dependencies",
       "matchPaths": ["package.json"],
-      "matchPackageNames": ["vscode", "@types/vscode"],
+      "matchDepNames": ["vscode", "@types/vscode"],
       "patch": false,
       "rangeStrategy": "bump",
       "semanticCommitType": "fix",
