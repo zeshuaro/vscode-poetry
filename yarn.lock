@@ -5754,10 +5754,10 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.4.1.tgz#44cc8988377f126304d3b3fc1010c733b929ef0f"
   integrity sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==
 
-semantic-release-vsce@6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.0.4.tgz#5fd2ab63f9e18b2e54556a3c2d967b4a01380518"
-  integrity sha512-bb0+403d0iBuORFwkb1rDRJ3KAe03925mEs6sILJua/SKfzWWT5GlI4lQmzf0QVQivUZK90icYtmM+aXwHHpkg==
+semantic-release-vsce@6.0.5:
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.0.5.tgz#a25f01bdd88184ad966b7e6aee2093e6beaf758c"
+  integrity sha512-eN+8PqEwpcy1Hxhgu+zoKQGpz0DUlvVLw4XJbaqQA7YYOzyshOIYF3txVrjwT1UzbR2ePVdyn+wyvF5xUrhZEQ==
   dependencies:
     "@semantic-release/error" "^4.0.0"
     "@vscode/vsce" "^3.0.0"
