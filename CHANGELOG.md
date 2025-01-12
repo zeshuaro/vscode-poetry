@@ -1,3 +1,21 @@
+## [0.18.2](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.1...v0.18.2) (2025-01-12)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.10.5 ([#1147](https://github.com/zeshuaro/vscode-poetry/issues/1147)) ([af6880a](https://github.com/zeshuaro/vscode-poetry/commit/af6880ab30c36a5b04397c29a1660b9e24730a5d))
+* **node:** update node.js to v22.13.0 ([#1149](https://github.com/zeshuaro/vscode-poetry/issues/1149)) ([7eb2ee9](https://github.com/zeshuaro/vscode-poetry/commit/7eb2ee98ff392d7a8be6938089f64a462d7bf6dd))
+
+### Documentation
+
+* **license:** update copyright year to 2025 ([#1148](https://github.com/zeshuaro/vscode-poetry/issues/1148)) ([5eb9021](https://github.com/zeshuaro/vscode-poetry/commit/5eb9021bcb5179aeea2dd15eeb438a18847d0a35))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1145](https://github.com/zeshuaro/vscode-poetry/issues/1145)) ([33146c3](https://github.com/zeshuaro/vscode-poetry/commit/33146c3ab4aebcd88a9ada4f88c4b5f9362626cf))
+* **deps:** update dependency semantic-release to v24.2.1 ([#1146](https://github.com/zeshuaro/vscode-poetry/issues/1146)) ([6bee96d](https://github.com/zeshuaro/vscode-poetry/commit/6bee96d8fa715990ed8d7ba239cab1145c8ef929))
+* **deps:** update dependency typescript to v5.7.3 ([#1151](https://github.com/zeshuaro/vscode-poetry/issues/1151)) ([b24f7af](https://github.com/zeshuaro/vscode-poetry/commit/b24f7af1ac48a788938990776214dec3dbe358dd))
+* **deps:** update typescript-eslint monorepo to v8.19.1 ([#1150](https://github.com/zeshuaro/vscode-poetry/issues/1150)) ([2923e14](https://github.com/zeshuaro/vscode-poetry/commit/2923e14f68ea79a20d41d9f56be3ca5e2441299b))
+
 ## [0.18.1](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.0...v0.18.1) (2025-01-05)
 
 ### Bug Fixes
