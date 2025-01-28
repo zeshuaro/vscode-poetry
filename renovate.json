@@ -8,9 +8,16 @@
   "packageRules": [
     {
       "groupName": "VS Code dependencies",
-      "matchPaths": ["package.json"],
-      "matchDepNames": ["vscode", "@types/vscode"],
-      "patch": false,
+      "matchFileNames": [
+        "package.json"
+      ],
+      "matchDepNames": [
+        "vscode",
+        "@types/vscode"
+      ],
+      "patch": {
+        "enabled": false
+      },
       "rangeStrategy": "bump",
       "semanticCommitType": "fix",
       "semanticCommitScope": "vscode"
