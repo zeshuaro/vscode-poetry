@@ -1,3 +1,17 @@
+## [0.18.6](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.5...v0.18.6) (2025-02-09)
+
+### Bug Fixes
+
+* **deps:** update dependency fuse.js to v7.1.0 ([#1179](https://github.com/zeshuaro/vscode-poetry/issues/1179)) ([3273303](https://github.com/zeshuaro/vscode-poetry/commit/327330362da5336b3c387112a88aa9d8f8bdfe04))
+* **node:** update dependency @types/node to v22.13.0 ([#1178](https://github.com/zeshuaro/vscode-poetry/issues/1178)) ([1beb3da](https://github.com/zeshuaro/vscode-poetry/commit/1beb3dad1b6d8bf937dab2a5944e0771829d539b))
+* **node:** update dependency @types/node to v22.13.1 ([#1181](https://github.com/zeshuaro/vscode-poetry/issues/1181)) ([d911a48](https://github.com/zeshuaro/vscode-poetry/commit/d911a484b159b4d197b1604026d66470ab21eec9))
+* **vscode:** update dependency vscode to ^1.97.0 ([#1183](https://github.com/zeshuaro/vscode-poetry/issues/1183)) ([b1b6afa](https://github.com/zeshuaro/vscode-poetry/commit/b1b6afad50890feb8a6fa79cb348ae1d70af3552))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1177](https://github.com/zeshuaro/vscode-poetry/issues/1177)) ([c82a57a](https://github.com/zeshuaro/vscode-poetry/commit/c82a57ad11c98d4ee63d333e695b86b24c2a752c))
+* **deps:** update typescript-eslint monorepo to v8.23.0 ([#1182](https://github.com/zeshuaro/vscode-poetry/issues/1182)) ([1024ab5](https://github.com/zeshuaro/vscode-poetry/commit/1024ab5de5e945158b5f558df88c2abdf43b3b36))
+
 ## [0.18.5](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.4...v0.18.5) (2025-02-02)
 
 ### Bug Fixes
