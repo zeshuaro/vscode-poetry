@@ -1,3 +1,22 @@
+## [0.18.8](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.7...v0.18.8) (2025-02-23)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.13.2 ([#1193](https://github.com/zeshuaro/vscode-poetry/issues/1193)) ([ee576ca](https://github.com/zeshuaro/vscode-poetry/commit/ee576ca2b9c5884809fda26897e18baf19b0ff5f))
+* **node:** update dependency @types/node to v22.13.4 ([#1195](https://github.com/zeshuaro/vscode-poetry/issues/1195)) ([751ecae](https://github.com/zeshuaro/vscode-poetry/commit/751ecae48182ef6e9da7fba47e3e64ed8700cdca))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency prettier to v3.5.1 ([#1194](https://github.com/zeshuaro/vscode-poetry/issues/1194)) ([fbcd8ca](https://github.com/zeshuaro/vscode-poetry/commit/fbcd8cac296aa96e71a545958213d7e3b4771282))
+* **deps:** update dependency semantic-release to v24.2.3 ([#1197](https://github.com/zeshuaro/vscode-poetry/issues/1197)) ([002f5b1](https://github.com/zeshuaro/vscode-poetry/commit/002f5b13645bc5c8f1ed6502980d168547c5c414))
+* **deps:** update typescript-eslint monorepo to v8.24.1 ([#1199](https://github.com/zeshuaro/vscode-poetry/issues/1199)) ([06da842](https://github.com/zeshuaro/vscode-poetry/commit/06da8427b9bae9cbcbc00bd2d58bda12cacbbfa1))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 9d9d6ec ([#1196](https://github.com/zeshuaro/vscode-poetry/issues/1196)) ([6eb89f0](https://github.com/zeshuaro/vscode-poetry/commit/6eb89f0fccaee0917f2d5794fbe2b5fb2f800768))
+* **deps:** update zeshuaro/github-actions-workflows digest to d5eb020 ([#1200](https://github.com/zeshuaro/vscode-poetry/issues/1200)) ([050dfd8](https://github.com/zeshuaro/vscode-poetry/commit/050dfd8145aa0816257123f6ce62ed5d7bf68da7))
+* **deps:** update zeshuaro/github-actions-workflows digest to f3ddb04 ([#1198](https://github.com/zeshuaro/vscode-poetry/issues/1198)) ([db1203c](https://github.com/zeshuaro/vscode-poetry/commit/db1203c7a68ad08051212d77caf2bac50ce515b4))
+
 ## [0.18.7](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.6...v0.18.7) (2025-02-16)
 
 ### Bug Fixes
