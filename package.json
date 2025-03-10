@@ -122,7 +122,7 @@
     "@vscode/test-electron": "2.4.1",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "eslint": "9.21.0",
-    "eslint-config-prettier": "10.0.2",
+    "eslint-config-prettier": "10.1.1",
     "eslint-config-semistandard": "17.0.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-import": "2.31.0",
