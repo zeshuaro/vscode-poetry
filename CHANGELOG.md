@@ -1,3 +1,15 @@
+## [0.18.12](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.11...v0.18.12) (2025-03-23)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.8.4 ([#1236](https://github.com/zeshuaro/vscode-poetry/issues/1236)) ([0b5b3d1](https://github.com/zeshuaro/vscode-poetry/commit/0b5b3d1295969a243303d3f52a5299477ec91b69))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1233](https://github.com/zeshuaro/vscode-poetry/issues/1233)) ([e3c6523](https://github.com/zeshuaro/vscode-poetry/commit/e3c6523548011e089b08491a17109f54cc90b28c))
+* **deps:** update dependency semantic-release-vsce to v6.0.7 ([#1234](https://github.com/zeshuaro/vscode-poetry/issues/1234)) ([3f53e3f](https://github.com/zeshuaro/vscode-poetry/commit/3f53e3f45b6d2524015e33aefd86de0a064dacd8))
+* **deps:** update dependency sinon to v19.0.4 ([#1235](https://github.com/zeshuaro/vscode-poetry/issues/1235)) ([cb870ea](https://github.com/zeshuaro/vscode-poetry/commit/cb870ea69640e6f10c8dca4c2ee206c70f67b32e))
+
 ## [0.18.11](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.10...v0.18.11) (2025-03-16)
 
 ### Bug Fixes
