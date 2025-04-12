@@ -119,7 +119,7 @@
     "@types/vscode": "^1.98.0",
     "@typescript-eslint/eslint-plugin": "8.29.1",
     "@typescript-eslint/parser": "8.29.1",
-    "@vscode/test-electron": "2.4.1",
+    "@vscode/test-electron": "2.5.2",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "eslint": "9.24.0",
     "eslint-config-prettier": "10.1.1",
