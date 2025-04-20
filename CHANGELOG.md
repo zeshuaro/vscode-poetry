@@ -1,3 +1,25 @@
+## [0.18.15](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.14...v0.18.15) (2025-04-20)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.14.1 ([#1266](https://github.com/zeshuaro/vscode-poetry/issues/1266)) ([1cd4713](https://github.com/zeshuaro/vscode-poetry/commit/1cd4713b6f8f7b3833976249faa57cc7d390ddd7))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1258](https://github.com/zeshuaro/vscode-poetry/issues/1258)) ([72dc305](https://github.com/zeshuaro/vscode-poetry/commit/72dc305ca31e90d6dccba229343e15be253a75a3))
+* **deps:** lock file maintenance ([#1264](https://github.com/zeshuaro/vscode-poetry/issues/1264)) ([fb53273](https://github.com/zeshuaro/vscode-poetry/commit/fb53273d10a14646d4f89d634bc2dfe923b03640))
+* **deps:** update dependency @vscode/test-electron to v2.5.2 ([#1262](https://github.com/zeshuaro/vscode-poetry/issues/1262)) ([6c67ea2](https://github.com/zeshuaro/vscode-poetry/commit/6c67ea20de93afe68a2e61291d30f3cdd2d7fbb9))
+* **deps:** update dependency eslint to v9.24.0 ([#1260](https://github.com/zeshuaro/vscode-poetry/issues/1260)) ([360b4f2](https://github.com/zeshuaro/vscode-poetry/commit/360b4f263303194b9be99a77530d3a123ea8d08d))
+* **deps:** update dependency eslint-config-prettier to v10.1.2 ([#1263](https://github.com/zeshuaro/vscode-poetry/issues/1263)) ([422ca56](https://github.com/zeshuaro/vscode-poetry/commit/422ca5650411918d4208655df3b914d6dd1dacd6))
+* **deps:** update dependency typescript to v5.8.3 ([#1259](https://github.com/zeshuaro/vscode-poetry/issues/1259)) ([4d8798e](https://github.com/zeshuaro/vscode-poetry/commit/4d8798e5fdacbc325732ee8b9aa734468e643a41))
+* **deps:** update typescript-eslint monorepo to v8.29.1 ([#1261](https://github.com/zeshuaro/vscode-poetry/issues/1261)) ([9a3e577](https://github.com/zeshuaro/vscode-poetry/commit/9a3e577465e14e61c6901a4c27a08b14a72ab607))
+* **deps:** update typescript-eslint monorepo to v8.30.1 ([#1268](https://github.com/zeshuaro/vscode-poetry/issues/1268)) ([14fdf79](https://github.com/zeshuaro/vscode-poetry/commit/14fdf79c0dbeff4538a5d5cb2e6c0e69f8d9de2f))
+
+### Continuous Integration
+
+* **deps:** update codecov/codecov-action action to v5.4.2 ([#1265](https://github.com/zeshuaro/vscode-poetry/issues/1265)) ([db4b123](https://github.com/zeshuaro/vscode-poetry/commit/db4b1236145f3abb6233f0be1464ec1332002c1d))
+* **deps:** update zeshuaro/github-actions-workflows digest to 7ada519 ([#1267](https://github.com/zeshuaro/vscode-poetry/issues/1267)) ([341d07e](https://github.com/zeshuaro/vscode-poetry/commit/341d07ee12eeb1af72557d72fd1859129b9e2d02))
+
 ## [0.18.14](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.13...v0.18.14) (2025-04-06)
 
 ### Bug Fixes
