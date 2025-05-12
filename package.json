@@ -114,7 +114,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/mocha": "10.0.10",
-    "@types/node": "22.15.16",
+    "@types/node": "22.15.17",
     "@types/sinon": "17.0.4",
     "@types/vscode": "^1.98.0",
     "@typescript-eslint/eslint-plugin": "8.32.0",
