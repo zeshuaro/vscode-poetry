@@ -1,3 +1,3 @@
-export { PypiClient } from "./pypi-client";
-export { PypiService } from "./pypi-service";
+export { PypiClient } from "./pypiClient";
+export { PypiService } from "./pypiService";
 export { PypiSimple } from "./types";

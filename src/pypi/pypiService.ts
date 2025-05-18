@@ -1,6 +1,6 @@
 import Fuse from "fuse.js";
 import { Uri, workspace } from "vscode";
-import { PypiClient } from "./pypi-client";
+import { PypiClient } from "./pypiClient";
 import { PypiProject, PypiSimple } from "./types";
 
 export class PypiService {

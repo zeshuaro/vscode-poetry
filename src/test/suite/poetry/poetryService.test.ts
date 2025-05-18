@@ -8,9 +8,9 @@ import {
   stub,
 } from "sinon";
 import { Terminal, window } from "vscode";
-import { PoetryService } from "../../poetry-service";
-import { PypiService } from "../../pypi";
-import { PoetryCommand, PoetryOption } from "../../types";
+import { PoetryService } from "../../../poetry/poetryService";
+import { PypiService } from "../../../pypi";
+import { PoetryCommand, PoetryOption } from "../../../types";
 
 suite("PoetryService", () => {
   const command = PoetryCommand.add;
