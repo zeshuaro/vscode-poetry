@@ -1,6 +1,6 @@
 import { ExtensionContext, commands } from "vscode";
-import { ExtensionService } from "./extension-service";
-import { PoetryService } from "./poetry-service";
+import { ExtensionService } from "./extensionService";
+import { PoetryService } from "./poetry/poetryService";
 import { PypiClient, PypiService } from "./pypi";
 
 export function activate(context: ExtensionContext): void {

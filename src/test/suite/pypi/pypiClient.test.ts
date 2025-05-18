@@ -9,7 +9,7 @@ import {
   restore,
   stub,
 } from "sinon";
-import { PypiClient } from "../../../pypi/pypi-client";
+import { PypiClient } from "../../../pypi/pypiClient";
 
 suite("PypiClient", () => {
   const axiosRes = <AxiosResponse>{ data: undefined };

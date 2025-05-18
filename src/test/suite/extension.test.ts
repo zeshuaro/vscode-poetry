@@ -2,10 +2,10 @@ import { afterEach, beforeEach } from "mocha";
 import { SinonStub, assert, restore, stub } from "sinon";
 import { ExtensionContext, commands } from "vscode";
 import { activate } from "../../extension";
-import { ExtensionService } from "../../extension-service";
-import { PoetryService } from "../../poetry-service";
+import { ExtensionService } from "../../extensionService";
+import { PoetryService } from "../../poetry/poetryService";
 import { PypiClient } from "../../pypi";
-import { PypiService } from "../../pypi/pypi-service";
+import { PypiService } from "../../pypi/pypiService";
 
 suite("Extension", () => {
   const numExtensions = 12;

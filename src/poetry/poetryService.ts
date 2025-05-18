@@ -1,6 +1,6 @@
 import { Terminal, window } from "vscode";
-import { PypiService } from "./pypi";
-import { PoetryCommand, PoetryOption } from "./types";
+import { PypiService } from "../pypi";
+import { PoetryCommand, PoetryOption } from "../types";
 
 export class PoetryService {
   static groupOptions: PoetryOption[] = [
@@ -161,7 +161,7 @@ export class PoetryService {
 
   private async getOptions(options: PoetryOption[]) {
     const selectedOpts = await this.promptOptions(
-      options.map((option) => option.description)
+      options.map((option) => option.description),
     );
     if (!selectedOpts?.length) {
       return;
