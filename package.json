@@ -132,7 +132,7 @@
     "mocha": "11.2.2",
     "nyc": "17.1.0",
     "prettier": "3.5.3",
-    "semantic-release": "24.2.3",
+    "semantic-release": "24.2.4",
     "semantic-release-vsce": "6.0.8",
     "sinon": "20.0.0",
     "typescript": "5.8.3"
