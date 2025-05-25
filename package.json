@@ -16,20 +16,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:vscode-python-poetry.installPackages",
-    "onCommand:vscode-python-poetry.installPackagesWithOptions",
-    "onCommand:vscode-python-poetry.addPackage",
-    "onCommand:vscode-python-poetry.addDevPackageLegacy",
-    "onCommand:vscode-python-poetry.removePackage",
-    "onCommand:vscode-python-poetry.removeDevPackageLegacy",
-    "onCommand:vscode-python-poetry.updatePackages",
-    "onCommand:vscode-python-poetry.updatePackagesWithOptions",
-    "onCommand:vscode-python-poetry.updatePackagesNoDev",
-    "onCommand:vscode-python-poetry.updatePackage",
-    "onCommand:vscode-python-poetry.lockPackages",
-    "onCommand:vscode-python-poetry.lockPackagesNoUpdate"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
