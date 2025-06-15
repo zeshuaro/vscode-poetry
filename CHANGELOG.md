@@ -1,3 +1,16 @@
+## [0.18.23](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.22...v0.18.23) (2025-06-15)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.15.30 ([#1327](https://github.com/zeshuaro/vscode-poetry/issues/1327)) ([771f476](https://github.com/zeshuaro/vscode-poetry/commit/771f4765ac9447824f5149d9d593d259886f9349))
+* **node:** update dependency @types/node to v22.15.31 ([#1329](https://github.com/zeshuaro/vscode-poetry/issues/1329)) ([1562728](https://github.com/zeshuaro/vscode-poetry/commit/15627282d548c8a2cc68529e397117435d2626cb))
+* **vscode:** update dependency vscode to ^1.101.0 ([#1331](https://github.com/zeshuaro/vscode-poetry/issues/1331)) ([8d98e19](https://github.com/zeshuaro/vscode-poetry/commit/8d98e19d2736a43b01fab1fd12e10352871982f1))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency mocha to v11.6.0 ([#1328](https://github.com/zeshuaro/vscode-poetry/issues/1328)) ([8f6c561](https://github.com/zeshuaro/vscode-poetry/commit/8f6c561cf92b0b1433bd7e91ec923ebded57aabd))
+* **deps:** update typescript-eslint monorepo to v8.34.0 ([#1330](https://github.com/zeshuaro/vscode-poetry/issues/1330)) ([4ff862a](https://github.com/zeshuaro/vscode-poetry/commit/4ff862a58a07d0b32267ae1fd639e903a5cb0f2c))
+
 ## [0.18.22](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.21...v0.18.22) (2025-06-08)
 
 ### Bug Fixes
