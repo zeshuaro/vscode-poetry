@@ -1,4 +1,4 @@
-import { ExtensionContext, commands } from "vscode";
+import { type ExtensionContext, commands } from "vscode";
 import { ExtensionService } from "./extensionService";
 import { PoetryService } from "./poetry/poetryService";
 import { PypiClient, PypiService } from "./pypi";
@@ -14,64 +14,64 @@ export function activate(context: ExtensionContext): void {
       commands.registerCommand(
         "vscode-python-poetry.installPackages",
         /* istanbul ignore next */
-        () => extensionService.installPackages()
+        () => extensionService.installPackages(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.installPackagesWithOptions",
         /* istanbul ignore next */
-        () => extensionService.installPackagesWithOptions()
+        () => extensionService.installPackagesWithOptions(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.addPackage",
         /* istanbul ignore next */
-        () => extensionService.addPackage()
+        () => extensionService.addPackage(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.addDevPackageLegacy",
         /* istanbul ignore next */
-        () => extensionService.addDevPackageLegacy()
+        () => extensionService.addDevPackageLegacy(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.removePackage",
         /* istanbul ignore next */
-        () => extensionService.removePackage()
+        () => extensionService.removePackage(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.removeDevPackageLegacy",
         /* istanbul ignore next */
-        () => extensionService.removeDevPackageLegacy()
+        () => extensionService.removeDevPackageLegacy(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackages",
         /* istanbul ignore next */
-        () => extensionService.updatePackages()
+        () => extensionService.updatePackages(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesWithOptions",
         /* istanbul ignore next */
-        () => extensionService.updatePackagesWithOptions()
+        () => extensionService.updatePackagesWithOptions(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackagesNoDev",
         /* istanbul ignore next */
-        () => extensionService.updatePackagesNoDev()
+        () => extensionService.updatePackagesNoDev(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.updatePackage",
         /* istanbul ignore next */
-        () => extensionService.updatePackage()
+        () => extensionService.updatePackage(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackages",
         /* istanbul ignore next */
-        () => extensionService.lockPackages()
+        () => extensionService.lockPackages(),
       ),
       commands.registerCommand(
         "vscode-python-poetry.lockPackagesNoUpdate",
         /* istanbul ignore next */
-        () => extensionService.lockPackagesNoUpdate()
+        () => extensionService.lockPackagesNoUpdate(),
       ),
-    ]
+    ],
   );
 }
 

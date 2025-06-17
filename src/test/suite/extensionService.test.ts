@@ -1,7 +1,7 @@
 import { afterEach, beforeEach } from "mocha";
 import {
-  SinonStubbedInstance,
   assert,
+  type SinonStubbedInstance,
   createStubInstance,
   restore,
 } from "sinon";

@@ -1,12 +1,12 @@
 import { Axios } from "axios";
-import { PypiSimple } from "./types";
+import type { PypiSimple } from "./types";
 
 export class PypiClient {
   private static baseUrl = "https://pypi.org";
 
   /* istanbul ignore next */
   static default() {
-    return new this(new Axios({ baseURL: PypiClient.baseUrl }));
+    return new PypiClient(new Axios({ baseURL: PypiClient.baseUrl }));
   }
 
   private axios: Axios;
