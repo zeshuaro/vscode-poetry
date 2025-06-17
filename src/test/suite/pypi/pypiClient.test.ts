@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { Axios, AxiosResponse } from "axios";
+import { Axios, type AxiosResponse } from "axios";
 import { afterEach, beforeEach } from "mocha";
 import {
-  SinonStubbedInstance,
   assert,
+  type SinonStubbedInstance,
   createStubInstance,
   match,
   restore,
@@ -54,7 +54,7 @@ suite("PypiClient", () => {
       "/simple",
       match({
         headers: { accept: "application/vnd.pypi.simple.v1+json" },
-      })
+      }),
     );
   });
 });

@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { afterEach, beforeEach } from "mocha";
 import {
-  SinonStub,
-  SinonStubbedInstance,
   assert,
+  type SinonStub,
+  type SinonStubbedInstance,
   createStubInstance,
   restore,
   stub,
 } from "sinon";
-import { FileSystem, Uri, workspace } from "vscode";
-import { PypiClient, PypiService, PypiSimple } from "../../../pypi";
-import { PypiProject } from "../../../pypi/types";
+import { type FileSystem, Uri, workspace } from "vscode";
+import { PypiClient, PypiService, type PypiSimple } from "../../../pypi";
+import type { PypiProject } from "../../../pypi/types";
 
 suite("PypiService", () => {
   const packagesCacheName = "packages-cache.json";

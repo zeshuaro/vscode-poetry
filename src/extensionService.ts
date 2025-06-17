@@ -1,4 +1,4 @@
-import { PoetryService } from "./poetry/poetryService";
+import type { PoetryService } from "./poetry/poetryService";
 import { PoetryCommand } from "./types";
 
 export class ExtensionService {

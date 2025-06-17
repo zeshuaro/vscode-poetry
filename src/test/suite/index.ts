@@ -1,6 +1,6 @@
+import { join, resolve } from "node:path";
 import { sync } from "glob";
 import Mocha from "mocha";
-import { join, resolve } from "path";
 
 function setupCoverage() {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -32,7 +32,9 @@ export async function run(): Promise<void> {
   const testsRoot = resolve(__dirname, "..");
   const nyc = setupCoverage();
   const files = sync("**/**.test.js", { cwd: testsRoot });
-  files.forEach((f) => mocha.addFile(resolve(testsRoot, f)));
+  for (const file of files) {
+    mocha.addFile(resolve(testsRoot, file));
+  }
 
   try {
     await new Promise<void>((resolve, reject) => {
