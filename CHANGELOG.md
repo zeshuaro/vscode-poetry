@@ -1,3 +1,24 @@
+## [0.18.24](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.23...v0.18.24) (2025-06-22)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.10.0 ([#1338](https://github.com/zeshuaro/vscode-poetry/issues/1338)) ([dffe9ff](https://github.com/zeshuaro/vscode-poetry/commit/dffe9ff056ac2da2f5f481a9d2202e7f8495c4b2))
+* **node:** update dependency @types/node to v22.15.32 ([#1341](https://github.com/zeshuaro/vscode-poetry/issues/1341)) ([7a6be05](https://github.com/zeshuaro/vscode-poetry/commit/7a6be05dcc665f93abb7b335f2a28fed73e631cc))
+
+### Documentation
+
+* **readme:** update code style badge ([#1339](https://github.com/zeshuaro/vscode-poetry/issues/1339)) ([f0b7fb8](https://github.com/zeshuaro/vscode-poetry/commit/f0b7fb826445e2470f61941cf4b3244e26b54fa2))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1332](https://github.com/zeshuaro/vscode-poetry/issues/1332)) ([7a06664](https://github.com/zeshuaro/vscode-poetry/commit/7a066649e98427f2005c31dea0dadabd963e2fa5))
+* **deps:** update dependency eslint to v9.29.0 ([#1335](https://github.com/zeshuaro/vscode-poetry/issues/1335)) ([cf6f9af](https://github.com/zeshuaro/vscode-poetry/commit/cf6f9af3e3816d238c0c2295048b0f1a52afdb98))
+* **deps:** update dependency eslint-plugin-n to v17.20.0 ([#1334](https://github.com/zeshuaro/vscode-poetry/issues/1334)) ([9bc0cec](https://github.com/zeshuaro/vscode-poetry/commit/9bc0cec20558a2664d75858ee6729e43eed98e04))
+* **deps:** update dependency glob to v11.0.3 ([#1333](https://github.com/zeshuaro/vscode-poetry/issues/1333)) ([4d90ca9](https://github.com/zeshuaro/vscode-poetry/commit/4d90ca913bc0cb9da47324b593c637f106e2f8b2))
+* **deps:** update dependency mocha to v11.7.0 ([#1343](https://github.com/zeshuaro/vscode-poetry/issues/1343)) ([0dcdf15](https://github.com/zeshuaro/vscode-poetry/commit/0dcdf15b3dc3ba532461592b6e892e2f93a014c9))
+* **deps:** update dependency semantic-release-vsce to v6.0.9 ([#1340](https://github.com/zeshuaro/vscode-poetry/issues/1340)) ([d8ba130](https://github.com/zeshuaro/vscode-poetry/commit/d8ba13095dee180eea7a37ff608ec7c7a82f60f0))
+* migrate to biome linter and formatter ([#1337](https://github.com/zeshuaro/vscode-poetry/issues/1337)) ([702492c](https://github.com/zeshuaro/vscode-poetry/commit/702492cd95d53104c0bab94cdbbc0876b7aa2eee))
+
 ## [0.18.23](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.22...v0.18.23) (2025-06-15)
 
 ### Bug Fixes
