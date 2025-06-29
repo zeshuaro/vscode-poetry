@@ -1,3 +1,15 @@
+## [0.18.25](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.24...v0.18.25) (2025-06-29)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.15.33 ([#1347](https://github.com/zeshuaro/vscode-poetry/issues/1347)) ([09338ff](https://github.com/zeshuaro/vscode-poetry/commit/09338ff59dfed2c888c46bd04f63b76faa73fc26))
+* **node:** update node.js to v22.17.0 ([#1345](https://github.com/zeshuaro/vscode-poetry/issues/1345)) ([f2cd764](https://github.com/zeshuaro/vscode-poetry/commit/f2cd76403d98c024b06801dfacc4630155d61fc7))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1344](https://github.com/zeshuaro/vscode-poetry/issues/1344)) ([83ace3d](https://github.com/zeshuaro/vscode-poetry/commit/83ace3da35d5840eaea89b0cfde72b997150ea2f))
+* **deps:** update dependency mocha to v11.7.1 ([#1346](https://github.com/zeshuaro/vscode-poetry/issues/1346)) ([caa2c6e](https://github.com/zeshuaro/vscode-poetry/commit/caa2c6ea9670c49e746ba4e6f628b618e9cac10b))
+
 ## [0.18.24](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.23...v0.18.24) (2025-06-22)
 
 ### Bug Fixes
