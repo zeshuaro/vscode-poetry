@@ -111,7 +111,7 @@
     "mocha": "11.7.1",
     "nyc": "17.1.0",
     "semantic-release": "24.2.6",
-    "semantic-release-vsce": "6.0.9",
+    "semantic-release-vsce": "6.0.10",
     "sinon": "20.0.0",
     "typescript": "5.8.3"
   },
