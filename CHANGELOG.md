@@ -1,3 +1,19 @@
+## [0.18.33](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.32...v0.18.33) (2025-08-24)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.17.2 ([#1385](https://github.com/zeshuaro/vscode-poetry/issues/1385)) ([f00bae5](https://github.com/zeshuaro/vscode-poetry/commit/f00bae5771da23ef4e79a1a12f62164397f4fc46))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1384](https://github.com/zeshuaro/vscode-poetry/issues/1384)) ([5b3b75e](https://github.com/zeshuaro/vscode-poetry/commit/5b3b75e2a379c320c2a6943da539339f14b8fc67))
+
+### Continuous Integration
+
+* **deps:** update codecov/codecov-action action to v5.5.0 ([#1387](https://github.com/zeshuaro/vscode-poetry/issues/1387)) ([6805334](https://github.com/zeshuaro/vscode-poetry/commit/6805334143b0e69e61391082bfd64434dfebf652))
+* **deps:** update zeshuaro/github-actions-workflows digest to ac5fa4b ([#1386](https://github.com/zeshuaro/vscode-poetry/issues/1386)) ([d04360d](https://github.com/zeshuaro/vscode-poetry/commit/d04360d5179cc7efdc96f74d0869a224d0bb276e))
+* **deps:** update zeshuaro/github-actions-workflows digest to e307835 ([#1388](https://github.com/zeshuaro/vscode-poetry/issues/1388)) ([0a38ad1](https://github.com/zeshuaro/vscode-poetry/commit/0a38ad1d48fefd0213687e091725c77ab61204df))
+
 ## [0.18.32](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.31...v0.18.32) (2025-08-17)
 
 ### Bug Fixes
