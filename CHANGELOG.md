@@ -1,3 +1,13 @@
+## [0.18.36](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.35...v0.18.36) (2025-09-21)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.18.3 ([#1404](https://github.com/zeshuaro/vscode-poetry/issues/1404)) ([ec1c60f](https://github.com/zeshuaro/vscode-poetry/commit/ec1c60f9df0ce42a270cd1ed896f934c80ba3a3f))
+* **node:** update dependency @types/node to v22.18.4 ([#1406](https://github.com/zeshuaro/vscode-poetry/issues/1406)) ([c9249bb](https://github.com/zeshuaro/vscode-poetry/commit/c9249bbed1cff0459805a7dd1f435ff2da1cb399))
+* **node:** update dependency @types/node to v22.18.5 ([#1407](https://github.com/zeshuaro/vscode-poetry/issues/1407)) ([39bdbe1](https://github.com/zeshuaro/vscode-poetry/commit/39bdbe155e4b984dc95bdebc7b0410f53c30c214))
+* **vscode:** update dependency @types/vscode to ^1.104.0 ([#1405](https://github.com/zeshuaro/vscode-poetry/issues/1405)) ([d0ba058](https://github.com/zeshuaro/vscode-poetry/commit/d0ba058c5d4fbd3cb0dc4f69eea32c4120388ac6))
+* **vscode:** update dependency vscode to ^1.104.0 ([#1403](https://github.com/zeshuaro/vscode-poetry/issues/1403)) ([8099417](https://github.com/zeshuaro/vscode-poetry/commit/80994176777bf34e4f8d020c0a246a25be8d1ec6))
+
 ## [0.18.35](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.34...v0.18.35) (2025-09-14)
 
 ### Bug Fixes

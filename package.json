@@ -3,7 +3,7 @@
   "displayName": "Python Poetry",
   "description": "Python Poetry support for VS Code to manage Poetry commands",
   "icon": "images/icon.png",
-  "version": "0.18.35",
+  "version": "0.18.36",
   "preview": true,
   "publisher": "zeshuaro",
   "repository": {
