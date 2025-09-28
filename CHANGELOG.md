@@ -1,3 +1,19 @@
+## [0.18.37](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.36...v0.18.37) (2025-09-28)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v22.18.6 ([#1408](https://github.com/zeshuaro/vscode-poetry/issues/1408)) ([8eb3718](https://github.com/zeshuaro/vscode-poetry/commit/8eb3718d491636cdd67d18d3adddf731c5c6e7bd))
+* **node:** update node.js to v22.20.0 ([#1411](https://github.com/zeshuaro/vscode-poetry/issues/1411)) ([4b1729d](https://github.com/zeshuaro/vscode-poetry/commit/4b1729dcfb6e25d74a21b4a37893c1b911ce4b2a))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1409](https://github.com/zeshuaro/vscode-poetry/issues/1409)) ([4bb3a25](https://github.com/zeshuaro/vscode-poetry/commit/4bb3a2579245988c8c234b00e1cd9e84c66ebdce))
+* **deps:** update dependency semantic-release to v24.2.9 ([#1410](https://github.com/zeshuaro/vscode-poetry/issues/1410)) ([4ebc674](https://github.com/zeshuaro/vscode-poetry/commit/4ebc6740d7a2c26a740c21164f913f2a5ba47eb8))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to eaa9651 ([#1412](https://github.com/zeshuaro/vscode-poetry/issues/1412)) ([d4bb862](https://github.com/zeshuaro/vscode-poetry/commit/d4bb86241d41346231cfa53d0cd4efe6be5c7338))
+
 ## [0.18.36](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.35...v0.18.36) (2025-09-21)
 
 ### Bug Fixes
