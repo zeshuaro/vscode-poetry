@@ -1,3 +1,19 @@
+## [0.18.38](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.37...v0.18.38) (2025-10-05)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.12.2 ([#1415](https://github.com/zeshuaro/vscode-poetry/issues/1415)) ([ea1b30d](https://github.com/zeshuaro/vscode-poetry/commit/ea1b30d51dc087e074c98d2dc9ad260bd15c1767))
+* **node:** update dependency @types/node to v22.18.7 ([#1417](https://github.com/zeshuaro/vscode-poetry/issues/1417)) ([3e46831](https://github.com/zeshuaro/vscode-poetry/commit/3e468319f386b51f898a88c958b82338acd977d5))
+* **node:** update dependency @types/node to v22.18.8 ([#1420](https://github.com/zeshuaro/vscode-poetry/issues/1420)) ([fa43f27](https://github.com/zeshuaro/vscode-poetry/commit/fa43f2746b788fb0533ac7616f31bf0e167c1472))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1413](https://github.com/zeshuaro/vscode-poetry/issues/1413)) ([b74440f](https://github.com/zeshuaro/vscode-poetry/commit/b74440fec6061380ee82b17a32f870178345db08))
+* **deps:** lock file maintenance ([#1414](https://github.com/zeshuaro/vscode-poetry/issues/1414)) ([56dd039](https://github.com/zeshuaro/vscode-poetry/commit/56dd0395d540e5f684f870c8cd4b9f7db4ea3f73))
+* **deps:** update dependency mocha to v11.7.3 ([#1418](https://github.com/zeshuaro/vscode-poetry/issues/1418)) ([806ebee](https://github.com/zeshuaro/vscode-poetry/commit/806ebee2e14d1847c6b8a3b52bcd240b1367db0e))
+* **deps:** update dependency mocha to v11.7.4 ([#1421](https://github.com/zeshuaro/vscode-poetry/issues/1421)) ([7c786c1](https://github.com/zeshuaro/vscode-poetry/commit/7c786c10f5edb044475bc6a49f779f4eca20c1c2))
+* **deps:** update dependency typescript to v5.9.3 ([#1419](https://github.com/zeshuaro/vscode-poetry/issues/1419)) ([e682a9f](https://github.com/zeshuaro/vscode-poetry/commit/e682a9ff9b0d97240843096548a1155abe289851))
+
 ## [0.18.37](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.36...v0.18.37) (2025-09-28)
 
 ### Bug Fixes
