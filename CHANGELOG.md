@@ -1,3 +1,13 @@
+## [0.18.39](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.38...v0.18.39) (2025-10-12)
+
+### Bug Fixes
+
+* **vscode:** update dependency vscode to ^1.105.0 ([#1423](https://github.com/zeshuaro/vscode-poetry/issues/1423)) ([413cf0a](https://github.com/zeshuaro/vscode-poetry/commit/413cf0aadd35d7e8fece8d2e0f2e246ac160adaf))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency semantic-release-vsce to v6.0.12 ([#1422](https://github.com/zeshuaro/vscode-poetry/issues/1422)) ([705c280](https://github.com/zeshuaro/vscode-poetry/commit/705c2804718127033a78a73d86e9aec4481de886))
+
 ## [0.18.38](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.37...v0.18.38) (2025-10-05)
 
 ### Bug Fixes
