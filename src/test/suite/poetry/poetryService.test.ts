@@ -1,10 +1,10 @@
 import { afterEach, beforeEach } from "mocha";
 import {
   assert,
-  createStubInstance,
-  restore,
   type SinonStub,
   type SinonStubbedInstance,
+  createStubInstance,
+  restore,
   stub,
 } from "sinon";
 import { type Terminal, window } from "vscode";
@@ -56,7 +56,7 @@ suite("PoetryService", () => {
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<string>(numExtraPrompts).fill(optionValue)
+      ...Array<string>(numExtraPrompts).fill(optionValue),
     );
 
     await sut.installPackages({ askOptions: true });
@@ -66,7 +66,7 @@ suite("PoetryService", () => {
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
-      `poetry install ${getMappedPoetryOptions(opts)}`
+      `poetry install ${getMappedPoetryOptions(opts)}`,
     );
   });
 
@@ -86,7 +86,7 @@ suite("PoetryService", () => {
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<undefined>(numExtraPrompts).fill(undefined)
+      ...Array<undefined>(numExtraPrompts).fill(undefined),
     );
 
     await sut.installPackages({ askOptions: true });
@@ -99,7 +99,7 @@ suite("PoetryService", () => {
       `poetry install ${opts
         .filter((opt) => !("promptDescription" in opt))
         .map((opt) => opt.value)
-        .join(" ")}`
+        .join(" ")}`,
     );
   });
 
@@ -167,7 +167,7 @@ suite("PoetryService", () => {
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
-      `poetry ${command} ${packageName} --group ${group}`
+      `poetry ${command} ${packageName} --group ${group}`,
     );
     assert.calledOnce(promptPackageNameWithSearch);
     assert.calledOnce(showInputBox);
@@ -212,7 +212,7 @@ suite("PoetryService", () => {
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<string>(numExtraPrompts).fill(optionValue)
+      ...Array<string>(numExtraPrompts).fill(optionValue),
     );
 
     await sut.updatePackages({ askOptions: true });
@@ -222,7 +222,7 @@ suite("PoetryService", () => {
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
-      `poetry update ${getMappedPoetryOptions(opts)}`
+      `poetry update ${getMappedPoetryOptions(opts)}`,
     );
   });
 
