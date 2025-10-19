@@ -52,17 +52,17 @@ suite("PoetryService", () => {
 
   test("install packages ask options", async () => {
     const opts = PoetryService.installOptions;
-    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+    const numExtraPrompts = opts.filter((opt) => opt.promptDescription).length;
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<string>(numExtraPompts).fill(optionValue),
+      ...Array<string>(numExtraPrompts).fill(optionValue),
     );
 
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
-    assert.callCount(showInputBox, numExtraPompts);
+    assert.callCount(showInputBox, numExtraPrompts);
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
@@ -82,17 +82,17 @@ suite("PoetryService", () => {
 
   test("install packages ask options prompt undefined", async () => {
     const opts = PoetryService.installOptions;
-    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+    const numExtraPrompts = opts.filter((opt) => opt.promptDescription).length;
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<undefined>(numExtraPompts).fill(undefined),
+      ...Array<undefined>(numExtraPrompts).fill(undefined),
     );
 
     await sut.installPackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
-    assert.callCount(showInputBox, numExtraPompts);
+    assert.callCount(showInputBox, numExtraPrompts);
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
@@ -208,17 +208,17 @@ suite("PoetryService", () => {
 
   test("update packages ask options", async () => {
     const opts = PoetryService.updateOptions;
-    const numExtraPompts = opts.filter((opt) => opt.promptDescription).length;
+    const numExtraPrompts = opts.filter((opt) => opt.promptDescription).length;
 
     const showQuickPick = mockShowQuickPick(opts.map((opt) => opt.description));
     const showInputBox = mockShowInputBox(
-      ...Array<string>(numExtraPompts).fill(optionValue),
+      ...Array<string>(numExtraPrompts).fill(optionValue),
     );
 
     await sut.updatePackages({ askOptions: true });
 
     assert.calledOnce(showQuickPick);
-    assert.callCount(showInputBox, numExtraPompts);
+    assert.callCount(showInputBox, numExtraPrompts);
     assert.calledOnce(show);
     assert.calledWith(
       sendText,
