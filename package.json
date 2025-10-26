@@ -112,7 +112,7 @@
     "nyc": "17.1.0",
     "semantic-release": "25.0.1",
     "semantic-release-vsce": "6.0.13",
-    "sinon": "20.0.0",
+    "sinon": "21.0.0",
     "typescript": "5.9.3"
   },
   "__metadata": {
