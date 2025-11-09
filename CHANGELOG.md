@@ -1,3 +1,14 @@
+## [0.19.1](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.0...v0.19.1) (2025-11-09)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.13.2 ([#1445](https://github.com/zeshuaro/vscode-poetry/issues/1445)) ([a847551](https://github.com/zeshuaro/vscode-poetry/commit/a847551e0c9e74348ef63ac83f6b030bde1fa85d))
+* **node:** update dependency @types/node to v24.10.0 ([#1444](https://github.com/zeshuaro/vscode-poetry/issues/1444)) ([f3bbf02](https://github.com/zeshuaro/vscode-poetry/commit/f3bbf026133b83b626403b7167ccb1af066228e7))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency mocha to v11.7.5 ([#1446](https://github.com/zeshuaro/vscode-poetry/issues/1446)) ([2b44711](https://github.com/zeshuaro/vscode-poetry/commit/2b4471115ff844ae57ee65d6193fa4018007a7fd))
+
 ## [0.19.0](https://github.com/zeshuaro/vscode-poetry/compare/v0.18.41...v0.19.0) (2025-11-02)
 
 ### Features
