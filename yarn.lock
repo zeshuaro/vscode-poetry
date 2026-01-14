@@ -5117,10 +5117,10 @@ secretlint@^10.1.2:
     globby "^14.1.0"
     read-pkg "^9.0.1"
 
-semantic-release-vsce@6.0.20:
-  version "6.0.20"
-  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.0.20.tgz#631513d654611f4b5a3fc2c4d737e7106806bd5a"
-  integrity sha512-F8WNK/l9TmB21qYQYn7hWQ40aae5jyhuck4Q96kxzlpC1AiIb7piM2OH/I9nBP3ByiEcVJ9fK+Z3A1f//3iBQg==
+semantic-release-vsce@6.0.21:
+  version "6.0.21"
+  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.0.21.tgz#676ad8fc67fbf8d7ae972f0e4932cba9a81256e5"
+  integrity sha512-zulO88n946x+AV9aHhyoIGKGnwYhtu+IA0jsJt20lKG2VfDPh+UaJtk3IXB6MU/EzH4CkyjM2utH+ZKWRAzbmg==
   dependencies:
     "@semantic-release/error" "^4.0.0"
     "@vscode/vsce" "^3.0.0"
