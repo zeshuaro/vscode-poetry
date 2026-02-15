@@ -1,3 +1,21 @@
+## [0.19.10](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.9...v0.19.10) (2026-02-15)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.13.5 [security] ([#1515](https://github.com/zeshuaro/vscode-poetry/issues/1515)) ([255c6a4](https://github.com/zeshuaro/vscode-poetry/commit/255c6a4908621ed9446309c6c5d87b33832a37e8))
+* **node:** update dependency @types/node to v24.10.11 ([#1513](https://github.com/zeshuaro/vscode-poetry/issues/1513)) ([7ed4606](https://github.com/zeshuaro/vscode-poetry/commit/7ed4606542cf1aadf17e7530af3120478402cdc4))
+* **node:** update dependency @types/node to v24.10.13 ([#1518](https://github.com/zeshuaro/vscode-poetry/issues/1518)) ([02e4b84](https://github.com/zeshuaro/vscode-poetry/commit/02e4b84f42665fa708fad17ccdea59ee16a39d25))
+* **node:** update node minor patch versions (patch) ([#1516](https://github.com/zeshuaro/vscode-poetry/issues/1516)) ([4f0109c](https://github.com/zeshuaro/vscode-poetry/commit/4f0109cbdbca751544e898bb8612e7f59b3b1137))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1512](https://github.com/zeshuaro/vscode-poetry/issues/1512)) ([bb825dc](https://github.com/zeshuaro/vscode-poetry/commit/bb825dc7c2fa5681708dd5b62032d282ab61c69d))
+* **deps:** update dependency glob to v13.0.2 ([#1517](https://github.com/zeshuaro/vscode-poetry/issues/1517)) ([c7c0fc2](https://github.com/zeshuaro/vscode-poetry/commit/c7c0fc2312f68fb03054bffb7dba802ac20892a0))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to fe28195 ([#1514](https://github.com/zeshuaro/vscode-poetry/issues/1514)) ([0640c3a](https://github.com/zeshuaro/vscode-poetry/commit/0640c3ad918f77a081f646e257a8d3d45cbe8c50))
+
 ## [0.19.9](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.8...v0.19.9) (2026-02-08)
 
 ### Bug Fixes
