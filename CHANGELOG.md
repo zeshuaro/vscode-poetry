@@ -1,3 +1,17 @@
+## [0.19.12](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.11...v0.19.12) (2026-03-08)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.13.6 ([#1531](https://github.com/zeshuaro/vscode-poetry/issues/1531)) ([208925c](https://github.com/zeshuaro/vscode-poetry/commit/208925c61e9eec86f94fb651097c8040b18ce41f))
+* **node:** update dependency @types/node to v24.10.14 ([#1529](https://github.com/zeshuaro/vscode-poetry/issues/1529)) ([0666539](https://github.com/zeshuaro/vscode-poetry/commit/066653905d51171ae1f2ce78eff2588bda26e89d))
+* **node:** update dependency @types/node to v24.10.15 ([#1530](https://github.com/zeshuaro/vscode-poetry/issues/1530)) ([894f2d4](https://github.com/zeshuaro/vscode-poetry/commit/894f2d46d390781efdfe3031dcd9e5dd50d38536))
+* **node:** update dependency @types/node to v24.11.0 ([#1532](https://github.com/zeshuaro/vscode-poetry/issues/1532)) ([a1c00ba](https://github.com/zeshuaro/vscode-poetry/commit/a1c00ba4cd3d4985c7749b54fe3c08a5ceb2eecd))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.2.0 ([#1533](https://github.com/zeshuaro/vscode-poetry/issues/1533)) ([77c4b89](https://github.com/zeshuaro/vscode-poetry/commit/77c4b89a5f3ac2ac91f9a8ca223321b390b6e336))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.3.0 ([#1534](https://github.com/zeshuaro/vscode-poetry/issues/1534)) ([fe25208](https://github.com/zeshuaro/vscode-poetry/commit/fe25208a15255f68a590e891ebce8aea7bb07310))
+
 ## [0.19.11](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.10...v0.19.11) (2026-03-01)
 
 ### Bug Fixes
