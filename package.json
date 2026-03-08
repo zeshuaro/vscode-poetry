@@ -106,7 +106,7 @@
     "@types/sinon": "17.0.4",
     "@types/vscode": "^1.109.0",
     "@vscode/test-electron": "2.5.2",
-    "conventional-changelog-conventionalcommits": "9.2.0",
+    "conventional-changelog-conventionalcommits": "9.3.0",
     "glob": "13.0.6",
     "mocha": "11.7.5",
     "nyc": "17.1.0",
