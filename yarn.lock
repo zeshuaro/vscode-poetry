@@ -2425,7 +2425,7 @@ execa@^8.0.0:
     signal-exit "^4.1.0"
     strip-final-newline "^3.0.0"
 
-execa@^9.0.0, execa@^9.5.2:
+execa@^9.0.0:
   version "9.6.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-9.6.1.tgz#5b90acedc6bdc0fa9b9a6ddf8f9cbb0c75a7c471"
   integrity sha512-9Be3ZoN4LmYR90tUoVu2te2BsbzHfhJyfEiAVfz7N5/zv+jduIfLrV2xdQXOHbaD6KgpGdO9PRPM1Y4Q9QkPkA==
@@ -5129,14 +5129,13 @@ secretlint@^10.1.2:
     globby "^14.1.0"
     read-pkg "^9.0.1"
 
-semantic-release-vsce@6.0.24:
-  version "6.0.24"
-  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.0.24.tgz#863916a320b61815c9615ea1c0c3a0cd3560de92"
-  integrity sha512-zKCx4LgOeZV+ff4I2FwDPhsOlSPd6ZKElt+82j2biwjAlDx7zT9QFm5lSHDEl6bb6WYfCxhtEmDfo23u/3JNQA==
+semantic-release-vsce@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/semantic-release-vsce/-/semantic-release-vsce-6.1.0.tgz#9afd17bbd3fc3a58535000c2200543e45a6f5a9b"
+  integrity sha512-op8u5H19EXQvVwQwMqsGCULMvc2VShpbB1WMWcOJjUaQT8UOi6XChSz8akEG8503ZRGQ/aal6fe1t2bpPHmLfw==
   dependencies:
     "@semantic-release/error" "^4.0.0"
     "@vscode/vsce" "^3.0.0"
-    execa "^9.5.2"
     fs-extra "^11.1.0"
     glob "^13.0.0"
     ovsx "^0.10.0"
