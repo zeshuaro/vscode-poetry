@@ -1,3 +1,16 @@
+## [0.19.13](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.12...v0.19.13) (2026-03-15)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v24.11.2 ([#1536](https://github.com/zeshuaro/vscode-poetry/issues/1536)) ([51fd5a4](https://github.com/zeshuaro/vscode-poetry/commit/51fd5a47abf1c7bf73eacc308c69cc4d0346e475))
+* **node:** update dependency @types/node to v24.12.0 ([#1537](https://github.com/zeshuaro/vscode-poetry/issues/1537)) ([728d0dc](https://github.com/zeshuaro/vscode-poetry/commit/728d0dc952d175ae93c388dc309b41b2f9bf9409))
+* **vscode:** update dependency @types/vscode to ^1.110.0 ([#1539](https://github.com/zeshuaro/vscode-poetry/issues/1539)) ([6618141](https://github.com/zeshuaro/vscode-poetry/commit/6618141aef873f4fff03d0259c19b45b21ca70fe))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1535](https://github.com/zeshuaro/vscode-poetry/issues/1535)) ([4508744](https://github.com/zeshuaro/vscode-poetry/commit/450874485c8fe0f81458fe88c14d204fe4fc1111))
+* **deps:** update dependency semantic-release-vsce to v6.1.0 ([#1538](https://github.com/zeshuaro/vscode-poetry/issues/1538)) ([cfe8fe8](https://github.com/zeshuaro/vscode-poetry/commit/cfe8fe8089d8e9db4bb44b9951a8c449367fc97b))
+
 ## [0.19.12](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.11...v0.19.12) (2026-03-08)
 
 ### Bug Fixes
