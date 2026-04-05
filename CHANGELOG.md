@@ -1,3 +1,21 @@
+## [0.19.15](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.14...v0.19.15) (2026-04-05)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.14.0 ([#1553](https://github.com/zeshuaro/vscode-poetry/issues/1553)) ([591bd6e](https://github.com/zeshuaro/vscode-poetry/commit/591bd6eb99960569e6cc1e06631ea3733126ade0))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1551](https://github.com/zeshuaro/vscode-poetry/issues/1551)) ([966bdc0](https://github.com/zeshuaro/vscode-poetry/commit/966bdc02185c09d69f6e54535a8834c58e4fe740))
+* **deps:** lock file maintenance ([#1552](https://github.com/zeshuaro/vscode-poetry/issues/1552)) ([da0730c](https://github.com/zeshuaro/vscode-poetry/commit/da0730cdaecd0df11751aa2d879f80d343fc8935))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.3.1 ([#1555](https://github.com/zeshuaro/vscode-poetry/issues/1555)) ([77b11e0](https://github.com/zeshuaro/vscode-poetry/commit/77b11e031f54af8130ab1741b9bc52f57c6f4604))
+* **deps:** update dependency semantic-release-vsce to v6.1.1 ([#1550](https://github.com/zeshuaro/vscode-poetry/issues/1550)) ([6a31464](https://github.com/zeshuaro/vscode-poetry/commit/6a31464a4eb44dbec63a596baa6b0263ff004200))
+* **deps:** update dependency semantic-release-vsce to v6.1.2 ([#1554](https://github.com/zeshuaro/vscode-poetry/issues/1554)) ([7e0deb2](https://github.com/zeshuaro/vscode-poetry/commit/7e0deb232ccf914fd7a0a88280d1ee476a35356d))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 6b595f8 ([#1556](https://github.com/zeshuaro/vscode-poetry/issues/1556)) ([402554c](https://github.com/zeshuaro/vscode-poetry/commit/402554cfde5eaea0007f0b195c8aa5252e147fe7))
+
 ## [0.19.14](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.13...v0.19.14) (2026-03-29)
 
 ### Bug Fixes
