@@ -1,6 +1,6 @@
 import { afterEach, beforeEach } from "mocha";
-import { assert, type SinonStub, restore, stub } from "sinon";
-import { type ExtensionContext, commands } from "vscode";
+import { assert, restore, type SinonStub, stub } from "sinon";
+import { commands, type ExtensionContext } from "vscode";
 import { activate } from "../../extension";
 import { ExtensionService } from "../../extensionService";
 import { PoetryService } from "../../poetry/poetryService";

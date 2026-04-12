@@ -1,4 +1,4 @@
-import { type ExtensionContext, commands } from "vscode";
+import { commands, type ExtensionContext } from "vscode";
 import { ExtensionService } from "./extensionService";
 import { PoetryService } from "./poetry/poetryService";
 import { PypiClient, PypiService } from "./pypi";

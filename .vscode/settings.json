@@ -5,12 +5,11 @@
   "search.exclude": {
     "out": true
   },
-  "typescript.tsc.autoDetect": "off",
   "editor.formatOnSave": true,
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
     }
   }
 }

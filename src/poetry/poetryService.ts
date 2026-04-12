@@ -49,11 +49,7 @@ export class PoetryService {
     this.pypiService = pypiService;
   }
 
-  async installPackages({
-    askOptions = false,
-  }: {
-    askOptions?: boolean;
-  } = {}) {
+  async installPackages({ askOptions = false }: { askOptions?: boolean } = {}) {
     const args: string[] = [PoetryCommand.install];
     if (askOptions) {
       const opts = await this.getOptions(PoetryService.installOptions);
