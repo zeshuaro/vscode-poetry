@@ -1,10 +1,10 @@
 import { afterEach, beforeEach } from "mocha";
 import {
   assert,
-  type SinonStub,
-  type SinonStubbedInstance,
   createStubInstance,
   restore,
+  type SinonStub,
+  type SinonStubbedInstance,
   stub,
 } from "sinon";
 import { type Terminal, window } from "vscode";
@@ -319,7 +319,7 @@ suite("PoetryService", () => {
   }
 
   function mockPromptPackageNameWithSearch(value: string | undefined) {
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: stub any
     return stub(sut, <any>"promptPackageNameWithSearch").returns(value);
   }
 

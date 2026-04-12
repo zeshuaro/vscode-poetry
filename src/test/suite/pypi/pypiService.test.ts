@@ -2,10 +2,10 @@
 import { afterEach, beforeEach } from "mocha";
 import {
   assert,
-  type SinonStub,
-  type SinonStubbedInstance,
   createStubInstance,
   restore,
+  type SinonStub,
+  type SinonStubbedInstance,
   stub,
 } from "sinon";
 import { type FileSystem, Uri, workspace } from "vscode";

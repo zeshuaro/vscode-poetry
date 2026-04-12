@@ -3,10 +3,10 @@ import { Axios, type AxiosResponse } from "axios";
 import { afterEach, beforeEach } from "mocha";
 import {
   assert,
-  type SinonStubbedInstance,
   createStubInstance,
   match,
   restore,
+  type SinonStubbedInstance,
   stub,
 } from "sinon";
 import { PypiClient } from "../../../pypi/pypiClient";
