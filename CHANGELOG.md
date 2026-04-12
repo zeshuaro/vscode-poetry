@@ -1,3 +1,18 @@
+## [0.19.16](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.15...v0.19.16) (2026-04-12)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.15.0 [security] ([#1563](https://github.com/zeshuaro/vscode-poetry/issues/1563)) ([91acf74](https://github.com/zeshuaro/vscode-poetry/commit/91acf743cade7d8ae3bb44f46cabc65c01aaf4f2))
+* **deps:** update dependency fuse.js to v7.2.0 ([#1559](https://github.com/zeshuaro/vscode-poetry/issues/1559)) ([ac6a15d](https://github.com/zeshuaro/vscode-poetry/commit/ac6a15d75ad29b247b8fd45c5678abeffd7a3bcf))
+* **deps:** update dependency fuse.js to v7.3.0 ([#1561](https://github.com/zeshuaro/vscode-poetry/issues/1561)) ([de3e052](https://github.com/zeshuaro/vscode-poetry/commit/de3e05229dd5c6dcd35d5651661f0a04094f3124))
+* **node:** update dependency @types/node to v24.12.2 ([#1560](https://github.com/zeshuaro/vscode-poetry/issues/1560)) ([3482767](https://github.com/zeshuaro/vscode-poetry/commit/3482767bbe8d2e365211e3abc567edba7d36479c))
+* **vscode:** update dependency @types/vscode to ^1.115.0 ([#1562](https://github.com/zeshuaro/vscode-poetry/issues/1562)) ([392e0da](https://github.com/zeshuaro/vscode-poetry/commit/392e0dada4309db483cead3dfd40b3e4e615df0d))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1557](https://github.com/zeshuaro/vscode-poetry/issues/1557)) ([defbc64](https://github.com/zeshuaro/vscode-poetry/commit/defbc648afc0e2b03c2ec6bd57c454296008a166))
+* **deps:** update dependency @types/sinon to v21.0.1 ([#1558](https://github.com/zeshuaro/vscode-poetry/issues/1558)) ([9bdebe2](https://github.com/zeshuaro/vscode-poetry/commit/9bdebe20a90b5120d995c43273b83b684fd0a204))
+
 ## [0.19.15](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.14...v0.19.15) (2026-04-05)
 
 ### Bug Fixes
