@@ -1,3 +1,17 @@
+## [0.19.17](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.16...v0.19.17) (2026-04-19)
+
+### Bug Fixes
+
+* **node:** update node.js to v24.15.0 ([#1567](https://github.com/zeshuaro/vscode-poetry/issues/1567)) ([7b1f46d](https://github.com/zeshuaro/vscode-poetry/commit/7b1f46da9c6fc3e046b59917afe5024cf66ad110))
+* **vscode:** update dependency @types/vscode to ^1.116.0 ([#1570](https://github.com/zeshuaro/vscode-poetry/issues/1570)) ([b06b079](https://github.com/zeshuaro/vscode-poetry/commit/b06b07901f9d5c6ddb1966dccea439c1b916b664))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @biomejs/biome to v2 ([#1342](https://github.com/zeshuaro/vscode-poetry/issues/1342)) ([dc67e29](https://github.com/zeshuaro/vscode-poetry/commit/dc67e29945e47dd61c9c2da0aa6fc01a80fa7b6d))
+* **deps:** update dependency @biomejs/biome to v2.4.11 ([#1565](https://github.com/zeshuaro/vscode-poetry/issues/1565)) ([329ffd1](https://github.com/zeshuaro/vscode-poetry/commit/329ffd1b5bbb6a00c48b544e7b22830d30bc25b5))
+* **deps:** update dependency @biomejs/biome to v2.4.12 ([#1568](https://github.com/zeshuaro/vscode-poetry/issues/1568)) ([06c6f47](https://github.com/zeshuaro/vscode-poetry/commit/06c6f478e9c507a7ef554521adbca5ed12b8e358))
+* **deps:** update dependency semantic-release-vsce to v6.1.3 ([#1569](https://github.com/zeshuaro/vscode-poetry/issues/1569)) ([792f49f](https://github.com/zeshuaro/vscode-poetry/commit/792f49f3a6e035f85ea54ef511b4964bd55d378a))
+
 ## [0.19.16](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.15...v0.19.16) (2026-04-12)
 
 ### Bug Fixes
