@@ -1,3 +1,21 @@
+## [0.19.18](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.17...v0.19.18) (2026-04-27)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.15.1 ([#1573](https://github.com/zeshuaro/vscode-poetry/issues/1573)) ([ec1daf9](https://github.com/zeshuaro/vscode-poetry/commit/ec1daf90b75c6f7c7c9043ab5b7b1e87d326260c))
+* **deps:** update dependency axios to v1.15.2 ([#1574](https://github.com/zeshuaro/vscode-poetry/issues/1574)) ([4885606](https://github.com/zeshuaro/vscode-poetry/commit/4885606286bec19415b01288614d553fb60d1bcb))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @biomejs/biome to v2.4.13 ([#1575](https://github.com/zeshuaro/vscode-poetry/issues/1575)) ([fc4993f](https://github.com/zeshuaro/vscode-poetry/commit/fc4993fbb80f6f3cede660998b05ae9a379b74f1))
+
+### Continuous Integration
+
+* **deps:** pin actions/checkout action to v6.0.2 ([#1571](https://github.com/zeshuaro/vscode-poetry/issues/1571)) ([cc66b3e](https://github.com/zeshuaro/vscode-poetry/commit/cc66b3e62c05c180005ce36ee5f4267fdd361ff7))
+* **deps:** pin actions/create-github-app-token action to v3.1.1 ([#1572](https://github.com/zeshuaro/vscode-poetry/issues/1572)) ([a2aa6cb](https://github.com/zeshuaro/vscode-poetry/commit/a2aa6cb6ea3dd6bf52c2febbbdbc487019b46c25))
+* **deps:** update zeshuaro/github-actions-workflows digest to 4599947 ([#1577](https://github.com/zeshuaro/vscode-poetry/issues/1577)) ([92a3c78](https://github.com/zeshuaro/vscode-poetry/commit/92a3c78bc6018620911e5d3a7b083d7b1d114a7b))
+* **github-actions:** add `main` branch comment to github actions digest reference ([#1576](https://github.com/zeshuaro/vscode-poetry/issues/1576)) ([434c971](https://github.com/zeshuaro/vscode-poetry/commit/434c97154d0752006c190c5ecaf0b91391dff9ab))
+
 ## [0.19.17](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.16...v0.19.17) (2026-04-19)
 
 ### Bug Fixes
