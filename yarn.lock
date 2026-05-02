@@ -1255,10 +1255,10 @@
   resolved "https://registry.yarnpkg.com/@types/sinonjs__fake-timers/-/sinonjs__fake-timers-15.0.1.tgz#49f731d9453f52d64dd79f5a5626c1cf1b81bea4"
   integrity sha512-Ko2tjWJq8oozHzHV+reuvS5KYIRAokHnGbDwGh/J64LntgpbuylF74ipEL24HCyRjf9FOlBiBHWBR1RlVKsI1w==
 
-"@types/vscode@^1.116.0":
-  version "1.116.0"
-  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.116.0.tgz#88e90907200b5d2776a2ebfae5fb791833193d79"
-  integrity sha512-sYHp4MO6BqJ2PD7Hjt0hlIS3tMaYsVPJrd0RUjDJ8HtOYnyJIEej0bLSccM8rE77WrC+Xox/kdBwEFDO8MsxNA==
+"@types/vscode@^1.118.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.118.0.tgz#4a226ddf8faa11a9e6b338555431c4edd3230e4a"
+  integrity sha512-Ah6eTlqDcwIMELEVwQMO++rJAFBRz/oLluLD/vWdYrH1KuI9kfpaM+7pg0OvvascgcJy+ghLCERAYouM4QbzGw==
 
 "@typespec/ts-http-runtime@^0.3.0", "@typespec/ts-http-runtime@^0.3.4":
   version "0.3.5"
