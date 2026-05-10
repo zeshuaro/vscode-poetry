@@ -1,3 +1,19 @@
+## [0.19.20](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.19...v0.19.20) (2026-05-10)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.16.0 ([#1583](https://github.com/zeshuaro/vscode-poetry/issues/1583)) ([195d006](https://github.com/zeshuaro/vscode-poetry/commit/195d00644fc3dcd87b72589fdf7ac2d50c5e4a3f))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1564](https://github.com/zeshuaro/vscode-poetry/issues/1564)) ([6457119](https://github.com/zeshuaro/vscode-poetry/commit/645711940dd2e649138cae57f70437942c4f7d56))
+* **deps:** update dependency @biomejs/biome to v2.4.14 ([#1582](https://github.com/zeshuaro/vscode-poetry/issues/1582)) ([4d0c839](https://github.com/zeshuaro/vscode-poetry/commit/4d0c8392b9d1d24f3d69175a7ae88bdf93ea381e))
+* **deps:** update dependency sinon to v21.1.2 ([#1566](https://github.com/zeshuaro/vscode-poetry/issues/1566)) ([ea63233](https://github.com/zeshuaro/vscode-poetry/commit/ea63233a5e7da44c6faaae9fb5bf1daad1d5088d))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 42e4f15 ([#1584](https://github.com/zeshuaro/vscode-poetry/issues/1584)) ([71444a5](https://github.com/zeshuaro/vscode-poetry/commit/71444a513d6d52e563ac9b66cbec3c8e52374106))
+
 ## [0.19.19](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.18...v0.19.19) (2026-05-03)
 
 ### Bug Fixes
