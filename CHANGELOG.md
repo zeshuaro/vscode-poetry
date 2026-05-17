@@ -1,3 +1,22 @@
+## [0.19.21](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.20...v0.19.21) (2026-05-17)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.16.1 ([#1592](https://github.com/zeshuaro/vscode-poetry/issues/1592)) ([d4f6203](https://github.com/zeshuaro/vscode-poetry/commit/d4f6203d898cf66a0dae1e0533db1ab9478e9e2f))
+* **node:** update dependency @types/node to v24.12.3 ([#1587](https://github.com/zeshuaro/vscode-poetry/issues/1587)) ([0060e8a](https://github.com/zeshuaro/vscode-poetry/commit/0060e8af5f3fceea050212d3312302a86ae32c04))
+* **node:** update dependency @types/node to v24.12.4 ([#1591](https://github.com/zeshuaro/vscode-poetry/issues/1591)) ([14256e8](https://github.com/zeshuaro/vscode-poetry/commit/14256e8bda2dceb5ee4e951c8e17582ceddf983d))
+* **vscode:** update dependency @types/vscode to ^1.120.0 ([#1594](https://github.com/zeshuaro/vscode-poetry/issues/1594)) ([d0c0208](https://github.com/zeshuaro/vscode-poetry/commit/d0c0208ba5d2dc15951024be8430fb7ac396eab3))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1586](https://github.com/zeshuaro/vscode-poetry/issues/1586)) ([dd0745d](https://github.com/zeshuaro/vscode-poetry/commit/dd0745da12182d8a951adc0fedba6d146338b320))
+* **deps:** update dependency @biomejs/biome to v2.4.15 ([#1589](https://github.com/zeshuaro/vscode-poetry/issues/1589)) ([5012f14](https://github.com/zeshuaro/vscode-poetry/commit/5012f1441a19519f8ead2e20314d2b4a02a721b0))
+* **deps:** update dependency semantic-release-vsce to v6.1.5 ([#1588](https://github.com/zeshuaro/vscode-poetry/issues/1588)) ([436863b](https://github.com/zeshuaro/vscode-poetry/commit/436863b33d96ca97871528cc829b75ecfe855958))
+
+### Continuous Integration
+
+* **deps:** update actions/create-github-app-token action to v3.2.0 ([#1590](https://github.com/zeshuaro/vscode-poetry/issues/1590)) ([bb28a47](https://github.com/zeshuaro/vscode-poetry/commit/bb28a4777ef58dd1e1fc2a13905a9b760e2e2b17))
+
 ## [0.19.20](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.19...v0.19.20) (2026-05-10)
 
 ### Bug Fixes
