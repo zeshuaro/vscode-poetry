@@ -95,7 +95,7 @@
   },
   "dependencies": {
     "axios": "1.16.1",
-    "fuse.js": "7.3.0"
+    "fuse.js": "7.4.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
