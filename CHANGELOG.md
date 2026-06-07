@@ -1,3 +1,17 @@
+## [0.19.23](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.22...v0.19.23) (2026-06-07)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.17.0 ([#1609](https://github.com/zeshuaro/vscode-poetry/issues/1609)) ([1f1c43a](https://github.com/zeshuaro/vscode-poetry/commit/1f1c43a0c9e8bcdb3527f4d8fe956ca55395699e))
+* **deps:** update dependency fuse.js to v7.4.0 ([#1607](https://github.com/zeshuaro/vscode-poetry/issues/1607)) ([8b07a60](https://github.com/zeshuaro/vscode-poetry/commit/8b07a6031e81d40d2bc257aa817d4e16be6f798c))
+* **deps:** update dependency fuse.js to v7.4.1 ([#1608](https://github.com/zeshuaro/vscode-poetry/issues/1608)) ([4894578](https://github.com/zeshuaro/vscode-poetry/commit/4894578e5a6b010a332feff786c51f2664a6836e))
+
+### Continuous Integration
+
+* **deps:** pin actions/setup-node action to v6.4.0 ([#1604](https://github.com/zeshuaro/vscode-poetry/issues/1604)) ([0f6bc5d](https://github.com/zeshuaro/vscode-poetry/commit/0f6bc5d967543ff637924ea2d0398cbc0fa1a07f))
+* **deps:** update actions/checkout action to v6.0.3 ([#1605](https://github.com/zeshuaro/vscode-poetry/issues/1605)) ([aa0991a](https://github.com/zeshuaro/vscode-poetry/commit/aa0991aa3f398a5989ed686a72a6e7b2c7d5ed3b))
+* **deps:** update zeshuaro/github-actions-workflows digest to e2bd453 ([#1606](https://github.com/zeshuaro/vscode-poetry/issues/1606)) ([0c43c65](https://github.com/zeshuaro/vscode-poetry/commit/0c43c65280afa865a1d8b8d521b4d2039f85c7e3))
+
 ## [0.19.22](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.21...v0.19.22) (2026-05-31)
 
 ### Bug Fixes
