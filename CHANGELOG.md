@@ -1,3 +1,21 @@
+## [0.19.24](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.23...v0.19.24) (2026-06-14)
+
+### Bug Fixes
+
+* **deps:** update dependency fuse.js to v7.4.2 ([#1615](https://github.com/zeshuaro/vscode-poetry/issues/1615)) ([8f29801](https://github.com/zeshuaro/vscode-poetry/commit/8f29801b65b2d6d3de549c37b23b833bc1b81077))
+* **node:** update node minor patch versions to v24.13.0 ([#1612](https://github.com/zeshuaro/vscode-poetry/issues/1612)) ([ceaf779](https://github.com/zeshuaro/vscode-poetry/commit/ceaf779b24ed0938c47db60a94b7fe75d42e64d6))
+* **node:** update node minor patch versions to v24.13.1 ([#1616](https://github.com/zeshuaro/vscode-poetry/issues/1616)) ([bfdde06](https://github.com/zeshuaro/vscode-poetry/commit/bfdde060f6fc280be264afb000de2dfb68d1f5d7))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1613](https://github.com/zeshuaro/vscode-poetry/issues/1613)) ([70ecf50](https://github.com/zeshuaro/vscode-poetry/commit/70ecf50b51d05f1c2e4121e24ce762e217806164))
+* **deps:** update semantic-release monorepo to v25.0.5 ([#1618](https://github.com/zeshuaro/vscode-poetry/issues/1618)) ([c6076cd](https://github.com/zeshuaro/vscode-poetry/commit/c6076cda74bfdf7a57200673e4168c4745b73a94))
+
+### Continuous Integration
+
+* **deps:** update codecov/codecov-action action to v6.0.2 ([#1611](https://github.com/zeshuaro/vscode-poetry/issues/1611)) ([d704424](https://github.com/zeshuaro/vscode-poetry/commit/d704424429cf5a757039aec631e55d9a185ca57e))
+* **deps:** update zeshuaro/github-actions-workflows digest to de5b773 ([#1614](https://github.com/zeshuaro/vscode-poetry/issues/1614)) ([da76099](https://github.com/zeshuaro/vscode-poetry/commit/da760996223ba33adbba386e942abb65b66e37cf))
+
 ## [0.19.23](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.22...v0.19.23) (2026-06-07)
 
 ### Bug Fixes
