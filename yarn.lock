@@ -1218,10 +1218,10 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-10.0.10.tgz#91f62905e8d23cbd66225312f239454a23bebfa0"
   integrity sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==
 
-"@types/node@24.13.1":
-  version "24.13.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.13.1.tgz#890e6a3832959d8181a11c4c91c3a0de8410e697"
-  integrity sha512-RSpUJGmvsJ1ZeBehQZFhIdpsz+bIpES0nIQXko4Ybq+N+kX6XvOq3Jo+iJ82FWLdblFq85AsMikd3m35jgezYg==
+"@types/node@24.13.2":
+  version "24.13.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.13.2.tgz#3b9b280a7055128359f125eb1067d9a190f39854"
+  integrity sha512-fRa09kZTgu8o71KFcDjUFuc7F+dEbZYZmkI0mg5YBTRs0yMKjYHsq/c0urDKeDb+D5qVgXOdFcuu+DZPKOITwA==
   dependencies:
     undici-types "~7.18.0"
 
