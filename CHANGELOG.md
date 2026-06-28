@@ -1,3 +1,15 @@
+## [0.19.26](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.25...v0.19.26) (2026-06-28)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.18.1 ([#1629](https://github.com/zeshuaro/vscode-poetry/issues/1629)) ([5db65c4](https://github.com/zeshuaro/vscode-poetry/commit/5db65c445fd5a17d07d04aaa59920acbad482f32))
+* **node:** update node minor patch versions ([#1627](https://github.com/zeshuaro/vscode-poetry/issues/1627)) ([1d02835](https://github.com/zeshuaro/vscode-poetry/commit/1d028354b5fa9fd60b23f3cf2d4635ae027ec8ea))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1626](https://github.com/zeshuaro/vscode-poetry/issues/1626)) ([7f969df](https://github.com/zeshuaro/vscode-poetry/commit/7f969dfd375c0e47c1e905bd1936dba2d723f5f6))
+* **deps:** update dependency @biomejs/biome to v2.5.1 ([#1628](https://github.com/zeshuaro/vscode-poetry/issues/1628)) ([7ff1bd0](https://github.com/zeshuaro/vscode-poetry/commit/7ff1bd07e416f4b3db0e53016294b342b941f7e7))
+
 ## [0.19.25](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.24...v0.19.25) (2026-06-21)
 
 ### Bug Fixes
