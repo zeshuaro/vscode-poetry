@@ -1,3 +1,19 @@
+## [0.19.27](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.26...v0.19.27) (2026-07-12)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v24.13.3 ([#1635](https://github.com/zeshuaro/vscode-poetry/issues/1635)) ([4ee4b11](https://github.com/zeshuaro/vscode-poetry/commit/4ee4b11b884f837f8513eb413296ed0a702a6e71))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1633](https://github.com/zeshuaro/vscode-poetry/issues/1633)) ([fbcc3da](https://github.com/zeshuaro/vscode-poetry/commit/fbcc3da4b4ddf17791774e23a64063fabf4a41c1))
+* **deps:** update dependency @biomejs/biome to v2.5.2 ([#1632](https://github.com/zeshuaro/vscode-poetry/issues/1632)) ([d936061](https://github.com/zeshuaro/vscode-poetry/commit/d936061ca49cf2c306cddf4f25be6203f5dce0fb))
+* **deps:** update dependency @biomejs/biome to v2.5.3 ([#1634](https://github.com/zeshuaro/vscode-poetry/issues/1634)) ([9704e1d](https://github.com/zeshuaro/vscode-poetry/commit/9704e1dac4b9511ca1ce15649129e22a3b3d934a))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 41d124c ([#1631](https://github.com/zeshuaro/vscode-poetry/issues/1631)) ([dee9749](https://github.com/zeshuaro/vscode-poetry/commit/dee97497a84b593042c51af69397bb792ba1a00c))
+
 ## [0.19.26](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.25...v0.19.26) (2026-06-28)
 
 ### Bug Fixes
