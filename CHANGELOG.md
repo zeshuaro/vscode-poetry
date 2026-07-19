@@ -1,3 +1,20 @@
+## [0.19.28](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.27...v0.19.28) (2026-07-19)
+
+### Bug Fixes
+
+* **deps:** update dependency fuse.js to v7.5.0 ([#1642](https://github.com/zeshuaro/vscode-poetry/issues/1642)) ([848924f](https://github.com/zeshuaro/vscode-poetry/commit/848924fe9da77e4181573584e1cf9676d90d4eb2))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#1637](https://github.com/zeshuaro/vscode-poetry/issues/1637)) ([4d8e853](https://github.com/zeshuaro/vscode-poetry/commit/4d8e8532c7a69dd2f34506b42c2dc2d0e607b347))
+* **deps:** update dependency @biomejs/biome to v2.5.4 ([#1643](https://github.com/zeshuaro/vscode-poetry/issues/1643)) ([9992cae](https://github.com/zeshuaro/vscode-poetry/commit/9992cae99628b770400ba9089fede46c832daac1))
+* **deps:** update dependency semantic-release to v25.0.6 ([#1638](https://github.com/zeshuaro/vscode-poetry/issues/1638)) ([d11598e](https://github.com/zeshuaro/vscode-poetry/commit/d11598e8efb403816e998e7b875c3ade1c8defb7))
+* **deps:** update dependency semantic-release to v25.0.7 ([#1641](https://github.com/zeshuaro/vscode-poetry/issues/1641)) ([2b9ac5f](https://github.com/zeshuaro/vscode-poetry/commit/2b9ac5fc4618ce125f65b3273fc8592136f27da8))
+
+### Continuous Integration
+
+* **deps:** update actions/setup-node action to v6.5.0 ([#1639](https://github.com/zeshuaro/vscode-poetry/issues/1639)) ([cfebf40](https://github.com/zeshuaro/vscode-poetry/commit/cfebf40d14705e7307a8195894e3a27012c9e001))
+
 ## [0.19.27](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.26...v0.19.27) (2026-07-12)
 
 ### Bug Fixes
