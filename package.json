@@ -113,7 +113,7 @@
     "semantic-release": "25.0.7",
     "semantic-release-vsce": "6.1.5",
     "sinon": "21.1.2",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "__metadata": {
     "id": "ad8177d1-0e40-42a1-b51e-6cbae086b46b",
