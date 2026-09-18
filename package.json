@@ -102,7 +102,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/mocha": "10.0.10",
-    "@types/node": "24.13.4",
+    "@types/node": "24.13.5",
     "@types/sinon": "22.0.0",
     "@types/vscode": "^1.125.0",
     "@vscode/test-electron": "3.1.0",
