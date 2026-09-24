@@ -99,7 +99,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
-    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "10.0.1",
     "@types/mocha": "10.0.10",
     "@types/node": "24.13.6",
