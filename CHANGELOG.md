@@ -1,3 +1,13 @@
+## [0.19.30](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.29...v0.19.30) (2026-09-27)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v24.13.6 ([#1669](https://github.com/zeshuaro/vscode-poetry/issues/1669)) ([a69f18d](https://github.com/zeshuaro/vscode-poetry/commit/a69f18df46a568fe59f47261e77e1a7aa1632536))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 92fcccd ([#1670](https://github.com/zeshuaro/vscode-poetry/issues/1670)) ([08151e7](https://github.com/zeshuaro/vscode-poetry/commit/08151e7ca3ddb93703a74752f7788808fbda6fe6))
+
 ## [0.19.29](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.28...v0.19.29) (2026-09-20)
 
 ### Bug Fixes
