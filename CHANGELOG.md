@@ -1,3 +1,14 @@
+## [0.19.33](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.32...v0.19.33) (2026-10-18)
+
+### Bug Fixes
+
+* **node:** update dependency @types/node to v24.19.2 ([#1677](https://github.com/zeshuaro/vscode-poetry/issues/1677)) ([c2b15cb](https://github.com/zeshuaro/vscode-poetry/commit/c2b15cbc658fa51bbb869d165ab3bbeec0b761a4))
+* **node:** update node.js to v24.22.0 ([#1679](https://github.com/zeshuaro/vscode-poetry/issues/1679)) ([725c20d](https://github.com/zeshuaro/vscode-poetry/commit/725c20d39f7932cf1a8fd6bd774c20eee2dae8e5))
+
+### Continuous Integration
+
+* **deps:** update actions/create-github-app-token action to v3.3.0 ([#1678](https://github.com/zeshuaro/vscode-poetry/issues/1678)) ([080353d](https://github.com/zeshuaro/vscode-poetry/commit/080353d251731d659166cd07b061226a2cf8a877))
+
 ## [0.19.32](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.31...v0.19.32) (2026-10-11)
 
 ### Bug Fixes
