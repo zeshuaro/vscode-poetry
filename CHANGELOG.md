@@ -1,3 +1,15 @@
+## [0.19.35](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.34...v0.19.35) (2026-11-01)
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v1.21.0 ([#1688](https://github.com/zeshuaro/vscode-poetry/issues/1688)) ([3bd0741](https://github.com/zeshuaro/vscode-poetry/commit/3bd07415bfbc427601bb0db96a6246b1683547dd))
+* **node:** update node.js to v24.22.2 ([#1686](https://github.com/zeshuaro/vscode-poetry/issues/1686)) ([fcd7370](https://github.com/zeshuaro/vscode-poetry/commit/fcd7370089a00abaa176f475cd4bcf474d0b3da1))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @biomejs/biome to v2.6.3 ([#1684](https://github.com/zeshuaro/vscode-poetry/issues/1684)) ([f2bdaa5](https://github.com/zeshuaro/vscode-poetry/commit/f2bdaa52984154509cbf1e3c91e5ca3e3259b1fc))
+* **deps:** update dependency @types/sinon to v22.0.2 ([#1685](https://github.com/zeshuaro/vscode-poetry/issues/1685)) ([bd3005f](https://github.com/zeshuaro/vscode-poetry/commit/bd3005f6e760f03d3f9026119bb6ef4abf126d6b))
+
 ## [0.19.34](https://github.com/zeshuaro/vscode-poetry/compare/v0.19.33...v0.19.34) (2026-10-25)
 
 ### Bug Fixes
